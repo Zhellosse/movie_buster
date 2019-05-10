@@ -29,7 +29,7 @@ class Actors
     /**
      * @ORM\Column(type="date")
      */
-    private $age;
+    private $birth_date;
 
     public function getId(): ?int
     {
@@ -60,12 +60,12 @@ class Actors
         return $this;
     }
 
-    public function getAge(): ?\DateTimeInterface
+    public function getBirthDate(): ?\DateTimeInterface
     {
         return $this->age;
     }
 
-    public function setAge(\DateTimeInterface $age): self
+    public function setBirthDate(\DateTimeInterface $age): self
     {
         $this->age = $age;
 
