@@ -22,11 +22,6 @@ class User
     private $rank;
 
     /**
-     * @ORM\Column(type="date")
-     */
-    private $age;
-
-    /**
      * @ORM\Column(type="string", length=45)
      */
     private $sex;
@@ -64,18 +59,6 @@ class User
     public function setRank(string $rank): self
     {
         $this->rank = $rank;
-
-        return $this;
-    }
-
-    public function getAge(): ?\DateTimeInterface
-    {
-        return $this->age;
-    }
-
-    public function setAge(\DateTimeInterface $age): self
-    {
-        $this->age = $age;
 
         return $this;
     }
