@@ -46,6 +46,11 @@ class User
      */
     private $pseudo;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birth_date;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,18 @@ class User
     public function setPseudo(string $pseudo): self
     {
         $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getBirthDate(): ?\DateTimeInterface
+    {
+        return $this->birth_date;
+    }
+
+    public function setBirthDate(\DateTimeInterface $birth_date): self
+    {
+        $this->birth_date = $birth_date;
 
         return $this;
     }
