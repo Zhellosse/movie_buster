@@ -44,10 +44,7 @@ class Movie
      */
     private $trailer;
 
-    /**
-     * @ORM\Column(type="string", length=150)
-     */
-    private $acteurs;
+   
 
     /**
      * @ORM\Column(type="string", length=150)
@@ -102,17 +99,7 @@ class Movie
         return $this->id;
     }
 
-    public function getGenre(): ?string
-    {
-        return $this->genre;
-    }
-
-    public function setGenre(string $genre): self
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
+   
 
     public function getReleaseDate(): ?\DateTimeInterface
     {
@@ -174,17 +161,6 @@ class Movie
         return $this;
     }
 
-    public function getActeurs(): ?string
-    {
-        return $this->acteurs;
-    }
-
-    public function setActeurs(string $acteurs): self
-    {
-        $this->acteurs = $acteurs;
-
-        return $this;
-    }
 
     public function getDirector(): ?string
     {
