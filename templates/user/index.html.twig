@@ -1,44 +1,49 @@
-{% extends 'formulaire.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Page D'inscription{% endblock %}
+{% block title %}User index{% endblock %}
 
 {% block body %}
+    <h1>User index</h1>
 
-<p>Si vous n'avez pas encore de compte, <button onclick="show()">Cliquez ici</button></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Password</th>
+                <th>Rank</th>
+                <th>Birth_date</th>
+                <th>Sex</th>
+                <th>Avatar</th>
+                <th>Pseudo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.rank }}</td>
+                <td>{{ user.birthDate ? user.birthDate|date('Y-m-d') : '' }}</td>
+                <td>{{ user.sex }}</td>
+                <td>{{ user.avatar }}</td>
+                <td>{{ user.pseudo }}</td>
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-        <form id="register">
-            <div class="form-row">
-                <div class="form-group col-md-3 offset-3">
-                    <label for="name">Nom : </label>
-                    <input type="text" class="form-control" id="nom" placeholder="Votre nom">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="prenom">Prénom : </label>
-                    <input type="prenom" class="form-control" id="prenom" placeholder="Votre prénom">
-                </div>
-            </div>
-            <br>
-
-            <div class="form-row">
-                <div class="form-group col-md-3 offset-3">
-                    <label for="email">Email : </label>
-                    <input type="email" class="form-control" id="email" placeholder="Votre email">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="password">Mot de passe : </label>
-                    <input type="password" class="form-control" id="password" placeholder="Votre Mot de passe">
-                </div>
-            </div>
-            <br>
-            <div class="form-row">
-                <div class="form-group col-md-3 offset-3">
-                    <label for="pseudo">Pseudo : </label>
-                    <input type="text" class="form-control" id="pseudo" placeholder="Votre pseudo">
-                </div>
-            <br>
-            </div>
-
-
-        <button type="submit" class="btn">Envoyer</button> <br> <br>
-        </form>
+    <a href="{{ path('user_new') }}">Create new</a>
 {% endblock %}
