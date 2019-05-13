@@ -205,6 +205,7 @@ class AppFixtures extends Fixture
         $movie1->addActor(1);
         $movie1->addGenre(26);
         $movie1->setUser(9);
+        $manager->persist($movie1);
 
 
         
