@@ -100,3 +100,27 @@ body{
 
 
 /* ///// FIN HEADER \\\\\\\ */
+
+
+form{
+	color : #FBFBFB;
+	text-align: center;
+	border: thick double #5847d0;
+	background-color:rgba(151, 175, 206, 0.2);
+	width: 60%;
+	position: relative;
+	margin: auto; 
+	top : 175px;	
+	display: none;
+}
+
+.btn{
+	background-color: #6954f8
+}
+
+button{
+	background-color: #282733;
+	color:#6954f8;
+	border: none
+}
+
