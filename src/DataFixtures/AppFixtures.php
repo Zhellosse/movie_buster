@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 use App\Entity\User;
 use App\Entity\Genre;
+use App\Entity\Actors;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
