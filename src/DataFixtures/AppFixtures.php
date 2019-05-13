@@ -161,7 +161,7 @@ class AppFixtures extends Fixture
 
         $actor6 = new Actors();
         $actor6->setFirstName('Gérard');
-        $actor6->setLastName('Depardieu');
+        $actor6->setLastName('Jugnot');
         $actor6->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1952-12-27'));
         $manager->persist($actor6);
 
