@@ -63,8 +63,9 @@ table {
 /* end */
 
 body{
-    font: 400 16px/1.3 'Roboto Lt', 'sans-serif' /*line heigh de 1.3*/ ;
-    color: white;
+	font: 400 16px/1.3 'Roboto', 'sans-serif' /*line heigh de 1.3*/;		
+	color: white;
+	background-color :#282733;
 }
 
 .wrap{
@@ -73,7 +74,29 @@ body{
     max-width: 1200px;
 }
 
-body {
-	background-color :#282733; 
+/* ///// HEADER \\\\\\\ */
+
+
+.linav, #logo{
+	display : inline;	
+	float: left;
+	width : 20%;
 }
 
+.linav{
+	margin-top: 20px;
+	padding-left: 15%;
+}
+
+#logo{
+	font-size:50px;
+	color: white;
+}
+
+#popcorn{
+	width:36px;
+	height:36px;
+}
+
+
+/* ///// FIN HEADER \\\\\\\ */
