@@ -6,6 +6,7 @@ use App\Entity\Genre;
 use App\Entity\Actors;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Validator\Constraints\Date;
 
 class AppFixtures extends Fixture
 {
@@ -133,7 +134,7 @@ class AppFixtures extends Fixture
         $actor1 = new Actors();
         $actor1->setFirstName('Christian');
         $actor1->setLastName('Clavier');
-        $actor1->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1952-05-06'));
+        $actor1->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1965-06-05'));
         $manager->persist($actor1);
 
         $actor2 = new Actors();
