@@ -16,10 +16,6 @@ class Movie
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=45)
-     */
-    private $genre;
 
     /**
      * @ORM\Column(type="date")
