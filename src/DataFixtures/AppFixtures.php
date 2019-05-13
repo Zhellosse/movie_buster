@@ -17,7 +17,7 @@ class AppFixtures extends Fixture
         $user->setRoles(['user']);
         $user->setPassword('user123');
         $user->setRank('user');
-        $user->setBirthDate('1990-05-25');
+        $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
         $user->setSex('H');
         $user->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user->setPseudo('userpseudo');
@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
         $user2->setRoles(['modo']);
         $user2->setPassword('modo123');
         $user2->setRank('modo');
-        $user2->setBirthDate('1995-11-04');
+        $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
         $user2->setSex('F');
         $user2->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user2->setPseudo('modopseudo');
@@ -39,7 +39,7 @@ class AppFixtures extends Fixture
         $user3->setRoles(['admin']);
         $user3->setPassword('admin123');
         $user3->setRank('admin');
-        $user3->setBirthDate('1994-08-13');
+        $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
         $user3->setSex('H');
         $user3->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user3->setPseudo('adminpseudo');
