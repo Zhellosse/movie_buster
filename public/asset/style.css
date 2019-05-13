@@ -76,32 +76,78 @@ body{
 
 /* ///// HEADER \\\\\\\ */
 
+.nav{
+	border: 2px white solid;
+	width: 100%;
+    height : 150px;
+}
 
-.linav, #logo{
-	display : inline;	
-	float: left;
-	width : 20%;
+.ulnav{
+	width: 75%
+}
+.linav, .logo{
+	float: left;	
+	position : relative;
+	
 }
 
 .linav{
 	margin-top: 20px;
-	padding-left: 15%;
+	text-align: center;
+	width : 25%;
 }
 
-#logo{
+.logo{ /* aussi dans le footer */
 	font-size:50px;
-	color: white;
+	width: 25%;
 }
 
 #popcorn{
 	width:36px;
-	height:36px;
+	height:36px;	
 }
 
 
 /* ///// FIN HEADER \\\\\\\ */
 
-/* ///// Formulaire  \\\\\\\ */
+/* ///// FOOTER \\\\\\\ */
+
+.foot{
+	margin-top: 150px; /* Juste pour avoir un espace entre footer et header (à modifier */
+	border: 2px white solid;
+	width: 100%;
+	height : 150px;
+}
+
+.reseauSoc{
+	width: 25%;
+	float: left;
+}
+
+#twitter{
+	padding-left: 30px;
+}
+
+.ulfoot{
+	width:50%;
+	float: left;
+	padding-top: 10px;
+}
+
+.lifoot{
+	float: left;
+	width : 33%;
+	height: 50px;
+	position:relative;
+}
+
+#copyright{
+	font-size:10px;
+	padding-top: 30px;
+}
+/* ///// FIN FOOTER \\\\\\\ */
+
+/* ///// Formulaire inscription  \\\\\\\ */
 #register{
 	color : #FBFBFB;
 	text-align: center;
@@ -125,3 +171,16 @@ button{
 }
 
 /* ///// fin Formulaire  \\\\\\\ */
+
+
+
+/* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
+@media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
+	
+/*ne pas toucher */
+    
+}
+@media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
+
+
+}

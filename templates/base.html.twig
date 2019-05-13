@@ -10,15 +10,14 @@
         {% block stylesheets %}{% endblock %}
         
 
-        <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
-       
-
     </head>
+
     <body>
-        <header>
-            <div class="hautnav">                
-                <ul>
-                    <li id="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </li>
+        <!--------------- HEADER ---------------->
+        <header >
+            <div class="nav">               
+                <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
+                <ul class="ulnav">                    
                     <li class="linav"><a href="">HOME</a></li>
                     <li class="linav"><a href="">CONTACT</a></li>
                     <li class="linav" ><input type="text" placeholder="Search.."></li>
@@ -26,9 +25,35 @@
             </div>            
 
         </header>
+        <!--------------- FIN HEADER ---------------->
         
         {% block body %}{% endblock %}
         
+
+        <!--------------- FOOTER ---------------->
+        <footer>
+            <div class="foot">
+                <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
+                <div class="reseauSoc">
+                <img src="asset/img/icon-facebook.png" id="fb" alt="fb">
+                <img src="asset/img/icon-twitter.png" id="twitter" alt="twitter">
+                </div>
+
+                <ul class="ulfoot">                    
+                    <li class="lifoot"><a href="">HOME</a></li>
+                    <li class="lifoot"><a href="">CONTACT</a></li>
+                    <li class="lifoot"><a href="">Mention légale</a></li>                
+                </ul>
+
+                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Mellissa  </p>
+            </div>
+        </footer>
+
+        <!--------------- FIN FOOTER ---------------->
+
+
+
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
