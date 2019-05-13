@@ -101,8 +101,8 @@ body{
 
 /* ///// FIN HEADER \\\\\\\ */
 
-
-form{
+/* ///// Formulaire  \\\\\\\ */
+#register{
 	color : #FBFBFB;
 	text-align: center;
 	border: thick double #5847d0;
@@ -124,3 +124,4 @@ button{
 	border: none
 }
 
+/* ///// fin Formulaire  \\\\\\\ */
