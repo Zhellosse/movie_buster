@@ -14,7 +14,7 @@ class AppFixtures extends Fixture
 
         $user = new User();
         $user->setEmail('user@mail.fr');
-        $user->setRoles('user');
+        $user->setRoles(['user']);
         $user->setPassword('user123');
         $user->setRank('user');
         $user->setBirthDate('1990-05-25');
@@ -25,7 +25,7 @@ class AppFixtures extends Fixture
         
         $user2 = new User();
         $user2->setEmail('modo@mail.fr');
-        $user2->setRoles('modo');
+        $user2->setRoles(['modo']);
         $user2->setPassword('modo123');
         $user2->setRank('modo');
         $user2->setBirthDate('1995-11-04');
@@ -36,7 +36,7 @@ class AppFixtures extends Fixture
 
         $user3 = new User();
         $user3->setEmail('admin@mail.fr');
-        $user3->setRoles('admin');
+        $user3->setRoles(['admin']);
         $user3->setPassword('admin123');
         $user3->setRank('admin');
         $user3->setBirthDate('1994-08-13');
