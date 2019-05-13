@@ -77,8 +77,7 @@ body{
 /* ///// HEADER \\\\\\\ */
 
 
-.linav, #logo{
-	display : inline;	
+.linav, #logo{	
 	float: left;
 	width : 20%;
 }
