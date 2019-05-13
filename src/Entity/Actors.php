@@ -74,12 +74,12 @@ class Actors
 
     public function getBirthDate(): ?\DateTimeInterface
     {
-        return $this->age;
+        return $this->birth_date;
     }
 
-    public function setBirthDate(\DateTimeInterface $age): self
+    public function setBirthDate(\DateTimeInterface $birth_date): self
     {
-        $this->age = $age;
+        $this->birth_date = $birth_date;
 
         return $this;
     }
