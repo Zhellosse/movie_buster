@@ -5,18 +5,23 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Length;
+
 
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('pseudo')
             ->add('email')
-            ->add('plainPassword', PasswordType::class, [
+            ->add('Password', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
@@ -32,6 +37,19 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('sex', ChoiceType::class, [
+                'choices'  => [
+                    'Your choice'=> null,
+                    'Female' => true,
+                    'Male' => true,
+                ],
+            ])
+            ->add('avatar', FileType::class, ['label' => 'Avatar'])
+            ->add('birth_date', BirthdayType::class, [
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ]
+            ]);
         ;
     }
 
