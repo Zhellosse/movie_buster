@@ -218,7 +218,7 @@ class Movie
         return $this->actors;
     }
 
-    public function addActor(Actors $actor): self
+    public function addActors(Actors $actor): self
     {
         if (!$this->actors->contains($actor)) {
             $this->actors[] = $actor;

@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d6e961a3920a51fe3c06405b7b0062b71935a9d
          <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
@@ -15,7 +19,7 @@
             <div class="nav">               
                 <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
                 <ul class="ulnav">                    
-                    <li class="linav"><a href="{{ path('home') }}">HOME</a></li>
+                    <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
                     <li class="linav"><a href="">CONTACT</a></li>
                     <li class="linav" ><input type="text" placeholder="Search.."></li>
                 </ul>
@@ -41,19 +45,24 @@
                 </div>
 
                 <ul class="ulfoot">                    
-                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
+               
                     <li class="lifoot"><a href="">CONTACT</a></li>
-                    <li class="lifoot"><a href="{{ path('mentionsleg') }}">Mentions légales</a></li>                
+            
 
                 </ul>
 
-                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Mellissa  </p>
+                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Melissa  </p>
             </div>
         </footer>
 
         <!--------------- FIN FOOTER ---------------->
 
 
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="{{ asset('asset/script.js') }}">
     {% block script %}{% endblock %}
 

@@ -9,13 +9,14 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Validator\Constraints\Date;
 
+
 class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
         // $product = new Product();
         // $manager->persist($product);
-
+        /*
         $user = new User();
         $user->setEmail('user@mail.fr');
         $user->setRoles(['ROLE_USER']);
@@ -202,12 +203,16 @@ class AppFixtures extends Fixture
         $movie1->setDirector('jean-mi français');
         $movie1->setDuree(120);
         $movie1->setCountry('France');
-        $movie1->addActor(1);
+        
+
+        $movie1->addActors();
         $movie1->addGenre(26);
         $movie1->setUser(9);
         $manager->persist($movie1);
 
-*/
+
+
+
         
 
         
@@ -215,6 +220,7 @@ class AppFixtures extends Fixture
 
 
 
-        $manager->flush();
+
+        $manager->flush();*/
     }
 }
