@@ -3,31 +3,31 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+
     <p>Si vous n'avez pas encore de compte Movie Buster <button onclick="show()">Cliquez ici</button></p>
-<form id="register">
+    <form id="register" method="post">
+    <fieldset>
     {{ form_start(registrationForm) }}
+<<<<<<< HEAD
+         <legend>Inscription</legend>
+
+        {{ form_row(registrationForm.pseudo) }}     
+=======
 
         <div class="formu">
         {{ form_row(registrationForm.pseudo) }} 
+>>>>>>> 6d6e961a3920a51fe3c06405b7b0062b71935a9d
         {{ form_row(registrationForm.email) }}
-        </div>
-        <br>
-        <div class="formu">
         {{ form_row(registrationForm.Password) }}
+        {{ form_row(registrationForm.rank) }}
         {{ form_row(registrationForm.sex) }}
-        </div>
-        <br>
-        <div class="formu">
         {{ form_row(registrationForm.avatar) }}
-        </div>
-        <br>
-        <div class="formu">
         {{ form_row(registrationForm.birth_date) }}
-        </div>
-        
-
+    </fieldset>
         <button class="btn" value="S'inscrire"> S'inscrire</button>
-    {{ form_end(registrationForm) }}
-</form>
+        {{ form_end(registrationForm) }}
+    
+    </form>
+    
+
 {% endblock %}
