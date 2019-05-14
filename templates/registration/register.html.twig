@@ -1,4 +1,4 @@
-{% extends 'formulaire.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
@@ -7,15 +7,26 @@
     <p>Si vous n'avez pas encore de compte Movie Buster <button onclick="show()">Cliquez ici</button></p>
 <form id="register">
     {{ form_start(registrationForm) }}
+        <div class="formu">
         {{ form_row(registrationForm.pseudo) }} 
         {{ form_row(registrationForm.email) }}
+        </div>
+        <br>
+        <div class="formu">
         {{ form_row(registrationForm.Password) }}
         {{ form_row(registrationForm.sex) }}
+        </div>
+        <br>
+        <div class="formu">
         {{ form_row(registrationForm.avatar) }}
+        </div>
+        <br>
+        <div class="formu">
         {{ form_row(registrationForm.birth_date) }}
+        </div>
         
 
-        <button class="btn">Register</button>
+        <button class="btn" value="S'inscrire"> S'inscrire</button>
     {{ form_end(registrationForm) }}
 </form>
 {% endblock %}
