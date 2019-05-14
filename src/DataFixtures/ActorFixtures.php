@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints\Date;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 
-class ActorFixtures extends Fixture
+class ActorFixtures extends Fixture implements DependentFixtureInterface
 {
     //public const ACTOR_REFERENCE = 'ACTOR';
     
@@ -81,5 +81,23 @@ class ActorFixtures extends Fixture
         $manager->flush();
 
         $this->addReference('actor', $actor1);
+        $this->addReference('actor2', $actor2);
+        $this->addReference('actor3', $actor3);
+        $this->addReference('actor4', $actor4);
+        $this->addReference('actor5', $actor5);
+        $this->addReference('actor6', $actor6);
+        $this->addReference('actor7', $actor7);
+        $this->addReference('actor8', $actor8);
+        $this->addReference('actor9', $actor9);
+        $this->addReference('actor10', $actor10);
     }
+    public function getDependencies()
+    {
+        return array(
+
+            GenreFixtures::class,
+            
+
+            UserFixtures::class
+        );}
 }
