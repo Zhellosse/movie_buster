@@ -193,6 +193,7 @@ class AppFixtures extends Fixture
         $manager->persist($actor10);
 
         $movie1 = new Movie();
+        $actor = new Actors();
         $movie1->setTitle('qu\'est ce qu\'on a fait au bon dieu');
         $movie1->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
         $movie1->setClassification('tout public');
@@ -202,7 +203,9 @@ class AppFixtures extends Fixture
         $movie1->setDirector('jean-mi français');
         $movie1->setDuree(120);
         $movie1->setCountry('France');
-        $movie1->addActor(1);
+        
+
+        $movie1->addActors(Actors::class);
         $movie1->addGenre(26);
         $movie1->setUser(9);
         $manager->persist($movie1);
