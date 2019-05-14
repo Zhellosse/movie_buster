@@ -4,8 +4,11 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> dc483455df1c7f9683d4ae9df5eb79ef303cfc4a
          <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
@@ -18,7 +21,7 @@
             <div class="nav">               
                 <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
                 <ul class="ulnav">                    
-                    <li class="linav"><a href="">HOME</a></li>
+                    <li class="linav"><a href="{{ path('home') }}">HOME</a></li>
                     <li class="linav"><a href="">CONTACT</a></li>
                     <li class="linav" ><input type="text" placeholder="Search.."></li>
                 </ul>
@@ -27,22 +30,27 @@
         </header>
         <!--------------- FIN HEADER ---------------->
         
-        {% block body %}{% endblock %}
+        {% block body %}
+        
+        {% endblock %}
         
 
         <!--------------- FOOTER ---------------->
         <footer>
             <div class="foot">
-                <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
+                <div class="logo"> 
+                    M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER 
+                </div>
                 <div class="reseauSoc">
-                <img src="asset/img/icon-facebook.png" id="fb" alt="fb">
-                <img src="asset/img/icon-twitter.png" id="twitter" alt="twitter">
+                    <img src="asset/img/icon-facebook.png" id="fb" alt="fb">
+                    <img src="asset/img/icon-twitter.png" id="twitter" alt="twitter">
                 </div>
 
                 <ul class="ulfoot">                    
-                    <li class="lifoot"><a href="">HOME</a></li>
+                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
                     <li class="lifoot"><a href="">CONTACT</a></li>
-                    <li class="lifoot"><a href="">Mention légale</a></li>                
+                    <li class="lifoot"><a href="{{ path('mentionsleg') }}">Mentions légales</a></li>                
+
                 </ul>
 
                 <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Mellissa  </p>

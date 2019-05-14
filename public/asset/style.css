@@ -74,6 +74,10 @@ body{
     max-width: 1200px;
 }
 
+a{
+	color:white;
+}
+
 /* ///// HEADER \\\\\\\ */
 
 .nav{
@@ -185,6 +189,13 @@ button{
 
 /* ///// fin Formulaire  \\\\\\\ */
 
+/* ///// MENTION LEGALES \\\\\\\\ */
+.titreleg{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* ///// FIN MENTION LEGALES \\\\\\\\ */
 
 
 /* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
