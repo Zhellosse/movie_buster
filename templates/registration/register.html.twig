@@ -1,14 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'formulaire.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
 {% block body %}
     <h1>Register</h1>
-
+    <p>Si vous n'avez pas encore de compte Movie Buster <button onclick="show()">Cliquez ici</button></p>
+<form id="register">
     {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.pseudo) }} 
         {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
+        {{ form_row(registrationForm.Password) }}
+        {{ form_row(registrationForm.sex) }}
+        {{ form_row(registrationForm.avatar) }}
+        {{ form_row(registrationForm.birth_date) }}
+        
 
         <button class="btn">Register</button>
     {{ form_end(registrationForm) }}
+</form>
 {% endblock %}
