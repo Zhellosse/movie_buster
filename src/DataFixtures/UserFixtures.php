@@ -11,13 +11,13 @@ use Symfony\Component\Validator\Constraints\Date;
 
 class UserFixtures extends Fixture
 {
-   // public const USER_REFERENCE = 'user';
+    public const USER_REFERENCE = 'userr';
 
     public function load(ObjectManager $manager)
     {
         $user = new User();
         $user->setEmail('user@mail.fr');
-        $user->setRoles(['user']);
+        $user->setRoles(['ROLE_USER']);
         $user->setPassword('user123');
         $user->setRank('user');
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
@@ -28,7 +28,7 @@ class UserFixtures extends Fixture
         
         $user2 = new User();
         $user2->setEmail('modo@mail.fr');
-        $user2->setRoles(['modo']);
+        $user2->setRoles(['ROLE_MODO']);
         $user2->setPassword('modo123');
         $user2->setRank('modo');
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
@@ -39,7 +39,7 @@ class UserFixtures extends Fixture
 
         $user3 = new User();
         $user3->setEmail('admin@mail.fr');
-        $user3->setRoles(['admin']);
+        $user3->setRoles(['ROLE_ADMIN']);
         $user3->setPassword('admin123');
         $user3->setRank('admin');
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));

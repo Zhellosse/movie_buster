@@ -96,7 +96,26 @@ class GenreFixtures extends Fixture
         $manager->persist($genre20);
         $manager->flush();
 
-        $this->addReference(self::GENRE_REFERENCE, $genre6);
+        $this->addReference('genre', $genre);
+        $this->addReference('genre2', $genre2);
+        $this->addReference('genre3', $genre3);
+        $this->addReference('genre4', $genre4);
+        $this->addReference('genre5', $genre5);
+        $this->addReference('genre6', $genre6);
+        $this->addReference('genre7', $genre7);
+        $this->addReference('genre8', $genre8);
+        $this->addReference('genre9', $genre9);
+        $this->addReference('genre10', $genre10);
+        $this->addReference('genre11', $genre11);
+        $this->addReference('genre12', $genre12);
+        $this->addReference('genre13', $genre13);
+        $this->addReference('genre14', $genre14);
+        $this->addReference('genre15', $genre15);
+        $this->addReference('genre16', $genre16);
+        $this->addReference('genre17', $genre17);
+        $this->addReference('genre18', $genre18);
+        $this->addReference('genre19', $genre19);
+        $this->addReference('genre20', $genre20);
     }
 
 }
