@@ -16,4 +16,14 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    /**
+     * @Route("/termes", name="mentionsleg")
+     */
+    public function mentionLeg()
+    {
+        return $this->render('default/mentionleg.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }
