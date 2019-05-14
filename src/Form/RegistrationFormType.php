@@ -37,27 +37,8 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
-            ])
-            ->add('rank', ChoiceType::class, [
-                'choices'  => [
-                    'noob' => true,
-                ],
-            ])
-            ->add('sex', ChoiceType::class, [
-                'choices'  => [
-                    'Your choice'=> null,
-                    'Female' => true,
-                    'Male' => true,
-                ],
-            ])
-            ->add('avatar', FileType::class, ['label' => 'Avatar'])
-            ->add('birth_date', BirthdayType::class, [
-                'placeholder' => [
-                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-                ]
             ]);
-        ;
-        
+
     }
 
     public function configureOptions(OptionsResolver $resolver)
