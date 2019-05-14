@@ -9,6 +9,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Validator\Constraints\Date;
 
+
 class ActorFixtures extends Fixture
 {
     public const ACTOR_REFERENCE = 'ACTOR';
