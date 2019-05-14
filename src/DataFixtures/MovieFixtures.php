@@ -30,6 +30,7 @@ class MovieFixtures extends Fixture
         $movie1->addActors($this->getReference(ActorFixtures::ACTOR_REFERENCE));
         $movie1->addGenre($this->getReference(GenreFixtures::GENRE_REFERENCE));
         $movie1->setUser($this->getReference(UserFixtures::USER_REFERENCE));
+        
         $manager->persist($movie1);
 
 
