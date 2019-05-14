@@ -3,11 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6d6e961a3920a51fe3c06405b7b0062b71935a9d
-         <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
 
@@ -46,8 +42,9 @@
 
                 <ul class="ulfoot">                    
                
+                    <li class="lifoot"><a href="{{ path('home')}}">HOME</a></li>
                     <li class="lifoot"><a href="">CONTACT</a></li>
-            
+                    <li class="lifoot"><a href="{{ path('mentionleg')}}"> Mentions Legales</a></li>            
 
                 </ul>
 
