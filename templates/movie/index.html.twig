@@ -1,25 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MovieController!{% endblock %}
+{% block title %}Movie index{% endblock %}
 
 {% block body %}
-    <div class="movie_filter">
-        <ul>
-            <li>All genres</li>
-            <li>All classification</li>
-        </ul>
-    </div>
-    <div class="movie_line">
-        <div class="movie_form">
-            <div class="movie_poster"><img src="{{ asset('asset/img/movieaffiche/hitman_.jpg') }}" id="poster" alt="logo"></div>
-            <div class="movie_date">21/12/2009</div>
-            <div class="movie_score">8.75 (24)  </div>
-        </div>
-        <div class="movie_form">
-            <div class="movie_poster"><img src="asset/img/movieaffiche/hitman_.jpg" id="poster" alt="logo"></div>
-            <div class="movie_date">21/12/2009</div>
-            <div class="movie_score">8.75 (24)  </div>
-        </div>
-    </div>
+    <h1>Movie index</h1>
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Release_date</th>
+                <th>Classification</th>
+                <th>Synopsis</th>
+                <th>Affiche</th>
+                <th>Trailer</th>
+                <th>Director</th>
+                <th>Duree</th>
+                <th>Country</th>
+                <th>Title</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for movie in movies %}
+            <tr>
+                <td>{{ movie.id }}</td>
+                <td>{{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}</td>
+                <td>{{ movie.classification }}</td>
+                <td>{{ movie.synopsis }}</td>
+                <td>{{ movie.affiche }}</td>
+                <td>{{ movie.trailer }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.duree }}</td>
+                <td>{{ movie.country }}</td>
+                <td>{{ movie.title }}</td>
+                <td>
+                    <a href="{{ path('movie_show', {'id': movie.id}) }}">show</a>
+                    <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('movie_new') }}">Create new</a>
 {% endblock %}
