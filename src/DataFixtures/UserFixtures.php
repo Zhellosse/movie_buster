@@ -26,9 +26,10 @@ class UserFixtures extends Fixture
         $user = new User();
         $user->setEmail('user@mail.fr');
         $user->setRoles(['ROLE_USER']);
+
         $password = $this->encoder->encodePassword($user,'user123');
         $user->setPassword($password);
-        $user->setPassword('user123');
+
         $user->setRank('user');
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
         $user->setSex('H');
@@ -39,7 +40,10 @@ class UserFixtures extends Fixture
         $user2 = new User();
         $user2->setEmail('modo@mail.fr');
         $user2->setRoles(['ROLE_MODO']);
-        $user2->setPassword('modo123');
+
+
+        $password2 = $this->encoder->encodePassword($user2,'modo123');
+        $user2->setPassword($password);
         $user2->setRank('modo');
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
         $user2->setSex('F');
@@ -50,7 +54,10 @@ class UserFixtures extends Fixture
         $user3 = new User();
         $user3->setEmail('admin@mail.fr');
         $user3->setRoles(['ROLE_ADMIN']);
-        $user3->setPassword('admin123');
+
+        $password3 = $this->encoder->encodePassword($user3,'admin123');
+        $user3->setPassword($password3);
+        
         $user3->setRank('admin');
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
         $user3->setSex('H');
