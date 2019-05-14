@@ -4,11 +4,6 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
-<<<<<<< HEAD
-        
-
-=======
->>>>>>> dc483455df1c7f9683d4ae9df5eb79ef303cfc4a
          <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
@@ -21,7 +16,7 @@
             <div class="nav">               
                 <div class="logo"> M<img src="asset/img/popcornlogo.png" id="popcorn" alt="logo">VIE BUSTER </div>
                 <ul class="ulnav">                    
-                    <li class="linav"><a href="{{ path('home') }}">HOME</a></li>
+                    <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
                     <li class="linav"><a href="">CONTACT</a></li>
                     <li class="linav" ><input type="text" placeholder="Search.."></li>
                 </ul>
@@ -47,9 +42,9 @@
                 </div>
 
                 <ul class="ulfoot">                    
-                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
+               
                     <li class="lifoot"><a href="">CONTACT</a></li>
-                    <li class="lifoot"><a href="{{ path('mentionsleg') }}">Mentions légales</a></li>                
+            
 
                 </ul>
 
