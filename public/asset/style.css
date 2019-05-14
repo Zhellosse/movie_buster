@@ -160,7 +160,7 @@ a{
 	width: 60%;
 	position: relative;
 	margin: auto; 
-	top : 175px;	
+	top : 50px;	
 	display: none;
 }
 
@@ -173,6 +173,19 @@ button{
 	color:#6954f8;
 	border: none
 }
+ .formu{
+	 display: flex;
+	 justify-content: center;
+ }
+ input, textarea, select, button {
+	width : 150px;
+	margin: 0;
+  
+	-webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+	   -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+			box-sizing: border-box;
+  }
+
 
 /* ///// fin Formulaire  \\\\\\\ */
 
