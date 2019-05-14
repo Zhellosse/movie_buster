@@ -114,6 +114,23 @@ a{
 
 /* ///// FIN HEADER \\\\\\\ */
 
+/*////// DEBUT BODY:HOME /////// */
+#poster{
+	width : 200px;
+	height : 250px;
+}
+.movie_line{
+	 display: flex;
+}
+
+
+
+
+
+
+
+/*////// FIN BODY:HOME /////// */
+
 /* ///// FOOTER \\\\\\\ */
 
 .foot{
