@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints\Date;
 
 class UserFixtures extends Fixture
 {
-   // public const USER_REFERENCE = 'user';
+    public const USER_REFERENCE = 'userr';
 
     public function load(ObjectManager $manager)
     {

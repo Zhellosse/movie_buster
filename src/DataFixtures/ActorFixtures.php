@@ -8,9 +8,10 @@ use App\Entity\Movie;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Validator\Constraints\Date;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 
-class ActorFixtures extends Fixture
+class ActorFixtures extends Fixture implements DependentFixtureInterface
 {
     public const ACTOR_REFERENCE = 'ACTOR';
     
@@ -81,4 +82,13 @@ class ActorFixtures extends Fixture
 
         $this->addReference(self::ACTOR_REFERENCE, $actor1);
     }
+    public function getDependencies()
+    {
+        return array(
+
+            GenreFixtures::class,
+            
+
+            UserFixtures::class
+        );}
 }
