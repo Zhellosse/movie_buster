@@ -8,16 +8,26 @@ use App\Entity\Movie;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Validator\Constraints\Date;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture
 {
     public const USER_REFERENCE = 'userr';
 
+    private $encoder;
+
+    public function __construct(UserPasswordEncoderInterface $encoder)
+    {
+        $this->encoder = $encoder;
+    }
+    
     public function load(ObjectManager $manager)
     {
         $user = new User();
         $user->setEmail('user@mail.fr');
         $user->setRoles(['ROLE_USER']);
+        $password = $this->encoder->encodePassword($user,'user123');
+        $user->setPassword($password);
         $user->setPassword('user123');
         $user->setRank('user');
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
