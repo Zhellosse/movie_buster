@@ -8,11 +8,12 @@ use App\Entity\Movie;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Validator\Constraints\Date;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 
 class ActorFixtures extends Fixture
 {
-    public const ACTOR_REFERENCE = 'ACTOR';
+    //public const ACTOR_REFERENCE = 'ACTOR';
     
     public function load(ObjectManager $manager)
     {
@@ -79,6 +80,6 @@ class ActorFixtures extends Fixture
         $manager->persist($actor10);
         $manager->flush();
 
-        $this->addReference(self::ACTOR_REFERENCE, $actor1);
+        $this->addReference('actor', $actor1);
     }
 }

@@ -96,7 +96,7 @@ class GenreFixtures extends Fixture
         $manager->persist($genre20);
         $manager->flush();
 
-        $this->addReference(self::GENRE_REFERENCE, $genre6);
+        $this->addReference('genre', $genre6);
     }
 
 }

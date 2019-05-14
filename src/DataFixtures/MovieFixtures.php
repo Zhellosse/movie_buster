@@ -27,10 +27,10 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie1->setDuree(120);
         $movie1->setCountry('France');
         
-
-        $movie1->addActors($this->getReference(ActorFixtures::ACTOR_REFERENCE));
-        $movie1->addGenre($this->getReference(GenreFixtures::GENRE_REFERENCE));
-        $movie1->setUser($this->getReference('userr'));
+        $movie1->setUser($this->getReference('userr')); 
+       // $movie1->addActors($this->getReference('actor'));
+       // $movie1->addGenre($this->getReference('genre'));
+        
         $manager->persist($movie1);
 
 
