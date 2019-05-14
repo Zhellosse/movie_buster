@@ -18,7 +18,7 @@ class AppFixtures extends Fixture
         /*
         $user = new User();
         $user->setEmail('user@mail.fr');
-        $user->setRoles(['user']);
+        $user->setRoles(['ROLE_USER']);
         $user->setPassword('user123');
         $user->setRank('user');
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
@@ -29,7 +29,7 @@ class AppFixtures extends Fixture
         
         $user2 = new User();
         $user2->setEmail('modo@mail.fr');
-        $user2->setRoles(['modo']);
+        $user2->setRoles(['ROLE_MODO']);
         $user2->setPassword('modo123');
         $user2->setRank('modo');
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
@@ -40,7 +40,7 @@ class AppFixtures extends Fixture
 
         $user3 = new User();
         $user3->setEmail('admin@mail.fr');
-        $user3->setRoles(['admin']);
+        $user3->setRoles(['ROLE_ADMIN']);
         $user3->setPassword('admin123');
         $user3->setRank('admin');
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
@@ -191,7 +191,7 @@ class AppFixtures extends Fixture
         $actor10->setLastName('Nicholson');
         $actor10->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
         $manager->persist($actor10);
-
+/*
         $movie1 = new Movie();
         $movie1->setTitle('qu\'est ce qu\'on a fait au bon dieu');
         $movie1->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
@@ -208,6 +208,15 @@ class AppFixtures extends Fixture
         $movie1->addGenre(26);
         $movie1->setUser(9);
         $manager->persist($movie1);
+
+
+
+
+        
+
+        
+
+
 
 
 
