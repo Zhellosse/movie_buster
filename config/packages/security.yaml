@@ -34,5 +34,6 @@ security:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
         # - { path: ^/modo, roles: ROLE_MODO }
-        # - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }        
+
+
 
