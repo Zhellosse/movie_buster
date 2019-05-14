@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movie{% endblock %}
+
+{% block body %}
+    <h1>Movie</h1>
+     <td><img src="{{asset(movie.affiche)}}" title="affiche" alt="affiche du film"></td>
+    <table class="table">
+
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ movie.id }}</td>
+            </tr>
+            <tr>
+                <th>Release_date</th>
+                <td>{{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Classification</th>
+                <td>{{ movie.classification }}</td>
+             
+            </tr>
+            <tr>
+                <th>Synopsis</th>
+                <td>{{ movie.synopsis }}</td>
+            </tr>
+
+            <tr>
+                <th>Trailer</th>
+                <td>{{ movie.trailer }}</td>
+            </tr>
+            <tr>
+                <th>Director</th>
+                <td>{{ movie.director }}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ movie.duree }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ movie.country }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ movie.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('movie_index') }}">back to list</a>
+
+    <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
+
+    {{ include('movie/_delete_form.html.twig') }}
+{% endblock %}
