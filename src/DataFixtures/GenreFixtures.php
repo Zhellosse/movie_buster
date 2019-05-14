@@ -98,4 +98,5 @@ class GenreFixtures extends Fixture
 
         $this->addReference(self::GENRE_REFERENCE, $genre6);
     }
+
 }
