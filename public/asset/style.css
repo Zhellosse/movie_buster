@@ -190,9 +190,15 @@ button{
 /* ///// fin Formulaire  \\\\\\\ */
 
 /* ///// MENTION LEGALES \\\\\\\\ */
-.titreleg{
-	font-size: 30px;
+#infoleg{
+	font-size: 35px;
 	font-weight: bold;
+}
+
+.titreleg{
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 20px;
 }
 
 /* ///// FIN MENTION LEGALES \\\\\\\\ */
