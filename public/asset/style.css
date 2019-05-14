@@ -152,41 +152,68 @@ a{
 /* ///// FIN FOOTER \\\\\\\ */
 
 /* ///// Formulaire inscription  \\\\\\\ */
-#register{
+#register
+{
 	color : #FBFBFB;
 	text-align: center;
 	border: thick double #5847d0;
 	background-color:rgba(151, 175, 206, 0.2);
-	width: 60%;
+	width: 40%;
 	position: relative;
 	margin: auto; 
 	top : 50px;	
 	display: none;
 }
 
-.btn{
-	background-color: #6954f8
+.btn
+{
+	background-color: #6954f8;
+	color: #FBFBFB;
 }
 
-button{
+button
+{
 	background-color: #282733;
 	color:#6954f8;
 	border: none
 }
- .formu{
-	 display: flex;
-	 justify-content: center;
- }
- input, textarea, select, button {
-	width : 150px;
-	margin: 0;
-  
-	-webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
-	   -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
-			box-sizing: border-box;
-  }
 
+fieldset
+{
+	margin-bottom: 15px;
+	padding: 10px;
+}
 
+legend
+{
+	padding: 0px 3px;
+	font-weight: bold;
+}
+   
+ 
+label
+{
+	width: 110px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 6px;
+}
+
+input:focus
+{
+	background: #eaeaea;
+}
+   
+input, textarea
+{
+	width: 249px;
+}
+   
+select
+{
+	width: 254px;
+}
+   
 /* ///// fin Formulaire  \\\\\\\ */
 
 /* ///// MENTION LEGALES \\\\\\\\ */

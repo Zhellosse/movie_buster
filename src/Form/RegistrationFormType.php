@@ -38,6 +38,11 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('rank', ChoiceType::class, [
+                'choices'  => [
+                    'noob' => true,
+                ],
+            ])
             ->add('sex', ChoiceType::class, [
                 'choices'  => [
                     'Your choice'=> null,
