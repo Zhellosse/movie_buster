@@ -15,7 +15,7 @@ class AppFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-
+        /*
         $user = new User();
         $user->setEmail('user@mail.fr');
         $user->setRoles(['user']);
@@ -193,7 +193,6 @@ class AppFixtures extends Fixture
         $manager->persist($actor10);
 
         $movie1 = new Movie();
-        $actor = new Actors();
         $movie1->setTitle('qu\'est ce qu\'on a fait au bon dieu');
         $movie1->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
         $movie1->setClassification('tout public');
@@ -205,19 +204,13 @@ class AppFixtures extends Fixture
         $movie1->setCountry('France');
         
 
-        $movie1->addActors(Actors::class);
+        $movie1->addActors();
         $movie1->addGenre(26);
         $movie1->setUser(9);
         $manager->persist($movie1);
 
 
-        
 
-        
-
-
-
-
-        $manager->flush();
+        $manager->flush();*/
     }
 }
