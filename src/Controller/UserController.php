@@ -37,6 +37,7 @@ class UserController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            
             // ajout de l'input pour l'image
             $file = $user->getAvatar();
 
@@ -44,7 +45,7 @@ class UserController extends AbstractController
             // Move the file to the directory where images are stored
             try {
                 $file->move(
-                    $this->getParameter('images_directory'),
+                    $this->getParameter('avatars_directory'),
                     $fileName
                 );
             } catch (FileException $e) {

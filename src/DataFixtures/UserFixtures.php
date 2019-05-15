@@ -62,7 +62,6 @@ class UserFixtures extends Fixture
         $userweb = new User();
         $userweb->setEmail('quidelantoine@gmail.com');
         $userweb->setPseudo('antoine');
-        $userweb->setRank('admin');
         $userweb->setSex('H');
         $userweb->setAvatar('public\asset\img\avatar_default_300x300.png');
         $userweb->setRoles(array('ROLE_ADMIN','ROLE_USER'));
