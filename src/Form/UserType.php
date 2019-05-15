@@ -18,7 +18,7 @@ class UserType extends AbstractType
             ->add('password')
             ->add('birth_date')
             ->add('sex')
-            ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)'])
+            ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)', 'data_class' => null])
             ->add('pseudo')
         ;
     }

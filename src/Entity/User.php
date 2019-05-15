@@ -54,7 +54,7 @@ class User implements UserInterface
      * @Assert\NotBlank(message="Please, upload the image as a jpg or png file.")
      * @Assert\Image(
      * maxSize = "1024k",
-     * mimeTypes = { "image/jpeg", "image/png" },
+     * mimeTypes = { "image/jpeg", "image/png" }
      * )
      */
     private $avatar;
