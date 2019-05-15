@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Movie{% endblock %}
 
@@ -32,8 +32,8 @@
             Trailer :<a href="https://www.youtube.com/watch?v={{ movie.trailer }}">cliquez ici</a><br>
       
             <a href="{{ path('movie_index') }}">back to list</a>
-            <!--<a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
-            {{ include('movie/_delete_form.html.twig') }}--></p>
+            <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
+            {{ include('movie/_delete_form.html.twig') }}</p>
            
         </div>                                      
 
