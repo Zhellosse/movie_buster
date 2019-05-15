@@ -70,7 +70,7 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie3->setClassification('tout public');
         $movie3->setSynopsis('Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, a Hmong teenager who tried to steal Kowalski\'s prized possession: a 1972 Gran Torino.');
         $movie3->setAffiche('asset/img/movieaffiche/grantorino_.jpg');
-        $movie3->setTrailer('https://www.youtube.com/watch?v=9ecW-d-CBPc');
+        $movie3->setTrailer('RMhbr2XQblk');
         $movie3->setDirector('clint eastwood');
         $movie3->setDuree(140);
         $movie3->setCountry('US');
