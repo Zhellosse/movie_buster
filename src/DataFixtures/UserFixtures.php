@@ -56,6 +56,21 @@ class UserFixtures extends Fixture
         $user3->setPseudo('adminpseudo');
         $manager->persist($user3);
 
+
+        $userweb = new User();
+        $userweb->setEmail('quidelantoine@gmail.com');
+        $userweb->setPseudo('antoine');
+        $userweb->setSex('H');
+        $userweb->setAvatar('public\asset\img\avatar_default_300x300.png');
+        $userweb->setRoles(array('ROLE_ADMIN','ROLE_USER'));
+        $userweb->setPassword($this->encoder->encodePassword(
+            $userweb,
+            'michel'
+        ));
+        $userweb->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1978-02-06'));
+        $manager->persist($userweb);
+
+
         $manager->flush();
 
         $this->addReference('userr', $user3);

@@ -18,7 +18,7 @@ use App\Entity\User;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/", name="app_login")
+     * @Route("/login", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -52,7 +52,7 @@ class SecurityController extends AbstractController
             $user = $entityManager->getRepository(User::Class)->findOneByEmail($email);
             if($user === null){
                 $this->addflash('danger','Email Inconnu');
-                return $this->redirectToRoute('homepage');
+                return $this->redirectToRoute('home');
             }
             $token = $tokenGenerator->generateToken();
             $user->setToken($token);
@@ -108,7 +108,7 @@ class SecurityController extends AbstractController
         }
         //request=> user {$email,$token}
         if ($request->isMethod('POST')) {
-            $password1 = $request->request->get('password');
+            $password1 = $request->request->get('password1');
             $password2 = $request->request->get('password2');
             if(!empty($password1) && !empty($password2)){
                 if($password1 == $password2){

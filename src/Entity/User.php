@@ -51,7 +51,6 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @Assert\NotBlank(message="Please, upload the image as a jpg or png file.")
      * @Assert\Image(
      * maxSize = "1024k",
      * mimeTypes = { "image/jpeg", "image/png" }
@@ -79,13 +78,17 @@ class User implements UserInterface
      */
     private $comment;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $token;
+
     public function __construct()
     {
         $this->movies = new ArrayCollection();
         $this->note = new ArrayCollection();
         $this->comment = new ArrayCollection();
-        $this->roles = ['ROLE_USER'];  
-        $this->avatar = 'public\asset\img\avatar_default_300x300.png';
+        $this->roles = ['ROLE_USER'];
     }
 
     public function getId(): ?int
@@ -303,6 +306,18 @@ class User implements UserInterface
                 $comment->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    public function setToken(?string $token): self
+    {
+        $this->token = $token;
 
         return $this;
     }
