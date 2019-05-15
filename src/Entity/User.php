@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
+use App\Entity\User;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -38,22 +40,22 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=45)
-     */
-    private $rank;
-
-    /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $birth_date;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=45, nullable=true)
      */
     private $sex;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\NotBlank(message="Please, upload the image as a jpg or png file.")
+     * @Assert\Image(
+     * maxSize = "1024k",
+     * mimeTypes = { "image/jpeg", "image/png" }
+     * )
      */
     private $avatar;
 
@@ -77,11 +79,18 @@ class User implements UserInterface
      */
     private $comment;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $token;
+
     public function __construct()
     {
         $this->movies = new ArrayCollection();
         $this->note = new ArrayCollection();
         $this->comment = new ArrayCollection();
+        $this->roles = ['ROLE_USER'];  
+        $this->avatar = 'public\asset\img\avatar_default_300x300.png';
     }
 
     public function getId(): ?int
@@ -162,18 +171,6 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getRank(): ?string
-    {
-        return $this->rank;
-    }
-
-    public function setRank(string $rank): self
-    {
-        $this->rank = $rank;
-
-        return $this;
-    }
-
     public function getBirthDate(): ?\DateTimeInterface
     {
         return $this->birth_date;
@@ -198,12 +195,12 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getAvatar(): ?string
+    public function getAvatar() 
     {
         return $this->avatar;
     }
 
-    public function setAvatar(string $avatar): self
+    public function setAvatar($avatar): self
     {
         $this->avatar = $avatar;
 
@@ -311,6 +308,18 @@ class User implements UserInterface
                 $comment->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    public function setToken(?string $token): self
+    {
+        $this->token = $token;
 
         return $this;
     }
