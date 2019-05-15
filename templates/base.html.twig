@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="{{ asset('asset/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
@@ -14,37 +15,13 @@
         <header >
             <div class="nav">               
                 <div class="logo"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </div>
-                <ul class="ulnav">                    
-                    <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
-                    <li class="linav"><a href="">CONTACT</a></li>
-                    <li class="linav" ><input type="text" placeholder="Search.."></li>
-        
-
-                    <li><a href="{{ path('home') }}">Home</a></li>
-                    <li><a href="{{ path('movie_index') }}">film</a></li>
-                    
-
-                {% if is_granted('ROLE_USER') %}
-
-                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-                    <li><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
-
-                    {% if is_granted('ROLE_ADMIN') %}
-                    
-                    <li><a href="{{ path('admin') }}">Admin</a></li>
-                    
-                    {% endif %}
-                {% else %}
-
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
-
-                {% endif %}
-
-            
-
-                    
-                </ul>
+                <div id="link_nav">
+                    <ul class="ulnav">                    
+                        <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
+                        <li class="linav"><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
             </div>            
 
         </header>
