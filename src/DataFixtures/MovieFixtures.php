@@ -304,7 +304,7 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie18->setCountry('US');
         $movie18->setUser($this->getReference('userr')); 
         $movie18->addActors($this->getReference('actor8'));
-        $movie16->addGenre($this->getReference('genre18'));
+        $movie18->addGenre($this->getReference('genre18'));
         $manager->persist($movie18);
 
         
@@ -320,7 +320,7 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie19->setCountry('US');
         $movie19->setUser($this->getReference('userr')); 
         $movie19->addActors($this->getReference('actor9'));
-        $movie16->addGenre($this->getReference('genre19'));
+        $movie19->addGenre($this->getReference('genre19'));
         $manager->persist($movie19);
 
         
