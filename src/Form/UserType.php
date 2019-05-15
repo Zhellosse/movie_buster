@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UserType extends AbstractType
@@ -18,7 +19,7 @@ class UserType extends AbstractType
             ->add('rank')
             ->add('birth_date')
             ->add('sex')
-            ->add('avatar')
+            ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)'])
             ->add('pseudo')
         ;
     }
