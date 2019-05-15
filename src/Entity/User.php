@@ -51,7 +51,6 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @Assert\NotBlank(message="Please, upload the image as a jpg or png file.")
      * @Assert\Image(
      * maxSize = "1024k",
      * mimeTypes = { "image/jpeg", "image/png" }
@@ -89,8 +88,7 @@ class User implements UserInterface
         $this->movies = new ArrayCollection();
         $this->note = new ArrayCollection();
         $this->comment = new ArrayCollection();
-        $this->roles = ['ROLE_USER'];  
-        $this->avatar = 'public\asset\img\avatar_default_300x300.png';
+        $this->roles = ['ROLE_USER'];
     }
 
     public function getId(): ?int
