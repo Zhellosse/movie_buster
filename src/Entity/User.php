@@ -84,6 +84,8 @@ class User implements UserInterface
         $this->movies = new ArrayCollection();
         $this->note = new ArrayCollection();
         $this->comment = new ArrayCollection();
+        $this->roles = ['ROLE_USER'];  
+        $this->avatar = 'public\asset\img\avatar_default_300x300.png';
     }
 
     public function getId(): ?int
