@@ -6,7 +6,7 @@
 
     <p>Si vous n'avez pas encore de compte Movie Buster <button onclick="show()">Cliquez ici</button></p>
     <form id="register" method="post">
-    <fieldset>
+
     {{ form_start(registrationForm) }}
          <legend>Inscription</legend>
 
@@ -14,11 +14,10 @@
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.Password) }}
 
-    </fieldset>
         <button class="btn" value="S'inscrire"> S'inscrire</button>
         {{ form_end(registrationForm) }}
-    
     </form>
+    
     
 
 {% endblock %}
