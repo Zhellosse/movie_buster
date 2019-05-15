@@ -3,55 +3,35 @@
 {% block title %}Movie{% endblock %}
 
 {% block body %}
-    <h1>Movie</h1>
-     <td><img src="{{asset(movie.affiche)}}" title="affiche" alt="affiche du film"></td>
-    <table class="table">
+    
+        <div class="wrap">
+            <h1>{{ movie.title }}</h1>
+    <img src="{{asset(movie.affiche)}}" title="affiche" alt="affiche du film">
+            <p>Release_date : {{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}<br>
+            Classification : {{ movie.classification }}<br>
+            Director : {{ movie.director }}<br>
+            Duree : {{ movie.duree }}<br>
+            Genre : 
+            {% for  g in movie.genre %}
+                    {{ g.name }}     
+            {% endfor %}<br>
 
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ movie.id }}</td>
-            </tr>
-            <tr>
-                <th>Release_date</th>
-                <td>{{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Classification</th>
-                <td>{{ movie.classification }}</td>
-             
-            </tr>
-            <tr>
-                <th>Synopsis</th>
-                <td>{{ movie.synopsis }}</td>
-            </tr>
-
-            <tr>
-                <th>Trailer</th>
-                <td>{{ movie.trailer }}</td>
-            </tr>
-            <tr>
-                <th>Director</th>
-                <td>{{ movie.director }}</td>
-            </tr>
-            <tr>
-                <th>Duree</th>
-                <td>{{ movie.duree }}</td>
-            </tr>
-            <tr>
-                <th>Country</th>
-                <td>{{ movie.country }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ movie.title }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('movie_index') }}">back to list</a>
-
-    <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
-
-    {{ include('movie/_delete_form.html.twig') }}
+            Actors : 
+            {% for  actor in movie.actors %}
+                    {{ actor.firstname }}
+                    {{ actor.lastname }}
+            {% endfor %}<br>
+            Note : 
+            {% for  n in movie.note %}
+                    {{ n.score }}     
+            {% endfor %}<br>
+            Country : {{ movie.country }}<br>
+            Synopsis :<br>
+            {{ movie.synopsis }}<br>
+            Trailer :<a href="{{ movie.trailer }}">{{ movie.trailer }}</a><br>
+      
+            <a href="{{ path('movie_index') }}">back to list</a>
+            <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
+            {{ include('movie/_delete_form.html.twig') }}</p>
+        </div>
 {% endblock %}

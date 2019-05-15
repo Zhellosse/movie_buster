@@ -43,7 +43,7 @@ class UserFixtures extends Fixture
 
 
         $password2 = $this->encoder->encodePassword($user2,'modo123');
-        $user2->setPassword($password);
+        $user2->setPassword($password2);
         $user2->setRank('modo');
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
         $user2->setSex('F');

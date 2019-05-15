@@ -18,6 +18,32 @@
                     <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
                     <li class="linav"><a href="">CONTACT</a></li>
                     <li class="linav" ><input type="text" placeholder="Search.."></li>
+        
+
+                    <li><a href="{{ path('home') }}">Home</a></li>
+                    <li><a href="{{ path('movie_index') }}">film</a></li>
+                    
+
+                {% if is_granted('ROLE_USER') %}
+
+                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                    <li><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                    
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    
+                    {% endif %}
+                {% else %}
+
+                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+
+                {% endif %}
+
+            
+
+                    
                 </ul>
             </div>            
 
