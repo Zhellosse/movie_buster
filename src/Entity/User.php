@@ -58,7 +58,6 @@ class User implements UserInterface
      * maxSize = "1024k",
      * mimeTypes = { "image/jpeg", "image/png" },
      * )
-
      */
     private $avatar;
 
