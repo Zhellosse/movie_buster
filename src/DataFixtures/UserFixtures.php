@@ -29,8 +29,6 @@ class UserFixtures extends Fixture
 
         $password = $this->encoder->encodePassword($user,'user123');
         $user->setPassword($password);
-
-        $user->setRank('user');
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
         $user->setSex('H');
         $user->setAvatar('public\asset\img\avatar_default_300x300.png');
@@ -40,11 +38,8 @@ class UserFixtures extends Fixture
         $user2 = new User();
         $user2->setEmail('modo@mail.fr');
         $user2->setRoles(['ROLE_MODO']);
-
-
         $password2 = $this->encoder->encodePassword($user2,'modo123');
-        $user2->setPassword($password);
-        $user2->setRank('modo');
+        $user2->setPassword($password2);
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
         $user2->setSex('F');
         $user2->setAvatar('public\asset\img\avatar_default_300x300.png');
@@ -57,8 +52,6 @@ class UserFixtures extends Fixture
 
         $password3 = $this->encoder->encodePassword($user3,'admin123');
         $user3->setPassword($password3);
-        
-        $user3->setRank('admin');
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
         $user3->setSex('H');
         $user3->setAvatar('public\asset\img\avatar_default_300x300.png');

@@ -39,28 +39,26 @@ class User implements UserInterface
      */
     private $password;
 
-    /**
-     * @ORM\Column(type="string", length=45)
-     */
-    private $rank;
+
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $birth_date;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=45, nullable=true)
      */
     private $sex;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      * @Assert\NotBlank(message="Please, upload the image as a jpg or png file.")
      * @Assert\Image(
      * maxSize = "1024k",
      * mimeTypes = { "image/jpeg", "image/png" },
      * )
+
      */
     private $avatar;
 
@@ -167,18 +165,6 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
-    }
-
-    public function getRank(): ?string
-    {
-        return $this->rank;
-    }
-
-    public function setRank(string $rank): self
-    {
-        $this->rank = $rank;
-
-        return $this;
     }
 
     public function getBirthDate(): ?\DateTimeInterface

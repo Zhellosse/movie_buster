@@ -235,6 +235,13 @@ class Movie
 
         return $this;
     }
+     /**
+     * @return Collection|Genre[]
+     */
+    public function getGenre(): Collection
+    {
+        return $this->genre;
+    }
 
     public function addGenre(Genre $genre): self
     {
