@@ -12,19 +12,31 @@
 
     <body>
         <!--------------- HEADER ---------------->
-        <header >
+           <header >
             <div class="nav">               
                 <div class="logo"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </div>
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
                         <li class="linav"><a href="">CONTACT</a></li>
+                        <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
+                        <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
+
                     </ul>
+                    <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
                 </div>
-                <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
+                
             </div>            
 
         </header>
+
+
+           
+
+            
+
+                    
+           
         <!--------------- FIN HEADER ---------------->
         
         {% block body %}

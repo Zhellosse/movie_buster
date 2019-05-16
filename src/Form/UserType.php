@@ -39,8 +39,19 @@ class UserType extends AbstractType
                 ],
             
             ])
-            ->add('birth_date')
-            ->add('sex')
+            ->add('birth_date', BirthdayType::class, [
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ]
+             ])
+             ->add('sex', ChoiceType::class, [
+                'choices' => [
+                    'Sexe' => [
+                        'Homme' => 'H',
+                        'Femme' => 'F',
+                    ]
+                ]
+             ])
             ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)', 'data_class' => null])
             ->add('pseudo')
         ;
