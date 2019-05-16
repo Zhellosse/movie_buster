@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Movie
 {
+    
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -86,6 +87,8 @@ class Movie
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    
 
     public function __construct()
     {
