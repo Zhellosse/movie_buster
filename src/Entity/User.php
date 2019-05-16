@@ -52,7 +52,8 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
      * @Assert\Image(
-     * maxSize = "1024k",
+     * maxSize = "2M",
+     * maxSizeMessage = "Images supérieurs à 2Mo interdit",
      * mimeTypes = { "image/jpeg", "image/png" }
      * )
      */
