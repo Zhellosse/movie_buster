@@ -3,9 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Movie;
+use App\Entity\Actors;
+use App\Entity\Genre;
+use App\Entity\Note;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class MovieType extends AbstractType
 {
@@ -21,10 +25,21 @@ class MovieType extends AbstractType
             ->add('duree')
             ->add('country')
             ->add('title')
-            ->add('actors')
-            ->add('genre')
-            ->add('note')
-            ->add('user')
+            ->add('genre', EntityType::class, [
+                // looks for choices from this entity
+                'class' => Genre::class,
+                // uses the User.username property as the visible option string
+                'choice_label' => 'name',
+                ])
+
+            ->add('actors', EntityType::class, [
+                // looks for choices from this entity
+                'class' => Actors::class,
+                'choice_label' => function (Actors $actor) {
+                    return $actor->getFirstname() . ' ' . $actor->getLastname();
+                }
+            ])
+            
         ;
     }
 
