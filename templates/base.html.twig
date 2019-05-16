@@ -21,16 +21,20 @@
                         <li class="linav"><a href="">CONTACT</a></li>
                         <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
                         <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
-
                     </ul>
                     <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
                 </div>
-                
+            <div id="info_header">
+            <h1 id="titreSite">
+                Bienvenue sur<br>
+                Movie Buster
+            </h1>
+            <div></div>
+            <p>Movie Buster est un site permettant de ....</p>
+            </div>
             </div>            
-
         </header>
-
-
+    
            
 
             
@@ -73,7 +77,9 @@
 
 
         <script src="{{ asset('asset/js/script.js') }}"></script>
-    {% block script %}{% endblock %}
 
+    {% block script %}
+
+    {% endblock %}
     </body>
 </html>
