@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -35,8 +36,14 @@ class Movie
      */
     private $synopsis;
 
+  
     /**
-     * @ORM\Column(type="string", length=150)
+     * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\Image(
+     * maxSize = "4M",
+     * maxSizeMessage = "Images supérieurs à 4Mo interdit",
+     * mimeTypes = { "image/jpeg", "image/png" }
+     * )
      */
     private $affiche;
 

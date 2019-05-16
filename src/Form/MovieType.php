@@ -11,6 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class MovieType extends AbstractType
 {
@@ -25,7 +26,7 @@ class MovieType extends AbstractType
              ])
             ->add('classification')
             ->add('synopsis')
-            ->add('affiche')
+            ->add('affiche', FileType::class, ['label' => 'Affiche (JPG/PNG Files)', 'data_class' => null])
             ->add('trailer')
             ->add('director')
             ->add('duree')
@@ -36,6 +37,9 @@ class MovieType extends AbstractType
                 'class' => Genre::class,
                 // uses the User.username property as the visible option string
                 'choice_label' => 'name',
+                'translation_domain' => 'Default',
+                    'required' => false,
+                    'multiple' => true,
                 ])
 
             ->add('actors', EntityType::class, [
@@ -43,7 +47,11 @@ class MovieType extends AbstractType
                 'class' => Actors::class,
                 'choice_label' => function (Actors $actor) {
                     return $actor->getFirstname() . ' ' . $actor->getLastname();
-                }
+                },
+                'translation_domain' => 'Default',
+                    'required' => false,
+                    'multiple' => true,
+                
             ])
             
         ;

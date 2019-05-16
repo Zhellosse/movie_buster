@@ -26,12 +26,20 @@
                     </ul>
                     <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
                 </div>
-                
+                <div id="info_header">
+                    <h1 id="titreSite">
+                        Bienvenue sur<br>
+                        Movie Buster
+                    </h1>
+                    <div></div>
+                    <p>Movie Buster est un site permettant de .........................<br>
+                    ....................................................................
+                    </p>
+                    <input type="button" value="Inscrivez-vous" class="register_button">
+                </div>
             </div>            
-
         </header>
-
-
+    
            
 
             
@@ -74,7 +82,9 @@
 
 
         <script src="{{ asset('asset/js/script.js') }}"></script>
-    {% block script %}{% endblock %}
 
+    {% block script %}
+
+    {% endblock %}
     </body>
 </html>
