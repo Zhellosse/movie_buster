@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Service\FileUploader;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -12,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 
 /**
  * @Route("/user")
@@ -31,7 +33,7 @@ class UserController extends AbstractController
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
-    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder, FileUploader $fileUploader): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -48,21 +50,26 @@ class UserController extends AbstractController
                 
             );
             // ajout de l'input pour l'image
+            // $file = $user->getAvatar();
+
+            // $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            // // Move the file to the directory where images are stored
+            // try {
+            //     $file->move(
+            //         $this->getParameter('avatars_directory'),
+            //         $fileName
+            //     );
+            // } catch (FileException $e) {
+            //     // ... handle exception if something happens during file upload
+            // }
+
+            // // updates the 'image' property to store the image file name
+            // // instead of its contents
+            // $user->setAvatar($fileName);
+
             $file = $user->getAvatar();
+            $fileName = $fileUploader->upload($file);
 
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
-            // Move the file to the directory where images are stored
-            try {
-                $file->move(
-                    $this->getParameter('avatars_directory'),
-                    $fileName
-                );
-            } catch (FileException $e) {
-                // ... handle exception if something happens during file upload
-            }
-
-            // updates the 'image' property to store the image file name
-            // instead of its contents
             $user->setAvatar($fileName);
 
             $entityManager->persist($user);

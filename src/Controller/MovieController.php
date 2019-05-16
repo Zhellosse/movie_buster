@@ -36,6 +36,7 @@ class MovieController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            $annonce->setUser($user);
             $entityManager->persist($movie);
             $entityManager->flush();
 
@@ -69,6 +70,8 @@ class MovieController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($movie);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('movie_index', [
