@@ -44,9 +44,7 @@ class Movie
      * @ORM\Column(type="string", length=150)
      */
     private $trailer;
-
-   
-
+    
     /**
      * @ORM\Column(type="string", length=150)
      */

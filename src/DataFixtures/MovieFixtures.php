@@ -18,11 +18,11 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $movie1 = new Movie();
-        $movie1->setTitle('qu\'est ce qu\'on a fait au bon dieu');
+        $movie1->setTitle('qu\'est ce qu\'on a fait au bon dieu ');
         $movie1->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
         $movie1->setClassification('tout public');
         $movie1->setSynopsis('blblbl');
-        $movie1->setAffiche('url');
+        $movie1->setAffiche('asset/img/movieaffiche/bon_dieu.jpg');
         $movie1->setTrailer('yenapas');
         $movie1->setDirector('jean-mi français');
         $movie1->setDuree(120);
