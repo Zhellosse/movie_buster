@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 
 /**
- * @Route("/user")
+ * @Route("/admin/user")
  */
 class UserController extends AbstractController
 {
@@ -27,6 +27,20 @@ class UserController extends AbstractController
     {
         return $this->render('user/index.html.twig', [
             'users' => $userRepository->findAll(),
+        ]);
+    }
+    /**
+     * @Route("/profil", name="user_profil", methods={"GET"})
+     */
+    public function profil(): Response
+    {
+        $user =$this->getUser();
+        $id = $user->getId() ;
+
+        // $movies = fromthis user 
+        return $this->render('user/profil.html.twig', [
+            'user'=> $user,
+            
         ]);
     }
 
@@ -85,7 +99,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="user_show", methods={"GET"})
+     * @Route("/{id}/show", name="user_show", methods={"GET"})
      */
     public function show(User $user): Response
     {
@@ -117,7 +131,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="user_delete", methods={"DELETE"})
+     * @Route("/{id}/delete", name="user_delete", methods={"DELETE"})
      */
     public function delete(Request $request, User $user): Response
     {
@@ -139,4 +153,6 @@ class UserController extends AbstractController
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
+
+    
 }
