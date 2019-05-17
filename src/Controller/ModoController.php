@@ -4,8 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Actors;
 use App\Entity\Movie;
+use App\Entity\User;
 use App\Form\MovieType;
 use App\Repository\MovieRepository;
+use App\Repository\UserRepository;
 use App\Service\FileUploaderMovie;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,8 +15,20 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class ModoController extends AbstractController
 {
+    /**
+     * @Route("/modo/profil/myaddedmovie", name="movie_added", methods={"GET"})
+     */
+    public function index(MovieRepository $movieRepository, UserRepository $user  ): Response
+    {
+        $user = $this->getUser();
+        $id = $user->getId();
+        return $this->render('modo/movie_added.html.twig', [
+            'movies' => $movieRepository->findMovieByUser($id), 
+        ]);
+    }
     
 /**
  * @Route("/modo/newmovie", name="movie_add", methods={"GET"})

@@ -17,6 +17,7 @@ class MovieRepository extends ServiceEntityRepository
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Movie::class);
+        
     }
 
     // /**
@@ -34,19 +35,35 @@ class MovieRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-
-     public function findActorByMovie($value)
+*/
+     public function findMovieByUser($value)
     {
         return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
+            ->andWhere('m.user = :val')
             ->setParameter('val', $value)
             ->orderBy('m.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
+    public function countNote($value)
+    { return $this->getEntityManager()
+        ->createQuery(
+            'SELECT COUNT(id) FROM note WHERE movie_id = '.$value.'  ORDER BY p.name ASC'
+        )
+        ->getResult();
+
+        /*
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.user = :val')
+            ->setParameter('val', $value)
+            ->orderBy('m.id', 'ASC')
+            ->getQuery()
+            ->getResult()*/
+        ;
+    }
+
 
     /*
     public function findOneBySomeField($value): ?Movie
