@@ -5,14 +5,18 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Service\FileUploader;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 
 /**
- * @Route("/user")
+ * @Route("/admin/user")
  */
 class UserController extends AbstractController
 {
@@ -25,11 +29,25 @@ class UserController extends AbstractController
             'users' => $userRepository->findAll(),
         ]);
     }
+    /**
+     * @Route("/profil", name="user_profil", methods={"GET"})
+     */
+    public function profil(): Response
+    {
+        $user =$this->getUser();
+        $id = $user->getId() ;
+
+        // $movies = fromthis user 
+        return $this->render('user/profil.html.twig', [
+            'user'=> $user,
+            
+        ]);
+    }
 
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder, FileUploader $fileUploader): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -37,22 +55,35 @@ class UserController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            $user->setPassword(     
+                $passwordEncoder->encodePassword(
+                    $user,
+                    $form->get('password')->getData()
+                )
+                
+            );
             // ajout de l'input pour l'image
+            // $file = $user->getAvatar();
+
+            // $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            // // Move the file to the directory where images are stored
+            // try {
+            //     $file->move(
+            //         $this->getParameter('avatars_directory'),
+            //         $fileName
+            //     );
+            // } catch (FileException $e) {
+            //     // ... handle exception if something happens during file upload
+            // }
+
+            // // updates the 'image' property to store the image file name
+            // // instead of its contents
+            // $user->setAvatar($fileName);
+
             $file = $user->getAvatar();
+            $fileName = $fileUploader->upload($file);
 
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
-            // Move the file to the directory where images are stored
-            try {
-                $file->move(
-                    $this->getParameter('images_directory'),
-                    $fileName
-                );
-            } catch (FileException $e) {
-                // ... handle exception if something happens during file upload
-            }
-
-            // updates the 'image' property to store the image file name
-            // instead of its contents
             $user->setAvatar($fileName);
 
             $entityManager->persist($user);
@@ -68,7 +99,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="user_show", methods={"GET"})
+     * @Route("/{id}/show", name="user_show", methods={"GET"})
      */
     public function show(User $user): Response
     {
@@ -100,7 +131,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="user_delete", methods={"DELETE"})
+     * @Route("/{id}/delete", name="user_delete", methods={"DELETE"})
      */
     public function delete(Request $request, User $user): Response
     {
@@ -122,4 +153,6 @@ class UserController extends AbstractController
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
+
+    
 }

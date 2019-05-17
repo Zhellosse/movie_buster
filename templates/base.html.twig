@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="{{ asset('asset/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
         {% block stylesheets %}{% endblock %}
         
@@ -11,43 +12,52 @@
 
     <body>
         <!--------------- HEADER ---------------->
-        <header >
+           <header >
             <div class="nav">               
                 <div class="logo"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </div>
-                <ul class="ulnav">                    
-                    <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
-                    <li class="linav"><a href="">CONTACT</a></li>
-                    <li class="linav" ><input type="text" placeholder="Search.."></li>
-        
-
-                    <li><a href="{{ path('home') }}">Home</a></li>
-                    <li><a href="{{ path('movie_index') }}">film</a></li>
-                    
-
+                <div id="link_nav">
+                    <ul class="ulnav">                    
+                        <li class="linav"><a href="{{ path('home')}}">HOME</a></li>
+                        <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
                 {% if is_granted('ROLE_USER') %}
 
-                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-                    <li><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
+                    <li class="linav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
 
                     {% if is_granted('ROLE_ADMIN') %}
-                    
-                    <li><a href="{{ path('admin') }}">Admin</a></li>
-                    
+
+                        <li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
+                        <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
+
                     {% endif %}
                 {% else %}
+                  <li class="linav"><a href="{{ path('app_register') }}">Inscription</a></li>
+                  <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
 
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+              {% endif %}
 
-                {% endif %}
+                    </ul>
+                    <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>
+                </div>
+                <div id="info_header">
+                    <h1 id="titreSite">
+                        Bienvenue sur<br>
+                        <span id="relief">Movie Buster</span>
+                    </h1>
+                    <div></div>
+                    <p>Movie Buster est un site permettant de .........................<br>
+                    ....................................................................
+                    </p>
+                    <input type="submit" value="Inscrivez-vous" class="register_button">
+                </div>
+            </div>            
+        </header>
+    
+           
 
             
 
                     
-                </ul>
-            </div>            
-
-        </header>
+           
         <!--------------- FIN HEADER ---------------->
         
         {% block body %}
@@ -68,9 +78,9 @@
 
                 <ul class="ulfoot">                    
                
-                    <li class="lifoot"><a href="{{ path('home')}}">HOME</a></li>
-                    <li class="lifoot"><a href="">CONTACT</a></li>
-                    <li class="lifoot"><a href="{{ path('mentionleg')}}"> Mentions Legales</a></li>            
+                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
+                    <li class="lifoot"><a href="{{ path('contact') }}">CONTACT</a></li>
+                    <li class="lifoot"><a href="{{ path('mentionleg') }}"> Mentions Legales</a></li>            
 
                 </ul>
 
@@ -84,7 +94,9 @@
 
 
         <script src="{{ asset('asset/js/script.js') }}"></script>
-    {% block script %}{% endblock %}
 
+    {% block script %}
+
+    {% endblock %}
     </body>
 </html>

@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture
 {
-    public const USER_REFERENCE = 'userr';
+    //public const USER_REFERENCE = 'userr';
 
     private $encoder;
 
@@ -73,7 +73,8 @@ class UserFixtures extends Fixture
 
         $manager->flush();
 
-        $this->addReference('userr', $user3);
+        $this->addReference('user1', $user3);
+        $this->addReference('user2', $user2);
     }
 
 

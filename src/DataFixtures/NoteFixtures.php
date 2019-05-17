@@ -17,102 +17,102 @@ class NoteFixtures extends Fixture
     {
         $Note = new Note();
         $Note->setScore(2);
-        $Note->setUser($this->getReference('userr'));
+        $Note->setUser($this->getReference('user1'));
         $manager->persist($Note);
 
         $Note2 = new Note();
         $Note2->setScore(3);
-        $Note2->setUser($this->getReference('userr'));
+        $Note2->setUser($this->getReference('user1'));
         $manager->persist($Note2);
 
         $Note3 = new Note();
         $Note3->setScore(1);
-        $Note3->setUser($this->getReference('userr'));
+        $Note3->setUser($this->getReference('user1'));
         $manager->persist($Note3);
 
         $Note4 = new Note();
         $Note4->setScore(4);
-        $Note4->setUser($this->getReference('userr'));
+        $Note4->setUser($this->getReference('user1'));
         $manager->persist($Note4);
 
         $Note5 = new Note();
         $Note5->setScore(5);
-        $Note5->setUser($this->getReference('userr'));
+        $Note5->setUser($this->getReference('user1'));
         $manager->persist($Note5);
 
         $Note6 = new Note();
         $Note6->setScore(6);
-        $Note6->setUser($this->getReference('userr'));
+        $Note6->setUser($this->getReference('user1'));
         $manager->persist($Note6);
 
         $Note7 = new Note();
         $Note7->setScore(7);
-        $Note7->setUser($this->getReference('userr'));
+        $Note7->setUser($this->getReference('user1'));
         $manager->persist($Note7);
 
         $Note8 = new Note();
         $Note8->setScore(8);
-        $Note8->setUser($this->getReference('userr'));
+        $Note8->setUser($this->getReference('user1'));
         $manager->persist($Note8);
 
         $Note9 = new Note();
         $Note9->setScore(9);
-        $Note9->setUser($this->getReference('userr'));
+        $Note9->setUser($this->getReference('user1'));
         $manager->persist($Note9);
 
         $Note10 = new Note();
         $Note10->setScore(10);
-        $Note10->setUser($this->getReference('userr'));
+        $Note10->setUser($this->getReference('user1'));
         $manager->persist($Note10);
 
         $Note11 = new Note();
         $Note11->setScore(9);
-        $Note11->setUser($this->getReference('userr'));
+        $Note11->setUser($this->getReference('user1'));
         $manager->persist($Note11);
 
         $Note12 = new Note();
         $Note12->setScore(8);
-        $Note12->setUser($this->getReference('userr'));
+        $Note12->setUser($this->getReference('user1'));
         $manager->persist($Note12);
 
         $Note13 = new Note();
         $Note13->setScore(7);
-        $Note13->setUser($this->getReference('userr'));
+        $Note13->setUser($this->getReference('user1'));
         $manager->persist($Note13);
 
         $Note14 = new Note();
         $Note14->setScore(6);
-        $Note14->setUser($this->getReference('userr'));
+        $Note14->setUser($this->getReference('user1'));
         $manager->persist($Note14);
 
         $Note15 = new Note();
         $Note15->setScore(5);
-        $Note15->setUser($this->getReference('userr'));
+        $Note15->setUser($this->getReference('user1'));
         $manager->persist($Note15);
 
         $Note16 = new Note();
         $Note16->setScore(4);
-        $Note16->setUser($this->getReference('userr'));
+        $Note16->setUser($this->getReference('user2'));
         $manager->persist($Note16);
 
         $Note17 = new Note();
         $Note17->setScore(3);
-        $Note17->setUser($this->getReference('userr'));
+        $Note17->setUser($this->getReference('user2'));
         $manager->persist($Note17);
 
         $Note18 = new Note();
         $Note18->setScore(2);
-        $Note18->setUser($this->getReference('userr'));
+        $Note18->setUser($this->getReference('user2'));
         $manager->persist($Note18);
 
         $Note19 = new Note();
         $Note19->setScore(1);
-        $Note19->setUser($this->getReference('userr'));
+        $Note19->setUser($this->getReference('user2'));
         $manager->persist($Note19);
 
         $Note20 = new Note();
         $Note20->setScore(5);
-        $Note20->setUser($this->getReference('userr'));
+        $Note20->setUser($this->getReference('user2'));
         $manager->persist($Note20);
         $manager->flush();
 

@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -52,7 +53,8 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
      * @Assert\Image(
-     * maxSize = "1024k",
+     * maxSize = "2M",
+     * maxSizeMessage = "Images supérieurs à 2Mo interdit",
      * mimeTypes = { "image/jpeg", "image/png" }
      * )
      */
@@ -201,7 +203,6 @@ class User implements UserInterface
     public function setAvatar($avatar): self
     {
         $this->avatar = $avatar;
-
         return $this;
     }
 

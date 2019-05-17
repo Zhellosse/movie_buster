@@ -1,5 +1,11 @@
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class="col-lg-5">
 {{ form_start(form) }}
     {{ form_widget(form) }}
+    {{ form_row(form.password) }}
     {{ form_row(form.avatar) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+</div>

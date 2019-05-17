@@ -1,17 +1,20 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Actors;
 use App\Entity\Movie;
 use App\Form\MovieType;
 use App\Repository\MovieRepository;
+use App\Service\FileUploaderMovie;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/movie")
+ * @Route("/admin/movie")
  */
 class MovieController extends AbstractController
 {
@@ -28,7 +31,7 @@ class MovieController extends AbstractController
     /**
      * @Route("/new", name="movie_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request ,FileUploaderMovie $fileUploader): Response
     {
         $movie = new Movie();
         $form = $this->createForm(MovieType::class, $movie);
@@ -36,6 +39,16 @@ class MovieController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            $file = $form->get('affiche')->getData();
+            //$file = $movie->getAffiche();
+           // $file =$request->files->get('affiche');
+            $fileName = $fileUploader->upload($file);
+         
+
+            $movie->setAffiche($fileName);
+            $user = $this->getUser();
+            $movie->setUser($user);
+
             $entityManager->persist($movie);
             $entityManager->flush();
 
@@ -49,7 +62,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="movie_show", methods={"GET"})
+     * @Route("/show/{id}", name="movie_show", methods={"GET"})
      */
     public function show(Movie $movie): Response
     {
@@ -69,6 +82,8 @@ class MovieController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($movie);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('movie_index', [
@@ -83,7 +98,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="movie_delete", methods={"DELETE"})
+     * @Route("/{id}/delete", name="movie_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Movie $movie): Response
     {

@@ -12,9 +12,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use App\Entity\User;
 
-/**
-     * @Route("/login")
-     */
+
 class SecurityController extends AbstractController
 {
     /**
