@@ -29,20 +29,7 @@ class UserController extends AbstractController
             'users' => $userRepository->findAll(),
         ]);
     }
-    /**
-     * @Route("/profil", name="user_profil", methods={"GET"})
-     */
-    public function profil(): Response
-    {
-        $user =$this->getUser();
-        $id = $user->getId() ;
-
-        // $movies = fromthis user 
-        return $this->render('user/profil.html.twig', [
-            'user'=> $user,
-            
-        ]);
-    }
+   
 
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})

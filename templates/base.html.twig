@@ -21,6 +21,7 @@
                         <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
                 {% if is_granted('ROLE_USER') %}
 
+                    <li class="linav"><a href="{{ path('user_profil') }}">Profil</a></li>
                     <li class="linav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
 
                     {% if is_granted('ROLE_ADMIN') %}
