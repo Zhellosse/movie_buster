@@ -164,23 +164,20 @@ a{
 	margin-left : 45%;
 	margin-top : 50px;
 }
-#genre_select{
-	border : 0;
-	width : 10px;
-	color : red;
-}
+
 .movie_poster{
 	height:250px;
 	width : 180px;
 }
 .movie_card{
-	max-width: 180px;
+	max-width: 16.6666666667%;
+	float: left;
 }
-.movie_line{
+#movie_line{
 	margin-top : 70px;
-	display : flex; 
 	width : 100%;
-	justify-content: space-around;
+	max-width: 100%;
+	border : 2px solid white;
 }
 /*////// FIN BODY:HOME /////// */
 

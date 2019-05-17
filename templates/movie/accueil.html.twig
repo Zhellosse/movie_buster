@@ -3,25 +3,21 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<div class="movie_line">
-    {% for movie in movies|slice(0, 6) %}
+
+<div class="wrap" id="movie_line">
+    {% for movie in movies %}
             <div class="movie_card">
                 <img class="movie_poster" src="{{ asset(movie.affiche) }}">
                 <p>{{ movie.title }}</p>
                 <p>{{ movie.releaseDate ? movie.releaseDate|date('Y-m') : '' }}</p>
             </div>
     {% endfor %}
+    <div class="clear"></div>
 </div>
 
-<div class="movie_line">
-    {% for movie in movies|slice(6, 6) %}
-            <div class="movie_card">
-                <img class="movie_poster" src="{{ asset(movie.affiche) }}">
-                <p>{{ movie.title }}</p>
-                <p>{{ movie.releaseDate ? movie.releaseDate|date('Y-m') : '' }}</p>
-            </div>
-    {% endfor %}
-</div>
+
+
+
 <div id="view_more"><a href="">ViewMore <i class="far fa-arrow-alt-circle-down"></a></i></div>
 
 
