@@ -2,7 +2,27 @@
 
 {% block title %}User profil{% endblock %}
 
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('asset/style.css') }}">{% endblock %}
+
 {% block body %}
-    <h1>profil utilisateur</h1>
+    
+<div class="userProfil">
+    <table class="table">
+        <img src="{{asset('uploads/avatars/')}}{{ users.avatar }}" id="avatar">
+        <div class="infoUser">    
+            <h1 class="nomUser"> {{ users.pseudo }}</h1>
+            <p> Sexe : {{ users.sex }} </p>
+            <p> E-mail : {{ users.email }}<p>
+            <p> Date de Naissance : {{ users.birthDate ? users.birthDate|date('d/m/Y') : '' }}<p>    
+        </div>
+    </table>
+</div>
+<!--PREVOIR Nombre de commentaires envoyé de notes donnés -->
+
+<div class="filmsRecent">
+<!--PREVOIR AFFICHAGE DES DERNIERS FILMS REGARDES -->
+</div>
+
+
 
 {% endblock %}

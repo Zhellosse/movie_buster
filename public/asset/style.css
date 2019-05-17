@@ -319,6 +319,35 @@ select
 
 /* ///// FIN MENTION LEGALES \\\\\\\\ */
 
+/* ///// AFFICHAGE PROFIL \\\\\\\\ */
+.userProfil{
+	width: 50%;
+	height : 300px;
+	margin-left: 20%;
+	margin-top: 20px;
+	}
+
+#avatar{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+}
+
+.nomUser{
+	font-size: 35px;
+	font-weight: bold;
+}
+.infoUser{
+	font-size: 20px;
+	margin-left: 2%;
+	margin-top: 20px;
+}
+
+#avatar, .infoUser{
+	float: left;	
+	position : relative;
+}
+/* ///// FIN AFFICHAGE PROFIL \\\\\\\\ */
 
 /* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
 @media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */

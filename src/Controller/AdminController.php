@@ -15,7 +15,7 @@ class AdminController extends AbstractController
      */
     public function index(UserRepository $userRepository) : Response
     {
-        return $this->render('admin/index.html.twig', [
+        return $this->render('admin.html.twig', [
             'controller_name' => 'AdminController',
             'users' => $userRepository->findAll(),
         ]);

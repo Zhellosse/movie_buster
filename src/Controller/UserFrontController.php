@@ -27,12 +27,11 @@ class UserFrontController extends AbstractController
     /**
      * @Route("/profil", name="user_profil")
      */
-    public function profil(UserRepository $user) : Response
+    public function profil(UserRepository $users) : Response
     {
-        $user =$this->getUser();
+        $users =$this->getUser();
         return $this->render('user_front/profil.html.twig', [
-            'user'=> $user,
-            
+            'users'=> $users,            
         ]);
     }
 
