@@ -18,7 +18,7 @@
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
-                        <li class="linav"><a href="">CONTACT</a></li>
+                        <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
                         <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
                         <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
                         
@@ -29,13 +29,13 @@
                 <div id="info_header">
                     <h1 id="titreSite">
                         Bienvenue sur<br>
-                        Movie Buster
+                        <span id="relief">Movie Buster</span>
                     </h1>
                     <div></div>
                     <p>Movie Buster est un site permettant de .........................<br>
                     ....................................................................
                     </p>
-                    <input type="button" value="Inscrivez-vous" class="register_button">
+                    <input type="submit" value="Inscrivez-vous" class="register_button">
                 </div>
             </div>            
         </header>
@@ -66,9 +66,9 @@
 
                 <ul class="ulfoot">                    
                
-                    <li class="lifoot"><a href="{{ path('home')}}">HOME</a></li>
-                    <li class="lifoot"><a href="">CONTACT</a></li>
-                    <li class="lifoot"><a href="{{ path('mentionleg')}}"> Mentions Legales</a></li>            
+                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
+                    <li class="lifoot"><a href="{{ path('contact') }}">CONTACT</a></li>
+                    <li class="lifoot"><a href="{{ path('mentionleg') }}"> Mentions Legales</a></li>            
 
                 </ul>
 

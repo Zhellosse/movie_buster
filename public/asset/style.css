@@ -68,12 +68,8 @@ body{
 	background-color :#282733;
 }
 @font-face {
-    font-family: 'movie_poster_personal_useRg';
-    src: url('movie_poster_personal_use-webfont.woff2') format('woff2'),
-         url('movie_poster_personal_use-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    font-family: "movie";
+    src: url("../asset/font/Movie\ Poster\ Personal\ Use.ttf") format("truetype");
 }
 .wrap{
     margin: 0 auto;
@@ -113,6 +109,7 @@ a{
 	float: left;	
 	position : relative;
 	margin-left : 2%;
+	
 	margin-top : 20px;
 }
 #info_header{
@@ -121,14 +118,21 @@ a{
 }
 #titreSite{
 	font-size: 70px;
+
+}
+#relief{
+	font-family: "movie",arial,sans-serif;
+	
 }
 .linav{
-	font-family: "movie_poster_personal_useRg",arial,sans-serif;
+	font-family: "movie",arial,sans-serif;
+	font-size : 19px ;
 	margin-top: 20px;
 	text-align: center;
 	margin-top : 40px;
 	margin-right : 3%;
 }
+
 .register_button{
 	width : 150px;
 	height : 35px;
@@ -136,6 +140,11 @@ a{
 	color : white;
 	border : 0;
 	font: 400 16px/1.3 'Roboto', 'sans-serif';	
+}
+.register_button:visited {
+	
+	background-color: #6954f8;
+	border : 0;
 }
 .logo{ /* aussi dans le footer */
 	font-size:30px;
@@ -151,8 +160,28 @@ a{
 /* ///// FIN HEADER \\\\\\\ */
 
 /*////// DEBUT BODY:HOME /////// */
-
-
+#view_more{
+	margin-left : 45%;
+	margin-top : 50px;
+}
+#genre_select{
+	border : 0;
+	width : 10px;
+	color : red;
+}
+.movie_poster{
+	height:250px;
+	width : 180px;
+}
+.movie_card{
+	max-width: 180px;
+}
+.movie_line{
+	margin-top : 70px;
+	display : flex; 
+	width : 100%;
+	justify-content: space-around;
+}
 /*////// FIN BODY:HOME /////// */
 
 /* ///// FOOTER \\\\\\\ */
@@ -256,6 +285,28 @@ select
 }
    
 /* ///// fin Formulaire  \\\\\\\ */
+
+/* ///// Debut formulaire contact \\\\\\\\ */
+#contact
+{
+	color : #FBFBFB;
+	text-align: center;
+	border: thick double #5847d0;
+	background-color:rgba(151, 175, 206, 0.2);
+	width: 40%;
+	position: relative;
+	margin: auto; 
+	top : 50px;	
+}
+
+#form_submit
+{
+	background-color: #6954f8;
+	color: #FBFBFB;
+	width: 100px;
+	border: none
+}
+/* ///// Fin formulaire contact \\\\\\\\ */
 
 /* ///// MENTION LEGALES \\\\\\\\ */
 #infoleg{
