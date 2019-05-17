@@ -39,13 +39,15 @@ class MovieController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            
-            $file = $movie->getAffiche();
+            $file = $form->get('affiche')->getData();
+            //$file = $movie->getAffiche();
            // $file =$request->files->get('affiche');
             $fileName = $fileUploader->upload($file);
          
 
             $movie->setAffiche($fileName);
+            $user = $this->getUser();
+            $movie->setUser($user);
 
             $entityManager->persist($movie);
             $entityManager->flush();
@@ -60,7 +62,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="movie_show", methods={"GET"})
+     * @Route("/show/{id}", name="movie_show", methods={"GET"})
      */
     public function show(Movie $movie): Response
     {
@@ -96,7 +98,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="movie_delete", methods={"DELETE"})
+     * @Route("/{id}/delete", name="movie_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Movie $movie): Response
     {
