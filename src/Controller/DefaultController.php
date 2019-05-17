@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Movie;
+use App\Form\MovieType;
+use App\Repository\MovieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="home", methods={"GET"})
      */
-    public function index()
+    public function index(MovieRepository $movieRepository)
     {
-        return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
+        return $this->render('default/accueil.html.twig', [
+            'movies' => $movieRepository->findAll(),
         ]);
     }
 

@@ -84,9 +84,8 @@ a{
 /* ///// HEADER \\\\\\\ */
 
 .nav{
-	background-image: url('../asset/img/movieaffiche/cinéma.jpg');
+	background-image: url('../uploads/affiches/cinéma.jpg');
 	background-size: 100%;
-	background-position-x: center;
 	background-repeat: no-repeat;
 	width: 100%;
 	height : 800px;
@@ -103,7 +102,7 @@ a{
 	margin-top : 15px;
 }
 #link_nav{
-	margin-left : 55%;
+	margin-left : 45%;
 }
 .linav, .logo{
 	float: left;	
@@ -164,23 +163,21 @@ a{
 	margin-left : 45%;
 	margin-top : 50px;
 }
-#genre_select{
-	border : 0;
-	width : 10px;
-	color : red;
-}
+
 .movie_poster{
 	height:250px;
-	width : 180px;
+	width : auto;
 }
 .movie_card{
-	max-width: 180px;
+	max-width: 15%;
+	width : 15%;
+	float: left;
 }
-.movie_line{
+#movie_line{
 	margin-top : 70px;
-	display : flex; 
-	width : 100%;
-	justify-content: space-around;
+	width : 85%;
+	max-width: 85%;
+	margin-left : 15%;
 }
 /*////// FIN BODY:HOME /////// */
 

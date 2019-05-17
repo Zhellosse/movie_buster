@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="wrap" id="movie_line">
+    {% for movie in movies %}
+            <div class="movie_card">
+                <img class="movie_poster" src="{{asset('uploads/affiches/' )}}{{movie.affiche}}">
+                <p>{{ movie.title }}</p>
+                <p>{{ movie.releaseDate ? movie.releaseDate|date('Y-m') : '' }}</p>
+            </div>
+    {% endfor %}
+    <div class="clear"></div>
+</div>
+
+
+
+
+<div id="view_more"><a href="">ViewMore <i class="far fa-arrow-alt-circle-down"></a></i></div>
+
+
+
+{% endblock %}

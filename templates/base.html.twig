@@ -17,11 +17,23 @@
                 <div class="logo"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </div>
                 <div id="link_nav">
                     <ul class="ulnav">                    
-                        <li class="linav"><a href="{{ path('app_register')}}">HOME</a></li>
+                        <li class="linav"><a href="{{ path('home')}}">HOME</a></li>
                         <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
+                {% if is_granted('ROLE_USER') %}
+
+                    <li class="linav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+
+                    {% if is_granted('ROLE_ADMIN') %}
+
+                        <li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
                         <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
-                        <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
-                        
+
+                    {% endif %}
+                {% else %}
+                  <li class="linav"><a href="{{ path('app_register') }}">Inscription</a></li>
+                  <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
+
+              {% endif %}
 
                     </ul>
                     <input type="text" id ="search_bar"placeholder="Search.."><i class="fas fa-search"></i>

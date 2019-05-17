@@ -28,18 +28,6 @@ class MovieController extends AbstractController
         ]);
     }
 
-
-    /**
-     * @Route("/accueil", name="movie_accueil", methods={"GET"})
-     */
-    public function accueil(MovieRepository $movieRepository): Response
-    {
-        return $this->render('movie/accueil.html.twig', [
-           'movies' => $movieRepository->findAll(),
-        ]);
-    }
-
-
     /**
      * @Route("/new", name="movie_new", methods={"GET","POST"})
      */
