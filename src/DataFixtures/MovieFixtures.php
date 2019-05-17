@@ -356,7 +356,7 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie19->setSynopsis('On the outskirts of Whoville, there lives a green, revenge-seeking Grinch (Jim Carrey), who plans on ruining Christmas for all of the citizens of the town.');
         $movie19->setAffiche('grinch_.jpg');
         $movie19->setTrailer('DD0m9t4WHEQ');
-        $movie19->setDirector('on Howard ');
+        $movie19->setDirector('Ron Howard ');
         $movie19->setDuree(80);
         $movie19->setCountry('US');
         $movie19->setUser($this->getReference('user2')); 
