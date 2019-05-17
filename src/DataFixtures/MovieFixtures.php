@@ -22,7 +22,7 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie1->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '1937-04-22'));
         $movie1->setClassification('tout public');
         $movie1->setSynopsis('blblbl');
-        $movie1->setAffiche('asset/img/movieaffiche/bon_dieu.jpg');
+        $movie1->setAffiche('bon_dieu.jpg');
         $movie1->setTrailer('yenapas');
         $movie1->setDirector('jean-mi français');
         $movie1->setDuree(120);

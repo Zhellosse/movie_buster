@@ -7,7 +7,7 @@
 <div class="wrap" id="movie_line">
     {% for movie in movies %}
             <div class="movie_card">
-                <img class="movie_poster" src="{{ asset(movie.affiche) }}">
+                <img class="movie_poster" src="{{asset('uploads/affiches/' )}}{{movie.affiche}}">
                 <p>{{ movie.title }}</p>
                 <p>{{ movie.releaseDate ? movie.releaseDate|date('Y-m') : '' }}</p>
             </div>
