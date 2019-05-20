@@ -9,23 +9,29 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Length;
 
 
 
-class UserType extends AbstractType
+class UserFrontType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('pseudo')
-            ->add('email')
+            ->add('pseudo', TextType::class,[
+                'attr' => ['class' => 'pseudo'],
+            ])
+            ->add('email', TextType::class,[
+                'attr' => ['class' => 'mail'],
+            ])
             //->add('roles')
             ->add('password', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
+                'attr' => ['class' => 'password'],
                 'mapped' => false,
                 'constraints' => [
                     new NotBlank([
@@ -46,15 +52,21 @@ class UserType extends AbstractType
                         'Homme' => 'Homme',
                         'Femme' => 'Femme',
                     ]
-                ]
+                    ],
+                'attr' => ['class' => 'sexe'],
              ])
             ->add('birth_date', BirthdayType::class, [
                 'placeholder' => [
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-                ]
+                ],
+                'attr' => ['class' => 'birthday'],
              ])
-            ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)', 'data_class' => null])
+            ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)', 
+            'data_class' => null,
+            'attr' => ['class' => 'avatarInput'],
+            ])
             
+
             
         ;
     }
