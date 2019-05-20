@@ -243,6 +243,7 @@ a{
 	margin: auto; 
 	top : 50px;	
 	display: none;
+
 }
 
 .btn
@@ -317,6 +318,27 @@ select
 	border: none
 }
 /* ///// Fin formulaire contact \\\\\\\\ */
+/* ///// Debut formulaire New Actors\\\\\\\\ */
+
+
+/* ///// Fin formulaire New Actors \\\\\\\\ */
+
+.actors{
+
+	color : #FBFBFB;
+	text-align: center;
+	border: thick double #5847d0;
+	background-color:rgba(151, 175, 206, 0.2);
+	width: 40%;
+	position: relative;
+	margin: auto; 
+	top : 50px;	
+
+}
+
+#actors_birth_date_day, #actors_birth_date_month, #actors_birth_date_year {
+	width: 20%;
+}
 
 /* ///// MENTION LEGALES \\\\\\\\ */
 #infoleg{
