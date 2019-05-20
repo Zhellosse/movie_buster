@@ -19,8 +19,8 @@ class DefaultController extends AbstractController
      */
     public function index(MovieRepository $movieRepository, UserRepository $userRepository)
     {
-        $movie = $this->getMovies();
-        $id = $movie->getId();
+        //$movie = $this->getMovies();
+        //$id = $movie->getId();
         return $this->render('default/accueil.html.twig', [
             'movies' => $movieRepository->findAll(),
             'users' => $userRepository->findAll(),
