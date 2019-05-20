@@ -96,10 +96,12 @@ a{
 	top : 1.5px;
 	padding : 7px;
 	background-color : #6954f8;
+	border-radius: 0px 7px 7px 0px;
 }
 #search_bar{
 	height: 30px;
 	margin-top : 15px;
+	border-radius: 7px 0px 0px 7px;
 }
 #link_nav{
 	margin-left : 45%;
@@ -150,10 +152,12 @@ a{
 	width: 25%;
 }
 
+
 #popcorn{
 	width:36px;
 	height:36px;	
 }
+
 
 
 /* ///// FIN HEADER \\\\\\\ */
@@ -361,6 +365,14 @@ select
 	position : relative;
 }
 /* ///// FIN AFFICHAGE PROFIL \\\\\\\\ */
+
+/* ///// FORMULAIRE FRONT USERS \\\\\\\\ */
+.pseudo, .mail, .password, .sexe, .birthday select, .avatarInput{
+	border-radius: 5px;
+	height : 30px;
+}
+
+/* ///// FIN FORMULAIRE FRONT USER \\\\\\\\ */
 
 /* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
 @media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
