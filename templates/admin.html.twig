@@ -82,6 +82,21 @@
         </div>
       </li>
 
+      <!-- Nav Item - Actors Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActors" aria-expanded="true" aria-controls="collapseActors">
+          <i class="fas fa-portrait"></i>
+          <span>Acteurs</span>
+        </a>
+        <div id="collapseActors" class="collapse" aria-labelledby="headingActors" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Liste:</h6>
+            <a class="collapse-item" href="{{ path('actors_index')}}">Tout les acteurs</a>
+            <a class="collapse-item" href="{{ path('actors_new')}}">Ajout acteur</a>
+          </div>
+        </div>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
