@@ -179,11 +179,11 @@ a{
 
 }
 .movie_poster{
-	
+	text-align: center;
 }
 .movie_card{
 	font-size: 17px;
-	width : 10%;
+	width : 20%;
 	/* max-width: 10%; */
 	margin-right:2%;
 	margin-bottom: 20px;
