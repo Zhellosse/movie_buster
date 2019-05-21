@@ -29,7 +29,7 @@ class UserFixtures extends Fixture
         $password = $this->encoder->encodePassword($user,'user123');
         $user->setPassword($password);
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
-        $user->setSex('H');
+        $user->setSex('Homme');
         $user->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user->setPseudo('userpseudo');
         $manager->persist($user);
@@ -40,7 +40,7 @@ class UserFixtures extends Fixture
         $password2 = $this->encoder->encodePassword($user2,'modo123');
         $user2->setPassword($password2);
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
-        $user2->setSex('F');
+        $user2->setSex('Femme');
         $user2->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user2->setPseudo('modopseudo');
         $manager->persist($user2);
@@ -51,7 +51,7 @@ class UserFixtures extends Fixture
         $password3 = $this->encoder->encodePassword($user3,'admin123');
         $user3->setPassword($password3);
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
-        $user3->setSex('H');
+        $user3->setSex('Homme');
         $user3->setAvatar('public\asset\img\avatar_default_300x300.png');
         $user3->setPseudo('adminpseudo');
         $manager->persist($user3);
@@ -60,7 +60,7 @@ class UserFixtures extends Fixture
         $userweb = new User();
         $userweb->setEmail('quidelantoine@gmail.com');
         $userweb->setPseudo('antoine');
-        $userweb->setSex('H');
+        $userweb->setSex('Homme');
         $userweb->setAvatar('public\asset\img\avatar_default_300x300.png');
         $userweb->setRoles(array('ROLE_ADMIN','ROLE_USER'));
         $userweb->setPassword($this->encoder->encodePassword(
