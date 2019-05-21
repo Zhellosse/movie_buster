@@ -18,6 +18,7 @@ class Comment
 
     /**
      * @ORM\Column(type="text")
+
      */
     private $content;
 

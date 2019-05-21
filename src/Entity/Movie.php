@@ -23,21 +23,32 @@ class Movie
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank
      */
     private $release_date;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     * )
      */
     private $classification;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 3,
+     * )
      */
     private $synopsis;
 
   
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=100, nullable=true)
      * @Assert\Image(
      * maxSize = "4M",
@@ -48,36 +59,51 @@ class Movie
     private $affiche;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=150)
      */
     private $trailer;
     
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=150)
      */
     private $director;
 
     /**
+     * @Assert\NotBlank
      * @ORM\Column(type="integer")
      */
     private $duree;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank
+     * @ORM\Column(type="string")
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     * )
      */
     private $country;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank
+     * @ORM\Column(type="string")
+     *  * @Assert\Length(
+     *      min = 1,
+     *      max = 250,
+     * )
      */
     private $title;
 
     /**
+     * @Assert\NotBlank
      * @ORM\ManyToMany(targetEntity="App\Entity\Actors", inversedBy="movies")
      */
     private $actors;
 
     /**
+     * @Assert\NotBlank
      * @ORM\ManyToMany(targetEntity="App\Entity\Genre", inversedBy="movies")
      */
     private $genre;

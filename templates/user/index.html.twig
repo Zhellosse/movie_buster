@@ -2,20 +2,30 @@
 
 {% block title %}User index{% endblock %}
 
+{% block head %}
+{{ parent() }}
+<style>
+.avatarIndex{
+    width:50px;
+	height:50px;
+	border-radius: 50%;
+}
+</style>
+{% endblock %}
+
 {% block body %}
-    <h1>User index</h1>
+    <h1>Tout les Utilisateurs</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Pseudo</th>
                 <th>Email</th>
                 <th>Roles</th>
-                <th>Password</th>
-                <th>Birth_date</th>
-                <th>Sex</th>
-                <th>Avatar</th>
-                <th>Pseudo</th>
+                <th>Date de Naissance</th>
+                <th>Sexe</th>
+                <th>Avatar</th>                
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,13 +33,13 @@
         {% for user in users %}
             <tr>
                 <td>{{ user.id }}</td>
+                <td>{{ user.pseudo }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
                 <td>{{ user.birthDate ? user.birthDate|date('Y-m-d') : '' }}</td>
                 <td>{{ user.sex }}</td>
-                <td>{{ user.avatar }}</td>
-                <td>{{ user.pseudo }}</td>
+                <td><img src="{{asset('uploads/avatars/')}}{{ user.avatar }}" class="avatarIndex" style="width:35px; height:35px; border-radius: 50%; "></td>
+                
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
                     <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
