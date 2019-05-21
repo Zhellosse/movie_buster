@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -22,12 +22,21 @@ class Actors
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     * )
      */
     private $first_name;
 
-    /**
-     * @ORM\Column(type="string", length=100)
+   /**
+     * @ORM\Column(type="string")
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     * )
      */
     private $last_name;
 

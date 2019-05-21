@@ -18,6 +18,8 @@ class Contact
     protected $name;
 
     /**
+     * /**
+     * @Assert\NotBlank
      * @Assert\Email(
      *     message = "The email '{{ value }}' is not a valid email.",
      *     checkMX = true
