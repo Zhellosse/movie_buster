@@ -8,35 +8,39 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Release_date</th>
+                
+                <th>Titre</th>
+                <th>Réalisateur</th>
+                <th>Duree</th>
+                <th>Pays</th>
+                <th>Date de sortie</th>
                 <th>Classification</th>
                 <th>Synopsis</th>
                 <th>Affiche</th>
                 <th>Trailer</th>
-                <th>Director</th>
-                <th>Duree</th>
-                <th>Country</th>
-                <th>Title</th>
+                
+                
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for movie in movies %}
             <tr>
-                <td>{{ movie.id }}</td>
+                
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.duree }}</td>
+                <td>{{ movie.country }}</td>
                 <td>{{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}</td>
                 <td>{{ movie.classification }}</td>
                 <td>{{ movie.synopsis }}</td>
                 <td>{{ movie.affiche }}</td>
                 <td>{{ movie.trailer }}</td>
-                <td>{{ movie.director }}</td>
-                <td>{{ movie.duree }}</td>
-                <td>{{ movie.country }}</td>
-                <td>{{ movie.title }}</td>
+                
+                
                 <td>
-                    <a href="{{ path('movie_show', {'id': movie.id}) }}">show</a>
-                    <a href="{{ path('movie_edit', {'id': movie.id}) }}">edit</a>
+                    <a href="{{ path('movie_show', {'id': movie.id}) }}">afficher</a>
+                    <a href="{{ path('movie_edit', {'id': movie.id}) }}">modifier</a>
                 </td>
             </tr>
         {% else %}
