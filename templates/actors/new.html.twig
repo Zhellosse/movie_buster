@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Actors{% endblock %}
+
+{% block body %}
+    
+
+    <div class="actors">
+
+    <legend>Ajouter un Acteur</legend>
+
+    {{ include('actors/_form.html.twig') }}
+
+    <a href="{{ path('actors_index') }}">back to list</a>
+
+    </div>
+{% endblock %}
