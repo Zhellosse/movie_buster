@@ -8,12 +8,12 @@
     
 <div class="userProfil">
     <table class="table">
-        <img src="{{asset('uploads/avatars/')}}{{ users.avatar }}" id="avatar">
+        <img src="{{asset('uploads/avatars/')}}{{ app.user.avatar }}" id="avatar" style="width:50px; height:50px; border-radius: 50%; ">
         <div class="infoUser">    
-            <h1 class="nomUser"> {{ users.pseudo }}</h1>
-            <p> Sexe : {{ users.sex }} </p>
-            <p> E-mail : {{ users.email }}<p>
-            <p> Date de Naissance : {{ users.birthDate ? users.birthDate|date('d/m/Y') : '' }}<p>    
+            <h1 class="nomUser"> {{ app.user.pseudo }}</h1>
+            <p> Sexe : {{ app.user.sex }} </p>
+            <p> E-mail : {{ app.user.email }}<p>
+            <p> Date de Naissance : {{ app.user.birthDate ? app.user.birthDate|date('d/m/Y') : '' }}<p>    
         </div>
     </table>
 </div>
