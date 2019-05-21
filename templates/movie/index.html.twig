@@ -3,8 +3,8 @@
 {% block title %}Movie index{% endblock %}
 
 {% block body %}
-    <h1>Movie index</h1>
- <a href="{{ path('movie_new') }}">Create new</a>
+    <h1>Film index</h1>
+ <a href="{{ path('movie_new') }}">Inserer un nouveau film</a>
     <table class="table">
         <thead>
             <tr>
@@ -12,10 +12,8 @@
                 <th>Titre</th>
                 <th>Réalisateur</th>
                 <th>Duree</th>
-                <th>Pays</th>
                 <th>Date de sortie</th>
                 <th>Classification</th>
-                <th>Synopsis</th>
                 <th>Affiche</th>
                 <th>Trailer</th>
                 
@@ -30,11 +28,9 @@
                 <td>{{ movie.title }}</td>
                 <td>{{ movie.director }}</td>
                 <td>{{ movie.duree }}</td>
-                <td>{{ movie.country }}</td>
                 <td>{{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}</td>
                 <td>{{ movie.classification }}</td>
-                <td>{{ movie.synopsis }}</td>
-                <td>{{ movie.affiche }}</td>
+                <td><img src="{{asset('uploads/affiches/')}}{{ movie.affiche }}" class="afficheIndex" style="width:35px; height:35px; "></td>
                 <td>{{ movie.trailer }}</td>
                 
                 
