@@ -7,7 +7,6 @@
 <p id="lib">Les derniers ajouts :</p>
     {% for movie in movies %}
             <div class="movie_card">
-            {{ movie.affiche }}
                 <a href="{{ path('movie_show_front', {'id': movie.id}) }}"><img class="movie_poster" src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} "></a>
                 <div class="movie_info">
                     <p class="movie_title">{{ movie.title|title }}</p>
