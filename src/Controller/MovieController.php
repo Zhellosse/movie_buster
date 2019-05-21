@@ -13,13 +13,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/admin/movie")
- */
 class MovieController extends AbstractController
 {
     /**
-     * @Route("/", name="movie_index", methods={"GET"})
+     * @Route("/admin/movie/", name="movie_index", methods={"GET"})
      */
     public function index(MovieRepository $movieRepository): Response
     {
@@ -29,7 +26,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="movie_new", methods={"GET","POST"})
+     * @Route("/admin/movie/new", name="movie_new", methods={"GET","POST"})
      */
     public function new(Request $request ,FileUploaderMovie $fileUploader): Response
     {
@@ -62,7 +59,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/show/{id}", name="movie_show", methods={"GET"})
+     * @Route("/admin/movie/show/{id}", name="movie_show", methods={"GET"})
      */
     public function show(Movie $movie): Response
     {
@@ -73,8 +70,20 @@ class MovieController extends AbstractController
         ]);
     }
 
+    
     /**
-     * @Route("/{id}/edit", name="movie_edit", methods={"GET","POST"})
+     * @Route("/movie/show/{id}", name="movie_show_front", methods={"GET"})
+     */
+    public function showFront(Movie $movie): Response
+    {
+        
+        return $this->render('movie/show.html.twig', [
+            'movie' => $movie,
+           
+        ]);
+    }
+    /**
+     * @Route("/admin/movie/{id}/edit", name="movie_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Movie $movie): Response
     {
@@ -98,7 +107,7 @@ class MovieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/delete", name="movie_delete", methods={"DELETE"})
+     * @Route("/admin/movie/{id}/delete", name="movie_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Movie $movie): Response
     {

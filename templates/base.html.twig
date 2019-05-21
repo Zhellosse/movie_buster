@@ -9,15 +9,16 @@
         
 
     </head>
+    <STYLE>A {text-decoration: none;} </STYLE>
 
     <body>
         <!--------------- HEADER ---------------->
            <header >
             <div class="nav">               
-                <div class="logo"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </div>
+                <div class="logo"><a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a></div>
                 <div id="link_nav">
                     <ul class="ulnav">                    
-                        <li class="linav"><a href="{{ path('home')}}">HOME</a></li>
+                        
                         <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
                 {% if is_granted('ROLE_USER') %}
 
@@ -26,7 +27,7 @@
 
                     {% if is_granted('ROLE_ADMIN') %}
 
-                        <li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>
+                        <!--<li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>-->
                         <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
 
                     {% endif %}
