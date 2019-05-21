@@ -72,7 +72,7 @@ class MovieController extends AbstractController
 
     
     /**
-     * @Route("/movie/show/{id}", name="movie_show", methods={"GET"})
+     * @Route("/movie/show/{id}", name="movie_show_front", methods={"GET"})
      */
     public function showFront(Movie $movie): Response
     {

@@ -30,7 +30,7 @@ class UserFixtures extends Fixture
         $user->setPassword($password);
         $user->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-05-25'));
         $user->setSex('Homme');
-        $user->setAvatar('public\asset\img\avatar_default_300x300.png');
+        $user->setAvatar('avatar_default_300x300.png');
         $user->setPseudo('userpseudo');
         $manager->persist($user);
         
@@ -41,7 +41,7 @@ class UserFixtures extends Fixture
         $user2->setPassword($password2);
         $user2->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-06-05'));
         $user2->setSex('Femme');
-        $user2->setAvatar('public\asset\img\avatar_default_300x300.png');
+        $user2->setAvatar('avatar_default_300x300.png');
         $user2->setPseudo('modopseudo');
         $manager->persist($user2);
 
@@ -52,7 +52,7 @@ class UserFixtures extends Fixture
         $user3->setPassword($password3);
         $user3->setBirthDate(\DateTime::createFromFormat('Y-m-d', '1990-12-25'));
         $user3->setSex('Homme');
-        $user3->setAvatar('public\asset\img\avatar_default_300x300.png');
+        $user3->setAvatar('avatar_default_300x300.png');
         $user3->setPseudo('adminpseudo');
         $manager->persist($user3);
 
@@ -61,7 +61,7 @@ class UserFixtures extends Fixture
         $userweb->setEmail('quidelantoine@gmail.com');
         $userweb->setPseudo('antoine');
         $userweb->setSex('Homme');
-        $userweb->setAvatar('public\asset\img\avatar_default_300x300.png');
+        $userweb->setAvatar('avatar_default_300x300.png');
         $userweb->setRoles(array('ROLE_ADMIN','ROLE_USER'));
         $userweb->setPassword($this->encoder->encodePassword(
             $userweb,

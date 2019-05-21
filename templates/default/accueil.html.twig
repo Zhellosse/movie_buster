@@ -8,7 +8,7 @@
 <p id="lib">Les derniers ajouts :</p>
     {% for movie in movies %}
             <div class="movie_card">
-                <a href=""><img class="movie_poster" src="{{asset('uploads/affiches/' )}}{{movie.affiche}}"></a>
+                <a href="{{ path('movie_show_front', {'id': movie.id}) }}"><img class="movie_poster" src="{{asset('uploads/affiches/' )}}{{movie.affiche}}"></a>
                 <div class="movie_info">
                     <p class="movie_title">{{ movie.title|title }}</p>
                     <p class="movie_date">{{ movie.releaseDate ? movie.releaseDate|date('Y') : '' }}</p>

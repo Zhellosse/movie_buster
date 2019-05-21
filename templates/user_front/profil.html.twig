@@ -8,7 +8,8 @@
     
 <div class="userProfil">
     <table class="table">
-        <img src="{{asset('uploads/avatars/')}}{{ users.avatar }}" id="avatar">
+        <img src="{{asset('uploads/avatars/')}}{{users.avatar}}" id="avatar">
+        
         <div class="infoUser">    
             <h1 class="nomUser"> {{ users.pseudo }}</h1>
             <p> Sexe : {{ users.sex }} </p>
