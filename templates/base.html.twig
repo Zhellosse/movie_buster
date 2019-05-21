@@ -19,21 +19,21 @@
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         
-                        <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
+                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "> Contact</i></a></li>
                 {% if is_granted('ROLE_USER') %}
 
-                    <li class="linav"><a href="{{ path('user_profil') }}">Profil</a></li>
-                    <li class="linav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                    <li class="linav"><a href="{{ path('user_profil') }}"><i class="far fa-address-card "> Profil</i></a></li>
+                    <li class="linav"><a href="{{ path('app_logout') }}"><i class="fas fa-walking "> Deconnexion</i></a></li>
 
                     {% if is_granted('ROLE_ADMIN') %}
 
                         <!--<li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>-->
-                        <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
+                        <li class="linav"><a href="{{ path('admin') }}"><i class="fas fa-tools "> Admin</i></a></li>
 
                     {% endif %}
                 {% else %}
-                  <li class="linav"><a href="{{ path('app_register') }}">Inscription</a></li>
-                  <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
+                  <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> Inscription</i></a></li>
+                  <li class="linav"><a href="{{ path('app_login') }}"><i class="fas fa-user "> Connexion</i></a></li>
 
               {% endif %}
 
