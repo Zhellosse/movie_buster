@@ -70,23 +70,22 @@
         <!--------------- FOOTER ---------------->
         <footer>
             <div class="foot">
-                <div class="logo"> 
-                    M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER 
+                <div class="logo2" id="logofoot"> 
+                   <a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a><br>
+                   <i class="fab fa-twitter " id="twitter" ></i>
+                    <i class="fab fa-facebook-f " id="fb" ></i>
+                    
                 </div>
-                <div class="reseauSoc">
-                    <a href="https://www.facebook.com/Movie-Buster-397536957507337/"><img src="{{asset('asset/img/icon-facebook.png')}}" id="fb" alt="fb"></a>
-                    <img src="{{asset('asset/img/icon-twitter.png')}}" id="twitter" alt="twitter">
-                </div>
+                    <div id="lienfoot">
+                    <a href="{{ path('user_profil') }}"><i class="far fa-address-card fa-2x"id="profil"> Profil</i></a>
+                    <a href="{{ path('contact') }}"><i class="far fa-address-book fa-2x"id="contacts"> Contact</i></a>
+                    <a href="{{ path('mentionleg') }}"><i class="fas fa-info-circle fa-2x"id="mentionlegales"> Mentions legales</i></a>
+                    </div>           
 
-                <ul class="ulfoot">                    
                
-                    <li class="lifoot"><a href="{{ path('home') }}">HOME</a></li>
-                    <li class="lifoot"><a href="{{ path('contact') }}">CONTACT</a></li>
-                    <li class="lifoot"><a href="{{ path('mentionleg') }}"> Mentions Legales</a></li>            
-
-                </ul>
-
-                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Mélissa  </p>
+                <div id="copy">
+                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site :<br> Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Melissa  </p>
+                </div>
             </div>
         </footer>
 
