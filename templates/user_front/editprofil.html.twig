@@ -5,11 +5,12 @@
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('asset/style.css') }}">{% endblock %}
 
 {% block body %}
-
+<div class="editprofil">
 {{ form_start(form) }}
     {{ form_widget(form) }}
     <button class="btn">Valider</button>
 {{ form_end(form) }}
+</div>
 
 
 

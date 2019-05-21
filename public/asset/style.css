@@ -133,7 +133,7 @@ a{
 }
 .linav{
 	font-family: "movie",arial,sans-serif;
-	font-size : 19px ;
+	font-size : 29px ;
 	margin-top: 20px;
 	text-align: center;
 	margin-top : 40px;
@@ -441,3 +441,16 @@ select
     #movie_line{margin-left:0;}
 
 }
+/* formulaire edit profil en front*/
+.editprofil{
+	
+	color : #FBFBFB;
+	text-align: center;
+	border: thick double #791a1e;
+	background-color:rgba(151, 175, 206, 0.2);
+	width: 40%;
+	position: relative;
+	margin: auto; 
+	
+}
+/*fin formulaire edit profil en front*/

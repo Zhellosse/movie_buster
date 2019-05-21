@@ -3,15 +3,15 @@
 {% block title %}Actors index{% endblock %}
 
 {% block body %}
-    <h1>Actors index</h1>
+    <h1>Liste des acteurs</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>First_name</th>
-                <th>Last_name</th>
-                <th>Birth_date</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,8 +23,8 @@
                 <td>{{ actor.lastName }}</td>
                 <td>{{ actor.birthDate ? actor.birthDate|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('actors_show', {'id': actor.id}) }}">show</a>
-                    <a href="{{ path('actors_edit', {'id': actor.id}) }}">edit</a>
+                    <a href="{{ path('actors_show', {'id': actor.id}) }}">Afficher</a>
+                    <a href="{{ path('actors_edit', {'id': actor.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('actors_new') }}">Create new</a>
+    <a href="{{ path('actors_new') }}">Ajouter nouvel acteur</a>
 {% endblock %}
