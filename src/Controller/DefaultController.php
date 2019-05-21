@@ -5,11 +5,12 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Repository\MovieRepository;
 use App\Entity\Movie;
 use App\Form\MovieType;
-use App\Repository\MovieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use  App\Controller\MovieController;
 
 class DefaultController extends AbstractController
 {
@@ -18,6 +19,8 @@ class DefaultController extends AbstractController
      */
     public function index(MovieRepository $movieRepository, UserRepository $userRepository)
     {
+        //$movie = $this->getMovies();
+        //$id = $movie->getId();
         return $this->render('default/accueil.html.twig', [
             'movies' => $movieRepository->findAll(),
             'users' => $userRepository->findAll(),
