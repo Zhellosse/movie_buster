@@ -26,15 +26,15 @@ class UserController extends AbstractController
      */
     public function index(UserRepository $users): Response
     {   
-        //Pagination
+        //Pagination (ne fonctionne pas)
         
         $repository = $this->getDoctrine()->getManager()->getRepository(User::class);
 
-        //$repository->count()
+        //$repository->count() 
         $totalItems = 4 ;
         $itemsPerPage = 2;
         $currentPage =  1;
-        $urlPattern = "/page/(:num)";
+        $urlPattern = "?page=(:num)";
 
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
