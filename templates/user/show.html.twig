@@ -8,8 +8,16 @@
     <table class="table">
         <tbody>
             <tr>
+                <th>Avatar</th>
+                <td><img src="{{asset('uploads/avatars/')}}{{ user.avatar }}" class="avatarIndex" style="width:300px; height:300px; border-radius: 50%; "></td>
+            </tr>
+            <tr>
                 <th>Id</th>
                 <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Pseudo</th>
+                <td>{{ user.pseudo }}</td>
             </tr>
             <tr>
                 <th>Email</th>
@@ -20,25 +28,18 @@
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
             </tr>
             <tr>
-                <th>Password</th>
+                <th>Mot de passe</th>
                 <td>{{ user.password }}</td>
             </tr>
             <tr>
-                <th>Birth_date</th>
-                <td>{{ user.birthDate ? user.birthDate|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Sex</th>
+                <th>Sexe</th>
                 <td>{{ user.sex }}</td>
             </tr>
             <tr>
-                <th>Avatar</th>
-                <td>{{ user.avatar }}</td>
+                <th>Date de naissance</th>
+                <td>{{ user.birthDate ? user.birthDate|date('d-m-Y') : '' }}</td>
             </tr>
-            <tr>
-                <th>Pseudo</th>
-                <td>{{ user.pseudo }}</td>
-            </tr>
+            
         </tbody>
     </table>
 
