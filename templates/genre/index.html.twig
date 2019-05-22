@@ -1,6 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Genre index{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<style>
+.avatarIndex{
+    width:50px;
+	height:50px;
+	border-radius: 50%;
+}
+</style>
+{% endblock %}
 
 {% block body %}
     <h1>Genre index</h1>
@@ -9,7 +20,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Nom</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,8 +30,8 @@
                 <td>{{ genre.id }}</td>
                 <td>{{ genre.name }}</td>
                 <td>
-                    <a href="{{ path('genre_show', {'id': genre.id}) }}">show</a>
-                    <a href="{{ path('genre_edit', {'id': genre.id}) }}">edit</a>
+                    <a href="{{ path('genre_show', {'id': genre.id}) }}">Voir</a>
+                    <a href="{{ path('genre_edit', {'id': genre.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +42,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('genre_new') }}">Create new</a>
+    <a href="{{ path('genre_new') }}">Ajouter genre</a>
 {% endblock %}

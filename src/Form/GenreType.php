@@ -15,9 +15,6 @@ class GenreType extends AbstractType
             ->add('name',null,[
                 'label_format' => 'Genre',
             ])
-            ->add('movies',null,[
-                'label_format' => 'Film',
-            ])
          
         ;
     }

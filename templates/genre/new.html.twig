@@ -1,11 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %} 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
 
 {% block title %}New Genre{% endblock %}
 
 {% block body %}
+
     <h1>Create new Genre</h1>
 
     {{ include('genre/_form.html.twig') }}
-
     <a href="{{ path('genre_index') }}">back to list</a>
+    
 {% endblock %}
