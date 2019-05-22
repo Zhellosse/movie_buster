@@ -101,12 +101,12 @@ a{
 	position : relative;
 	top : 2px;
 	padding : 7px;
-	background-color : #791a1e;
+	background-color : #ad272d;
 	border-radius: 0px 7px 7px 0px;
 }
 #search_bar{
 	height: 30px;
-	margin-top : 15px;
+	margin-top : 45px;
 	border-radius: 7px 0px 0px 7px;
 }
 #link_nav{
@@ -133,7 +133,7 @@ a{
 }
 .linav{
 	font-family: "movie",arial,sans-serif;
-	font-size : 19px ;
+	font-size : 29px ;
 	margin-top: 20px;
 	text-align: center;
 	margin-top : 40px;
@@ -151,8 +151,13 @@ a{
 .register_button:visited {
 	
 	background-color: #791a1e;
-	border : 0;
 }
+.register_button:hover {
+	
+	background-color: #791a1e;
+}
+
+
 .logo,.logo2{ /* aussi dans le footer */
 	font-size:30px;
 	width: 25%;
@@ -173,30 +178,33 @@ a{
 
 /*////// DEBUT BODY:HOME /////// */
 #view_more{
-	margin-left : 45%;
+	margin-left : 48%;
 	margin-top : 50px;
 }
 .movie_info{
 
 }
 .movie_poster{
-	
+	width:100%;
 }
 .movie_card{
 	font-size: 17px;
-	width : 10%;
+	width : 20%;
+	margin-left:5%;
 	/* max-width: 10%; */
-	margin-right:2%;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	float: left;
-	border : 1px solid white;
+	 border : 1px solid white;  
+	text-align: center;
+}
+.arroundmovie {
+	margin-left: -2%;
 }
 #movie_line{
+	width:100%;
 	margin-top : 70px;
-	width : 88%;
-	max-width: 88%;
-	margin-left : 12%;
-	border : 1px solid white;
+	/* border : 1px solid white;  */
+	text-align: center;
 }
 .movie_date{
 	color : #93919a    
@@ -254,7 +262,6 @@ a{
 #copy{
 	padding-top:3%;
 	float:right;
-
 	width:33.33%;
 }
 
@@ -284,13 +291,7 @@ a{
 {
 	background-color: #791a1e;
 	color: #FBFBFB;
-}
-
-button
-{
-	background-color: #282733;
-	color:#791a1e;
-	border: none
+	border : 0;
 }
 
 fieldset
@@ -304,8 +305,6 @@ legend
 	padding: 0px 3px;
 	font-weight: bold;
 }
-   
- 
 label
 {
 	width: 110px;
@@ -313,22 +312,18 @@ label
 	vertical-align: top;
 	margin: 6px;
 }
-
 input:focus
 {
-	background: #eaeaea;
+	/* background: #791a1e;  */
 }
-   
 input, textarea
 {
 	width: 249px;
 }
-   
 select
 {
 	width: 254px;
 }
-   
 /* ///// fin Formulaire  \\\\\\\ */
 
 /* ///// Debut formulaire contact \\\\\\\\ */
@@ -343,7 +338,6 @@ select
 	margin: auto; 
 	top : 50px;	
 }
-
 #form_submit
 {
 	background-color: #791a1e;
@@ -367,7 +361,6 @@ select
 	position: relative;
 	margin: auto; 
 	top : 50px;	
-
 }
 
 #actors_birth_date_day, #actors_birth_date_month, #actors_birth_date_year {
@@ -394,7 +387,7 @@ select
 	height : 300px;
 	margin-left: 20%;
 	margin-top: 20px;
-	}
+}
 
 #avatar{
 	width:200px;
@@ -428,12 +421,21 @@ select
 
 /* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
 @media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
-	
-	.movie_card{width:48%;}
-    
+	.movie_card{width:40%;}
 }
 @media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
-	.movie_card{width:96%;}
+	.movie_card{width:90%;}
     #movie_line{margin-left:0;}
-
 }
+/* formulaire edit profil en front*/
+.editprofil{
+	color : #FBFBFB;
+	text-align: center;
+	border: thick double #791a1e;
+	background-color:rgba(151, 175, 206, 0.2);
+	width: 40%;
+	position: relative;
+	margin: auto; 
+	
+}
+/*fin formulaire edit profil en front*/

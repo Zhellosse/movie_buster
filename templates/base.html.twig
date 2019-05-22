@@ -19,26 +19,26 @@
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         
-                        <li class="linav"><a href="{{ path('contact') }}">CONTACT</a></li>
+                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "> Contact</i></a></li>
                 {% if is_granted('ROLE_USER') %}
 
-                    <li class="linav"><a href="{{ path('user_profil') }}">Profil</a></li>
-                    <li class="linav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                    <li class="linav"><a href="{{ path('user_profil') }}"><i class="far fa-address-card "> Profil</i></a></li>
+                    <li class="linav"><a href="{{ path('app_logout') }}"><i class="fas fa-walking "> Deconnexion</i></a></li>
 
                     {% if is_granted('ROLE_ADMIN') %}
 
                         <!--<li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>-->
-                        <li class="linav"><a href="{{ path('admin') }}">Admin</a></li>
+                        <li class="linav"><a href="{{ path('admin') }}"><i class="fas fa-tools "> Admin</i></a></li>
 
                     {% endif %}
                 {% else %}
-                  <li class="linav"><a href="{{ path('app_register') }}">Inscription</a></li>
-                  <li class="linav"><a href="{{ path('app_login') }}">Connexion</a></li>
+                  <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> Inscription</i></a></li>
+                  <li class="linav"><a href="{{ path('app_login') }}"><i class="fas fa-user "> Connexion</i></a></li>
 
               {% endif %}
 
                     </ul>
-                    <input type="text" id="search_bar" placeholder="Search.."><i class="fas fa-search"></i>
+                    <input type="text" id="search_bar" placeholder="Recherche.."><i class="fas fa-search"></i>
                 </div>
                 <div id="info_header">
                     <h1 id="titreSite">
@@ -73,7 +73,7 @@
                 <div class="logo2" id="logofoot"> 
                    <a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a><br>
                    <i class="fab fa-twitter " id="twitter" ></i>
-                    <i class="fab fa-facebook-f " id="fb" ></i>
+                    <a href ="https://www.facebook.com/Movie-Buster-397536957507337/"><i class="fab fa-facebook-f " id="fb" ></i></a>
                     
                 </div>
                     <div id="lienfoot">
