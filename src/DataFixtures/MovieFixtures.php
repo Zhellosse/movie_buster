@@ -30,13 +30,14 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie1->setUser($this->getReference('user1')); 
         $movie1->addActors($this->getReference('actor'));
         $movie1->addGenre($this->getReference('genre'));
-        $movie1->addNote($this->getReference('Note'));
-        $movie1->addNote($this->getReference('Note4'));
-        $movie1->addNote($this->getReference('Note10'));
+        /*
+        $movie1->addNotes($this->getReference('Note'));
+        $movie1->addNotes($this->getReference('Note4'));
+        $movie1->addNotes($this->getReference('Note10'));
 
-
+*/
         $manager->persist($movie1);
-
+/*
         $movie2 = new Movie();
         $movie2->setTitle('hitman');
         $movie2->setReleaseDate(\DateTime::createFromFormat('Y-m-d', '2007-04-22'));
@@ -50,9 +51,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie2->setUser($this->getReference('user2')); 
         $movie2->addActors($this->getReference('actor2'));
         $movie2->addGenre($this->getReference('genre'));
-        $movie2->addNote($this->getReference('Note2'));
-        $movie2->addNote($this->getReference('Note20'));
-        $movie2->addNote($this->getReference('Note8'));
+        $movie2->addNotes($this->getReference('Note2'));
+        $movie2->addNotes($this->getReference('Note20'));
+        $movie2->addNotes($this->getReference('Note8'));
         $manager->persist($movie2);
 
        
@@ -70,9 +71,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie3->setUser($this->getReference('user2')); 
         $movie3->addActors($this->getReference('actor3'));
         $movie3->addGenre($this->getReference('genre3'));
-        $movie3->addNote($this->getReference('Note3'));
-        $movie3->addNote($this->getReference('Note5'));
-        $movie3->addNote($this->getReference('Note4'));
+        $movie3->addNotes($this->getReference('Note3'));
+        $movie3->addNotes($this->getReference('Note5'));
+        $movie3->addNotes($this->getReference('Note4'));
         $manager->persist($movie3);
 
         $movie4 = new Movie();
@@ -88,9 +89,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie4->setUser($this->getReference('user1')); 
         $movie4->addActors($this->getReference('actor4'));
         $movie4->addGenre($this->getReference('genre4'));
-        $movie4->addNote($this->getReference('Note4'));
-        $movie4->addNote($this->getReference('Note17'));
-        $movie4->addNote($this->getReference('Note19'));
+        $movie4->addNotes($this->getReference('Note4'));
+        $movie4->addNotes($this->getReference('Note17'));
+        $movie4->addNotes($this->getReference('Note19'));
         $manager->persist($movie4);
 
         $movie5 = new Movie();
@@ -106,9 +107,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie5->setUser($this->getReference('user1')); 
         $movie5->addActors($this->getReference('actor5'));
         $movie5->addGenre($this->getReference('genre5'));
-        $movie5->addNote($this->getReference('Note5'));
-        $movie5->addNote($this->getReference('Note12'));
-        $movie5->addNote($this->getReference('Note9'));
+        $movie5->addNotes($this->getReference('Note5'));
+        $movie5->addNotes($this->getReference('Note12'));
+        $movie5->addNotes($this->getReference('Note9'));
         $manager->persist($movie5);
 
         $movie6 = new Movie();
@@ -124,9 +125,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie6->setUser($this->getReference('user1')); 
         $movie6->addActors($this->getReference('actor6'));
         $movie6->addGenre($this->getReference('genre6'));
-        $movie6->addNote($this->getReference('Note6'));
-        $movie6->addNote($this->getReference('Note5'));
-        $movie6->addNote($this->getReference('Note15'));
+        $movie6->addNotes($this->getReference('Note6'));
+        $movie6->addNotes($this->getReference('Note5'));
+        $movie6->addNotes($this->getReference('Note15'));
         $manager->persist($movie6);
 
         $movie7 = new Movie();
@@ -142,9 +143,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie7->setUser($this->getReference('user1')); 
         $movie7->addActors($this->getReference('actor7'));
         $movie7->addGenre($this->getReference('genre7'));
-        $movie7->addNote($this->getReference('Note7'));
-        $movie7->addNote($this->getReference('Note7'));
-        $movie7->addNote($this->getReference('Note4'));
+        $movie7->addNotes($this->getReference('Note7'));
+        $movie7->addNotes($this->getReference('Note7'));
+        $movie7->addNotes($this->getReference('Note4'));
         $manager->persist($movie7);
 
         $movie8 = new Movie();
@@ -160,9 +161,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie8->setUser($this->getReference('user1')); 
         $movie8->addActors($this->getReference('actor8'));
         $movie8->addGenre($this->getReference('genre8'));
-        $movie8->addNote($this->getReference('Note8'));
-        $movie8->addNote($this->getReference('Note7'));
-        $movie8->addNote($this->getReference('Note4'));
+        $movie8->addNotes($this->getReference('Note8'));
+        $movie8->addNotes($this->getReference('Note7'));
+        $movie8->addNotes($this->getReference('Note4'));
         $manager->persist($movie8);
 
         $movie9 = new Movie();
@@ -178,9 +179,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie9->setUser($this->getReference('user1')); 
         $movie9->addActors($this->getReference('actor9'));
         $movie9->addGenre($this->getReference('genre9'));
-        $movie9->addNote($this->getReference('Note9'));
-        $movie9->addNote($this->getReference('Note4'));
-        $movie9->addNote($this->getReference('Note16'));
+        $movie9->addNotes($this->getReference('Note9'));
+        $movie9->addNotes($this->getReference('Note4'));
+        $movie9->addNotes($this->getReference('Note16'));
         $manager->persist($movie9);
 
         $movie10 = new Movie();
@@ -196,9 +197,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie10->setUser($this->getReference('user1')); 
         $movie10->addActors($this->getReference('actor10'));
         $movie10->addGenre($this->getReference('genre10'));
-        $movie10->addNote($this->getReference('Note10'));
-        $movie10->addNote($this->getReference('Note5'));
-        $movie10->addNote($this->getReference('Note9'));
+        $movie10->addNotes($this->getReference('Note10'));
+        $movie10->addNotes($this->getReference('Note5'));
+        $movie10->addNotes($this->getReference('Note9'));
         $manager->persist($movie10);
 
         $movie11 = new Movie();
@@ -214,9 +215,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie11->setUser($this->getReference('user1')); 
         $movie11->addActors($this->getReference('actor'));
         $movie11->addGenre($this->getReference('genre11'));
-        $movie11->addNote($this->getReference('Note11'));
-        $movie11->addNote($this->getReference('Note5'));
-        $movie11->addNote($this->getReference('Note9'));
+        $movie11->addNotes($this->getReference('Note11'));
+        $movie11->addNotes($this->getReference('Note5'));
+        $movie11->addNotes($this->getReference('Note9'));
         $manager->persist($movie11);
 
         $movie12 = new Movie();
@@ -232,9 +233,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie12->setUser($this->getReference('user1')); 
         $movie12->addActors($this->getReference('actor2'));
         $movie12->addGenre($this->getReference('genre12'));
-        $movie12->addNote($this->getReference('Note12'));
-        $movie12->addNote($this->getReference('Note5'));
-        $movie12->addNote($this->getReference('Note9'));
+        $movie12->addNotes($this->getReference('Note12'));
+        $movie12->addNotes($this->getReference('Note5'));
+        $movie12->addNotes($this->getReference('Note9'));
         $manager->persist($movie12);
 
         $movie13 = new Movie();
@@ -250,9 +251,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie13->setUser($this->getReference('user1')); 
         $movie13->addActors($this->getReference('actor3'));
         $movie13->addGenre($this->getReference('genre13'));
-        $movie13->addNote($this->getReference('Note13'));
-        $movie13->addNote($this->getReference('Note5'));
-        $movie13->addNote($this->getReference('Note3'));
+        $movie13->addNotes($this->getReference('Note13'));
+        $movie13->addNotes($this->getReference('Note5'));
+        $movie13->addNotes($this->getReference('Note3'));
         $manager->persist($movie13);
 
         $movie14 = new Movie();
@@ -268,9 +269,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie14->setUser($this->getReference('user1')); 
         $movie14->addActors($this->getReference('actor4'));
         $movie14->addGenre($this->getReference('genre14'));
-        $movie14->addNote($this->getReference('Note14'));
-        $movie14->addNote($this->getReference('Note15'));
-        $movie14->addNote($this->getReference('Note16'));
+        $movie14->addNotes($this->getReference('Note14'));
+        $movie14->addNotes($this->getReference('Note15'));
+        $movie14->addNotes($this->getReference('Note16'));
         $manager->persist($movie14);
 
         
@@ -287,8 +288,8 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie15->setUser($this->getReference('user1')); 
         $movie15->addActors($this->getReference('actor5'));
         $movie15->addGenre($this->getReference('genre15'));
-        $movie15->addNote($this->getReference('Note15'));
-        $movie15->addNote($this->getReference('Note4'));
+        $movie15->addNotes($this->getReference('Note15'));
+        $movie15->addNotes($this->getReference('Note4'));
 
         $manager->persist($movie15);
 
@@ -305,9 +306,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie16->setUser($this->getReference('user1')); 
         $movie16->addActors($this->getReference('actor6'));
         $movie16->addGenre($this->getReference('genre16'));
-        $movie16->addNote($this->getReference('Note16'));
-        $movie16->addNote($this->getReference('Note17'));
-        $movie16->addNote($this->getReference('Note18'));
+        $movie16->addNotes($this->getReference('Note16'));
+        $movie16->addNotes($this->getReference('Note17'));
+        $movie16->addNotes($this->getReference('Note18'));
         $manager->persist($movie16);
 
         
@@ -324,9 +325,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie17->setUser($this->getReference('user2')); 
         $movie17->addActors($this->getReference('actor7'));
         $movie17->addGenre($this->getReference('genre17'));
-        $movie17->addNote($this->getReference('Note17'));
-        $movie17->addNote($this->getReference('Note9'));
-        $movie17->addNote($this->getReference('Note5'));
+        $movie17->addNotes($this->getReference('Note17'));
+        $movie17->addNotes($this->getReference('Note9'));
+        $movie17->addNotes($this->getReference('Note5'));
         $manager->persist($movie17);
 
         
@@ -343,9 +344,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie18->setUser($this->getReference('user1')); 
         $movie18->addActors($this->getReference('actor8'));
         $movie18->addGenre($this->getReference('genre18'));
-        $movie18->addNote($this->getReference('Note18'));
-        $movie18->addNote($this->getReference('Note11'));
-        $movie18->addNote($this->getReference('Note8'));
+        $movie18->addNotes($this->getReference('Note18'));
+        $movie18->addNotes($this->getReference('Note11'));
+        $movie18->addNotes($this->getReference('Note8'));
         $manager->persist($movie18);
 
         
@@ -362,9 +363,9 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie19->setUser($this->getReference('user2')); 
         $movie19->addActors($this->getReference('actor9'));
         $movie19->addGenre($this->getReference('genre19'));
-        $movie19->addNote($this->getReference('Note19'));
-        $movie19->addNote($this->getReference('Note5'));
-        $movie19->addNote($this->getReference('Note9'));
+        $movie19->addNotes($this->getReference('Note19'));
+        $movie19->addNotes($this->getReference('Note5'));
+        $movie19->addNotes($this->getReference('Note9'));
         $manager->persist($movie19);
 
         
@@ -381,29 +382,30 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
         $movie20->setUser($this->getReference('user1')); 
         $movie20->addActors($this->getReference('actor10'));
         $movie20->addGenre($this->getReference('genre20'));
-        $movie20->addNote($this->getReference('Note20'));
-        $movie20->addNote($this->getReference('Note10'));
-        $movie20->addNote($this->getReference('Note7'));
+        $movie20->addNotes($this->getReference('Note20'));
+        $movie20->addNotes($this->getReference('Note10'));
+        $movie20->addNotes($this->getReference('Note7'));
         $manager->persist($movie20);
 
-        
-
+        */
+       
 
         
 
 
 
         $manager->flush();
+        $this->addReference('movie1', $movie1);
     }
 
-    public function getDependencies()
-    {
-        return array(
+        public function getDependencies()
+        {
+            return array(
 
-            GenreFixtures::class,
-            ActorFixtures::class,
-            UserFixtures::class,
-            NoteFixtures::Class
-        );
-    }
+                GenreFixtures::class,
+                ActorFixtures::class,
+                UserFixtures::class,
+            );
+        }
+   
 }

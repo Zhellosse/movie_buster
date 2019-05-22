@@ -108,16 +108,18 @@ class Movie
      */
     private $genre;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Note", inversedBy="movies")
-     */
-    private $note;
+   
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="movies")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Note", mappedBy="movie")
+     */
+    private $notes;
 
     
 
@@ -126,6 +128,7 @@ class Movie
         $this->actors = new ArrayCollection();
         $this->genre = new ArrayCollection();
         $this->note = new ArrayCollection();
+        $this->notes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -294,33 +297,33 @@ class Movie
 
         return $this;
     }
-
     /**
      * @return Collection|Note[]
      */
-    public function getNote(): Collection
+    public function getNotes(): Collection
     {
-        return $this->note;
+        return $this->notes;
     }
 
-    public function addNote(Note $note): self
+    public function addNote($notes): self
     {
-        if (!$this->note->contains($note)) {
-            $this->note[] = $note;
+        if (!$this->notes->contains($notes)) {
+            $this->notes[] = $notes;
         }
 
         return $this;
     }
 
-    public function removeNote(Note $note): self
+
+
+    public function removeNote($notes): self
     {
-        if ($this->note->contains($note)) {
-            $this->note->removeElement($note);
+        if ($this->notes->contains($notes)) {
+            $this->notes->removeElement($notes);
         }
 
         return $this;
     }
-
     public function getUser(): ?User
     {
         return $this->user;
