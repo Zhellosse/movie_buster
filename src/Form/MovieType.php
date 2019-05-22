@@ -24,17 +24,24 @@ class MovieType extends AbstractType
                 'placeholder' => [
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
                 ],
-                'label_format' => 'LALALALALALALA',
+                'label_format' => 'Date de sortie',
              ])
             ->add('classification',null,[
-                'label_format' => 'LALALALALALALA',
+                'label_format' => 'Classification',
             ])
-            ->add('director')
-            ->add('duree')
-            ->add('country')
+            ->add('director',null,[
+                'label_format' => 'Réalisateur',
+            ])
+            ->add('duree',null,[
+                'label_format' => 'Durée',
+            ])
+            ->add('country',null,[
+                'label_format' => 'Nationalité',
+            ])
             ->add('genre', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Genre::class,
+                'label_format' => 'Genre',
                 // uses the User.username property as the visible option string
                 'choice_label' => 'name',
                 'translation_domain' => 'Default',
@@ -44,6 +51,7 @@ class MovieType extends AbstractType
                 ])
                 ->add('actors', EntityType::class, array(
                     'class'        => Actors::class,
+                    'label_format' => 'Acteurs',
                     'choice_label' => function (Actors $actor) {
                         return $actor->getFirstname() . ' ' . $actor->getLastname();
                     },
@@ -53,9 +61,13 @@ class MovieType extends AbstractType
                     
                   ))
                 
-            ->add('synopsis')
+            ->add('synopsis',null,[
+                'label_format' => 'Synopsis',
+            ])
             ->add('affiche', FileType::class, ['label' => 'Affiche (JPG/PNG Files)', 'data_class' => null])
-            ->add('trailer')
+            ->add('trailer',null,[
+                'label_format' => 'Bande-annonce',
+            ])
        
             
             
