@@ -1,17 +1,17 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}New Actors{% endblock %}
+{% block stylesheets %} 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+
+{% block title %}Nouvel acteur{% endblock %}
 
 {% block body %}
     
-
-    <div class="actors">
-
-    <legend>Ajouter un Acteur</legend>
+<h1>Ajouter un nouvel acteur</h1>
 
     {{ include('actors/_form.html.twig') }}
+    <a href="{{ path('actors_index') }}">Retour a la liste</a>
 
-    <a href="{{ path('actors_index') }}">back to list</a>
 
-    </div>
 {% endblock %}
