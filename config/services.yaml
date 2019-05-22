@@ -38,3 +38,8 @@ services:
 
     App\Service\FileUploaderMovie:
         $targetDirectory: '%movie_directory%'
+
+    twig.extension.text:
+            class: Twig_Extensions_Extension_Text
+            tags:
+                - { name: twig.extension }

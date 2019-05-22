@@ -4,9 +4,10 @@
 
 {% block body %}
     
-        <div class="wrap">        
-        <div>
-                <h1>{{ movie.title }}</h1><br><br>
+        <div class="wrap" id="fichefilm">  
+                <h1 id="titrefilm">{{ movie.title|title }}</h1><br><br>
+                <div class ="haut">
+                
                 <div class="affichefilm">
                         {# src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} #}
                         <img src="{{ asset('/uploads/affiches/'~ movie.affiche) | imagine_filter('movie') }}" title="affiche" alt="affiche du film">
@@ -30,18 +31,20 @@
                         {% for  n in movie.note %}
                                 {{ n.score }}           
                         {% endfor %}<br>
-                Pays : {{ movie.country }}<br>
+                Pays : {{ movie.country }}<br><br>
+                Synopsis :<br>
+                        {{ movie.synopsis }}<br>
                 </div>
                <div class="clear"></div>  
-            </div><br>
+            </div>
             
-            Synopsis :<br>
-            {{ movie.synopsis }}<br>    
-            
-           <br><br>
+             
+           <br>
+           <div class="iframe">
             Bande-Annonce :
             {#<a href="https://www.youtube.com/watch?v={{ movie.trailer }}">cliquez ici</a>#}<br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/{{movie.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <br><br>
            <a href="{{ path('home')}}">retour a la liste</a>
             {% if is_granted('ROLE_ADMIN') %}
