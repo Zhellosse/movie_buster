@@ -4,40 +4,50 @@
 
 {% block body %}
     
-        <div class="wrap">
-            <h1>{{ movie.title }}</h1>
-                
-    <img src="{{asset('uploads/affiches/')}}{{movie.affiche}}" title="affiche" alt="affiche du film">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{movie.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Release_date : {{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}<br>
-            Classification : {{ movie.classification }}<br>
-            Director : {{ movie.director }}<br>
-            Duree : {{ movie.duree }}<br>
-            Genre : 
-            {% for  g in movie.genre %}
-                    {{ g.name }}     
-            {% endfor %}<br>
+        <div class="wrap">        
+        <div>
+                <h1>{{ movie.title }}</h1><br><br>
+                <div class="affichefilm">
+                        {# src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} #}
+                        <img src="{{ asset('/uploads/affiches/'~ movie.affiche) | imagine_filter('movie') }}" title="affiche" alt="affiche du film">
+                </div>
+                <div class="infofilm">
+                <p>Date de sortie : {{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}<br>
+                Classification : {{ movie.classification }}<br>
+                Réalisateur : {{ movie.director }}<br>
+                Durée : {{ movie.duree }}<br>
+                Genre : 
+                {% for  g in movie.genre %}
+                        {{ g.name }}     
+                {% endfor %}<br>
 
-            Actors : 
-            {% for  actor in movie.actors %}
-                    {{ actor.firstname }}
-                    {{ actor.lastname }}
-            {% endfor %}<br>
-            Note : 
-            {% for  n in movie.note %}
-                    {{ n.score }}           
-            {% endfor %}<br>
-            Country : {{ movie.country }}<br>
+                Acteurs : 
+                        {% for  actor in movie.actors %}
+                                {{ actor.firstname }}
+                                {{ actor.lastname }}
+                        {% endfor %}<br>
+                Note : 
+                        {% for  n in movie.note %}
+                                {{ n.score }}           
+                        {% endfor %}<br>
+                Pays : {{ movie.country }}<br>
+                </div>
+               <div class="clear"></div>  
+            </div><br>
+            
             Synopsis :<br>
-            {{ movie.synopsis }}<br>
-            Trailer :<a href="https://www.youtube.com/watch?v={{ movie.trailer }}">cliquez ici</a><br>
-                
-            <a href="{{ path('home')}}">retour a la liste</a>
+            {{ movie.synopsis }}<br>    
+            
+           <br><br>
+            Bande-Annonce :
+            {#<a href="https://www.youtube.com/watch?v={{ movie.trailer }}">cliquez ici</a>#}<br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{movie.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br>
+           <a href="{{ path('home')}}">retour a la liste</a>
             {% if is_granted('ROLE_ADMIN') %}
             <a href="{{ path('movie_edit', {'id': movie.id}) }}">modifier</a>
             {{ include('movie/_delete_form.html.twig') }}</p>
             {% endif %}
-           
         </div>                                      
 
 {% endblock %}
