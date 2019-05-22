@@ -23,9 +23,12 @@ class MovieType extends AbstractType
             ->add('release_date', BirthdayType::class, [
                 'placeholder' => [
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-                ]
+                ],
+                'label_format' => 'LALALALALALALA',
              ])
-            ->add('classification')
+            ->add('classification',null,[
+                'label_format' => 'LALALALALALALA',
+            ])
             ->add('director')
             ->add('duree')
             ->add('country')
@@ -53,7 +56,7 @@ class MovieType extends AbstractType
             ->add('synopsis')
             ->add('affiche', FileType::class, ['label' => 'Affiche (JPG/PNG Files)', 'data_class' => null])
             ->add('trailer')
-            
+       
             
             
             
