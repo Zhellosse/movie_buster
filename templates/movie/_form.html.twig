@@ -4,8 +4,29 @@
 <div class="offset-lg-4 col-lg-4">
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-   
+    {{ form_errors(form) }}
+
+    {{ form_row(form.title) }}
+    {{ form_row(form.release_date) }}
+    {{ form_row(form.classification) }}
+    {{ form_row(form.director) }}
+    {{ form_row(form.duree) }}
+    {{ form_row(form.country) }}
+
+
+
+    <div id="genre">
+        {{ form_row(form.genre) }}
+    </div>
+    <div id="actors">
+        {{ form_row(form.actors) }}
+    </div>
+
+   <div class="clearfix"></div>
+
+    {{ form_row(form.synopsis) }}
+    {{ form_row(form.affiche) }}
+    {{ form_row(form.trailer) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 
