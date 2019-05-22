@@ -86,6 +86,7 @@ body{
 a{
 	color:white;
 }
+/* ///// fin reset css \\\\\\\ */
 
 /* ///// HEADER \\\\\\\ */
 
@@ -266,10 +267,6 @@ a{
 }
 
 
-
-
-
-
 /* ///// FIN FOOTER \\\\\\\ */
 
 /* ///// Formulaire inscription  \\\\\\\ */
@@ -431,7 +428,7 @@ select
 .editprofil{
 	color : #FBFBFB;
 	text-align: center;
-	border: thick double #791a1e;
+	border: thick double #791a1f;
 	background-color:rgba(151, 175, 206, 0.2);
 	width: 40%;
 	position: relative;
@@ -446,11 +443,23 @@ select
 	float : left;
 }
 .infofilm{
-	width: 65%;
+	width: 70%;
 	float : right;
+	margin-top: 50px;
+
+	
 }
-h1{
+#titrefilm{
 	font-size: 300%;
 	text-align: center
+}
+
+.iframe{
+	width: 50%;
+	margin-left: 20%;
+}
+
+#fichefilm{
+	background-color: #0e0d11;
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
