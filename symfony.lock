@@ -117,6 +117,9 @@
     "imagine/imagine": {
         "version": "v0.7.1"
     },
+    "jasongrimes/paginator": {
+        "version": "1.0.3"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },

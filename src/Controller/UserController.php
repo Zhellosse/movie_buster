@@ -13,20 +13,34 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use JasonGrimes\Paginator;
 
 
 /**
- * @Route("/user")
+ * @Route("/admin/user")
  */
 class UserController extends AbstractController
 {
     /**
-     * @Route("/", name="user_index", methods={"GET"})
+     * @Route("/", name="admin_index", methods={"GET"})
      */
     public function index(UserRepository $users): Response
-    {
+    {   
+        //Pagination
+        
+        $repository = $this->getDoctrine()->getManager()->getRepository(User::class);
+
+        //$repository->count()
+        $totalItems = 4 ;
+        $itemsPerPage = 2;
+        $currentPage =  1;
+        $urlPattern = "/page/(:num)";
+
+        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+
         return $this->render('user/index.html.twig', [
             'users' => $users->findAll(),
+            'paginator' => $paginator,
         ]);
     }
    
@@ -156,6 +170,7 @@ class UserController extends AbstractController
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
+
 
     
 }
