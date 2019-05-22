@@ -38,7 +38,7 @@ class UserType extends AbstractType
                         'max' => 20,
                     ]),
                 ],
-            
+                'label_format' => 'Mot de passe',
             ])
             ->add('sex', ChoiceType::class, [
                 'choices' => [
@@ -46,12 +46,14 @@ class UserType extends AbstractType
                         'Homme' => 'Homme',
                         'Femme' => 'Femme',
                     ]
-                ]
+                ],
+                'label_format' => 'Sexe',
              ])
             ->add('birth_date', BirthdayType::class, [
                 'placeholder' => [
-                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-                ]
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
+                ],
+                'label_format' => 'Date de naissance',
              ])
             ->add('avatar', FileType::class, ['label' => 'Avatar (JPG/PNG Files)', 'data_class' => null])
             

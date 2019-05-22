@@ -6,8 +6,8 @@
     
         <div class="wrap">
             <h1>{{ movie.title }}</h1>
-                
-    <img src="{{asset('uploads/affiches/')}}{{movie.affiche}}" title="affiche" alt="affiche du film">
+         {# src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} #}
+    <img src="{{ asset('/uploads/affiches/'~ movie.affiche) | imagine_filter('movie') }}" title="affiche" alt="affiche du film">
      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{movie.trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>Release_date : {{ movie.releaseDate ? movie.releaseDate|date('Y-m-d') : '' }}<br>
             Classification : {{ movie.classification }}<br>
