@@ -440,3 +440,18 @@ select
 	
 }
 /*fin formulaire edit profil en front*/
+
+/*/////////////////////DEBUT FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.affichefilm{
+	width: 30%;
+	float : left;
+}
+.infofilm{
+	width: 65%;
+	float : right;
+}
+h1{
+	font-size: 300%;
+	text-align: center
+}
+/*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/

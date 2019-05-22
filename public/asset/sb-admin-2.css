@@ -12006,3 +12006,15 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+#genre{
+  width: 50%;
+  float: left;
+}
+
+#actors{
+  width: 50%;
+  float: right;
+  
+}
+
