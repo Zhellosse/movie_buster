@@ -22,7 +22,7 @@ class MovieType extends AbstractType
             ->add('title')
             ->add('release_date', BirthdayType::class, [
                 'placeholder' => [
-                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
                 ],
                 'label_format' => 'Date de sortie',
              ])

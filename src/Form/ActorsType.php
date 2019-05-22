@@ -9,17 +9,23 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 
+
 class ActorsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('first_name')
-            ->add('last_name')
+            ->add('first_name', null,[
+                'label_format' => 'Prénom',
+            ])
+            ->add('last_name', null,[
+                'label_format' => 'Nom',
+            ])
             ->add('birth_date', BirthdayType::class, [
                 'placeholder' => [
-                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-                ]
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
+                ],
+                'label_format' => 'Date de naissance',
              ]);
         ;
     }

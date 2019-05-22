@@ -37,7 +37,7 @@ class RegistrationFormType extends AbstractType
                         'max' => 20,
                     ]),
                 ],
-            
+                'label_format' => 'Mot de passe',
             ]);
             
 

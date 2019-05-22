@@ -61,7 +61,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Liste:</h6>
-            <a class="collapse-item" href="{{ path('user_index')}}">Tout les utilisateurs</a>
+            <a class="collapse-item" href="{{ path('admin_index')}}">Tout les utilisateurs</a>
             <a class="collapse-item" href="{{ path('user_new')}}">Ajout utilisateur</a>
           </div>
         </div>
@@ -96,6 +96,22 @@
           </div>
         </div>
       </li>
+
+      <!-- Nav Item - Genre Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGenre" aria-expanded="true" aria-controls="collapseGenre">
+          <i class="fas fa-portrait"></i>
+          <span>Genre</span>
+        </a>
+        <div id="collapseGenre" class="collapse" aria-labelledby="headingGenre" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Liste:</h6>
+            <a class="collapse-item" href="{{ path('genre_index')}}">Tout les genres</a>
+            <a class="collapse-item" href="{{ path('genre_new')}}">Ajout genre</a>
+          </div>
+        </div>
+      </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">

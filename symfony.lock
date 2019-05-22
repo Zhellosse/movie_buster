@@ -117,6 +117,9 @@
     "imagine/imagine": {
         "version": "v0.7.1"
     },
+    "jasongrimes/paginator": {
+        "version": "1.0.3"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -535,6 +538,18 @@
     },
     "symfony/yaml": {
         "version": "v4.2.8"
+    },
+    "twig/extensions": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "ddb2e0a77773b7fd75d8d649545f174e664500ab"
+        },
+        "files": [
+            "./config/packages/twig_extensions.yaml"
+        ]
     },
     "twig/twig": {
         "version": "v2.9.0"
