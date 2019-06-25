@@ -345,12 +345,6 @@ class MovieFixtures extends Fixture implements DependentFixtureInterface
 
         $manager->persist($movie20);
 
-       
-       
-
-        
-
-
 
         $manager->flush();
         $this->addReference('movie1', $movie1);
