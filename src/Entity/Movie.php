@@ -98,13 +98,13 @@ class Movie
 
     /**
      * @Assert\NotBlank
-     * @ORM\ManyToMany(targetEntity="App\Entity\Actors", inversedBy="movies")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Actors", inversedBy="movies",cascade={"persist"})
      */
     private $actors;
 
     /**
      * @Assert\NotBlank
-     * @ORM\ManyToMany(targetEntity="App\Entity\Genre", inversedBy="movies")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Genre", inversedBy="movies",cascade={"persist"})
      */
     private $genre;
 
@@ -116,10 +116,6 @@ class Movie
      */
     private $user;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Note", mappedBy="movie")
-     */
-    private $notes;
 
     
 
@@ -297,33 +293,7 @@ class Movie
 
         return $this;
     }
-    /**
-     * @return Collection|Note[]
-     */
-    public function getNotes(): Collection
-    {
-        return $this->notes;
-    }
 
-    public function addNote($notes): self
-    {
-        if (!$this->notes->contains($notes)) {
-            $this->notes[] = $notes;
-        }
-
-        return $this;
-    }
-
-
-
-    public function removeNote($notes): self
-    {
-        if ($this->notes->contains($notes)) {
-            $this->notes->removeElement($notes);
-        }
-
-        return $this;
-    }
     public function getUser(): ?User
     {
         return $this->user;
