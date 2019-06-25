@@ -20,13 +20,15 @@
 
     <body>
         <!--------------- HEADER ---------------->
-           <header >
-            <div class="nav">               
+        <header >
+            <div class="nav">
+               <img id="fondHeader" src ="{{asset('asset/img/cinéma.jpg')}}" alt="image de fond cinéma">  
+                 
                 <div class="logo"><a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a></div>
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         
-                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "> Contact</i></a></li>
+                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "></i>Contact</a></li>
                 {% if is_granted('ROLE_USER') %}
                         
                     <!------Affichage profil -------->
@@ -61,38 +63,39 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                                 </div>
-                                <div class="modal-body">Selectionnez "Logout" si vous êtes prêt à quitter votre</div>
+                                <div class="modal-body">Selectionnez "Deconnexion" si vous êtes prêt à quitter votre</div>
                                 <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="{{ path('app_logout') }}">Logout</a>
+                                <a class="btn btn-primary" href="{{ path('app_logout') }}">Déconnexion</a>
                                 </div>
                             </div>
                             </div>
                         </div>
-            <!----- FIn affichage profil -------->
+         
 
-                    {% if is_granted('ROLE_ADMIN') %}
+                        {% if is_granted('ROLE_ADMIN') %}
 
-                        <!--<li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>-->
-                        <li class="linav"><a href="{{ path('admin') }}"><i class="fas fa-tools "> Admin</i></a></li>
+                            <!--<li class="linav"><a href="{{ path('movie_new') }}">Nouvelle fiche de film</a></li>-->
+                            <li class="linav"><a href="{{ path('admin') }}"><i class="fas fa-tools "> </i>Admin</a></li>
 
-                    {% endif %}
-                {% else %}
-                  <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> Inscription</i></a></li>
-                  <li class="linav"><a href="{{ path('app_login') }}"><i class="fas fa-user "> Connexion</i></a></li>
+                        {% endif %}
+                        {% else %}
 
-              {% endif %}
+                        <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> </i>Inscription</a></li>
+                        <li class="linav"><a href="{{ path('app_login') }}"><i class="fas fa-user "> </i>Connexion</a></li>
+
+                        {% endif %}
              
 
                     </ul>
-                    <input type="text" id="search_bar" placeholder="Recherche.."><i class="fas fa-search"></i>
+                
                 </div>
                 <div id="info_header">
                     <h1 id="titreSite">
                         Bienvenue sur<br>
                         <span id="relief">Movie Buster</span>
                     </h1>
-                    <div></div>
+                    
                     <p>Movie Buster est un site permettant de .........................<br>
                     ....................................................................
                     </p>
