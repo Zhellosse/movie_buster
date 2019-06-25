@@ -46,7 +46,7 @@ class Actors
     private $birth_date;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Movie", mappedBy="actors")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Movie", mappedBy="actors",cascade={"persist"})
      */
     private $movies;
 

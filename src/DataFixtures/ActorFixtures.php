@@ -91,13 +91,11 @@ class ActorFixtures extends Fixture implements DependentFixtureInterface
         $this->addReference('actor9', $actor9);
         $this->addReference('actor10', $actor10);
     }
-    public function getDependencies()
-    {
-        return array(
+     public function getDependencies()
+     {
+         return array(
 
             GenreFixtures::class,
-            
-
             UserFixtures::class
         );}
 }
