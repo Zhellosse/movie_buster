@@ -86,6 +86,13 @@ body{
 
 a{
 	color:white;
+	text-decoration: none;
+
+}
+a:hover{
+	color:rgba(238, 238, 238, 0.74);
+	text-decoration: none;
+
 }
 /* ///// fin reset css \\\\\\\ */
 
@@ -179,9 +186,14 @@ position: absolute;top:20px;right:10px;
 /* ///// FIN HEADER \\\\\\\ */
 
 /*////// DEBUT BODY:HOME /////// */
+#lib{
+	padding-bottom:2%
+
+}
 #view_more{
 	margin-left : 48%;
 	margin-top : 50px;
+	padding-bottom:2%
 }
 .movie_info{
 height : 66px;
@@ -189,16 +201,22 @@ height : 66px;
 
 .movie_poster{
 	width:100%;
+	border-radius: 2px;
 }
+
 .movie_card{
 	font-size: 17px;
 	width : 18%;
 	margin-left:2%;
 	/* max-width: 10%; */
 	margin-bottom: 50px;
-	float: left;
-	 border : 1px solid white;  
+	float: left; 
 	text-align: center;
+	border-radius: 2px;
+	border : 1px solid white ;
+}
+.movie_card:hover{
+	border : 2px solid #EEE; 
 }
 .arroundmovie {
 	margin-left: -2%;
@@ -346,6 +364,10 @@ select
 	width: 100px;
 	border: none
 }
+#espace{
+	margin-top:2%;
+	margin-bottom:2%;
+}
 /* ///// Fin formulaire contact \\\\\\\\ */
 /* ///// Debut formulaire New Actors\\\\\\\\ */
 
@@ -449,7 +471,7 @@ select
 
 }
 #posterfilm{
-	padding-left: 30% ;
+	padding-left: 40% ;
 	
 }
 

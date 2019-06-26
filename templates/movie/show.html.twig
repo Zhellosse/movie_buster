@@ -43,10 +43,7 @@
                 <br><br>
                 <div class="retourhome">
                 <a href="{{ path('home')}}">retour a la liste</a>
-                {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('movie_edit', {'id': movie.id}) }}">modifier</a>
-                        {{ include('movie/_delete_form.html.twig') }}</p>
-                {% endif %}
+                
                 </div>
         
         </div>                                      
