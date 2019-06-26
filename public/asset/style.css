@@ -452,28 +452,56 @@ select
 /*fin formulaire edit profil en front*/
 
 /*/////////////////////DEBUT FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-.affichefilm{
-	width: 30%;
-	float : left;
-}
-.infofilm{
-	width: 70%;
-	float : right;
-	margin-top: 50px;
 
+.affichefilm{
+	width:50%;
+	float : left;
+
+}
+#posterfilm{
+	padding-left: 30% ;
 	
 }
+
+.infofilm{
+	width: 50%;
+	padding-right: 20% ;
+	text-align: left;
+	margin-top: 50px;
+	float : right;
+	
+	
+}
+
 #titrefilm{
 	font-size: 300%;
 	text-align: center
 }
 
 .iframe{
-	width: 50%;
-	margin-left: 20%;
+	width: 100%;
+	
+	margin-top:5%;
 }
 
 #fichefilm{
 	background-color: #0e0d11;
+	
+}
+#lienyt{
+	
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+#bandeannonce{
+	text-align: center;
+}
+.retourhome{
+	text-align: center;
+	padding-bottom: 5%
+
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
