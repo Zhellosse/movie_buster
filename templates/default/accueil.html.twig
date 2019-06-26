@@ -13,6 +13,7 @@
                     <div class="movie_info">
                         <p class="movie_title">{{ movie.title | slice(0,29) | title }}</p>
                         <p class="movie_date">{{ movie.releaseDate ? movie.releaseDate|date('Y') : '' }}</p>
+                        <a href="#"> <p class="favoris"> ☆ </p></a>
                     </div>
                 </div>
         {% endfor %}
@@ -23,6 +24,6 @@
 
 
 
-<div id="view_more"><a href="">ViewMore <i class="far fa-arrow-alt-circle-down"></a></i></div>
+<div id="view_more"><a href=""> Voir plus <i class="far fa-arrow-alt-circle-down"></a></i></div>
 
 {% endblock %}

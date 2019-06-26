@@ -15,10 +15,12 @@ use  App\Controller\MovieController;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="home", methods={"GET"})
+     * @Route("/", name="home", methods={"GET","POST"})
      */
     public function index(MovieRepository $movieRepository, UserRepository $userRepository)
     {
+        //$user->getfavoris();
+
         //$movie = $this->getMovies();
         //$id = $movie->getId();
         return $this->render('default/accueil.html.twig', [

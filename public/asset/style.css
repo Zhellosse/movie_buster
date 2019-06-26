@@ -208,6 +208,12 @@ height : 66px;
 	 border : 1px solid white;  
 	text-align: center;
 }
+.favoris{
+	font-size: 30px;
+	float: right;
+	position: relative;
+	padding-right: 10px;
+}
 .arroundmovie {
 	margin-left: -2%;
 }
@@ -250,8 +256,7 @@ footer{
 	font-size : 22px;
 	width: 33%;
 	float:left;
-	position:relative;
-	font-size: 	
+	position:relative; 	
 }
 #lienfoot>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
@@ -456,11 +461,9 @@ select
 .affichefilm{
 	width:50%;
 	float : left;
-
 }
 #posterfilm{
-	padding-left: 30% ;
-	
+	padding-left: 30% ;	
 }
 
 .infofilm{
@@ -468,9 +471,7 @@ select
 	padding-right: 20% ;
 	text-align: left;
 	margin-top: 50px;
-	float : right;
-	
-	
+	float : right;	
 }
 
 #titrefilm{
