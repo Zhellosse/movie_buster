@@ -86,6 +86,13 @@ body{
 
 a{
 	color:white;
+	text-decoration: none;
+
+}
+a:hover{
+	color:rgba(238, 238, 238, 0.74);
+	text-decoration: none;
+
 }
 /* ///// fin reset css \\\\\\\ */
 
@@ -140,7 +147,9 @@ right:10px;
 	background-color: #791a1e;
 	color : white;
 	border : 1px solid white;
-	font: 400 16px/1.3 'Roboto', 'sans-serif';	
+	font: 400 16px/1.3 'Roboto', 'sans-serif';
+	margin-top:2%;
+	margin-bottom:2%;
 }
 .register_button:visited {
 	
@@ -187,9 +196,14 @@ right:10px;
 /* ///// FIN HEADER \\\\\\\ */
 
 /*////// DEBUT BODY:HOME /////// */
+#lib{
+	padding-bottom:2%
+
+}
 #view_more{
 	margin-left : 48%;
 	margin-top : 50px;
+	padding-bottom:2%
 }
 .movie_info{
 height : 66px;
@@ -197,16 +211,22 @@ height : 66px;
 
 .movie_poster{
 	width:100%;
+	border-radius: 2px;
 }
+
 .movie_card{
 	font-size: 17px;
 	width : 18%;
 	margin-left:2%;
 	/* max-width: 10%; */
 	margin-bottom: 50px;
-	float: left;
-	 border : 1px solid white;  
+	float: left; 
 	text-align: center;
+	border-radius: 2px;
+	border : 1px solid white ;
+}
+.movie_card:hover{
+	border : 2px solid #EEE; 
 }
 .favoris{
 	font-size: 30px;
@@ -256,7 +276,12 @@ footer{
 	font-size : 22px;
 	width: 33%;
 	float:left;
+<<<<<<< HEAD
 	position:relative; 	
+=======
+	position:relative;
+	 	
+>>>>>>> 68d8e9c70796134776b2d655785bcb6f77ccea62
 }
 #lienfoot>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
@@ -285,7 +310,7 @@ footer{
 
 /* ///// FIN FOOTER \\\\\\\ */
 
-/* ///// Formulaire inscription  \\\\\\\ */
+/* ///// Formulaire  \\\\\\\ */
 #register
 {
 	color : #FBFBFB;
@@ -299,16 +324,6 @@ footer{
 	margin-bottom: 100px;
 }
 
-.btn
-{
-	background-color: #791a1e;
-	color: #FBFBFB;
-	border : 1px solid white;
-	width : 150px;
-	padding : 10 20px;
-	margin-top : 15px;
-	margin-bottom: 15px;
-}
 
 fieldset
 {
@@ -341,31 +356,22 @@ select
 {
 	width: 254px;
 }
-/* ///// fin Formulaire  \\\\\\\ */
 
-/* ///// Debut formulaire contact \\\\\\\\ */
-#contact
-{
-	color : #FBFBFB;
-	text-align: center;
-	border: thick double #791a1e;
-	background-color:rgba(151, 175, 206, 0.2);
-	width: 40%;
-	margin: auto; 
-	top : 50px;	
-}
+
 #form_submit
 {
 	background-color: #791a1e;
-	color: #FBFBFB;
 	width: 100px;
-	border: none
+	margin-top:2%;
+	margin-bottom:2%;
 }
-/* ///// Fin formulaire contact \\\\\\\\ */
-/* ///// Debut formulaire New Actors\\\\\\\\ */
+#espace{
 
+	margin-top:2%;
+	margin-bottom:2%;
+}
+/* ///// Fin formulaire \\\\\\\\ */
 
-/* ///// Fin formulaire New Actors \\\\\\\\ */
 
 .actors{
 
@@ -435,14 +441,7 @@ select
 
 /* ///// FIN FORMULAIRE FRONT USER \\\\\\\\ */
 
-/* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
-@media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
-	.movie_card{width:40%;}
-}
-@media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
-	.movie_card{width:90%;}
-    #movie_line{margin-left:0;}
-}
+
 /* formulaire edit profil en front*/
 .editprofil{
 	color : #FBFBFB;
@@ -463,7 +462,12 @@ select
 	float : left;
 }
 #posterfilm{
+<<<<<<< HEAD
 	padding-left: 30% ;	
+=======
+	padding-left: 40% ;
+	
+>>>>>>> 68d8e9c70796134776b2d655785bcb6f77ccea62
 }
 
 .infofilm{
@@ -506,3 +510,73 @@ select
 
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1200px){ /* Si l'écran est en dessus de 1200px */
+	
+
+	
+	
+	#lienfoot{font-size:1em;}
+	#copy{width:100%;}
+	
+	
+	
+}
+@media screen and (max-width: 1200px){ /* Si l'écran est en dessous de 1200px */
+	.movie_card{width:30%;margin-left:3%}
+	.linav{font-size:1.5em}
+	.logo{font-size:2em}
+	.logo{width:50%}
+	#info_header{font-size:0.5em;;}
+	.description{font-size:2.5em;margin-top:15px}
+	.register_button{font-size:3em;width:20%;position:absolute;left:320px;top:200px}
+
+	#logofoot{font-size:2em;}
+	#reseauSoc{font-size:2em}
+	#lienfoot{font-size:0.8em;padding-top:5px}
+	#copy{width:100%;}
+	
+	
+	
+}
+@media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
+	.movie_card{width:40%;margin-left:7%}
+	.linav{font-size:1.2em;margin-top:30px;}
+	.logo{width:50%;margin-left:25%}
+	#info_header{font-size:0.2em;margin-top:25px;}
+	.description{font-size:4em;margin-top:5px}
+	.register_button{font-size:3em;width:20%;position:absolute;left:280px;top:110px}
+
+	#logofoot{font-size:2em;width:60%;text-align:center}
+	#reseauSoc{width:100%;text-align:center;padding-left:10%;padding-top:10px}
+	#lienfoot{width:100%;text-align:center;padding-left:10%}
+	#copy{width:100%;text-align:center}
+	
+	
+	
+	
+	
+	
+}
+
+@media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
+	.movie_card{width:90%;}
+	
+	.linav{font-size:1.2em;}
+	.logo{font-size:2em;}
+	
+	#info_header{font-size:0.2em;padding-top:20px;}
+	.description{font-size:3.8em;}
+	.register_button{font-size:3em;width:20%;;left:300px;top:100px}
+
+	#logofoot{font-size:2em;width:60%}
+	#reseauSoc{width:100%;padding-top:10px}
+	#lienfoot{width:100%;padding-left:15%}
+	#copy{width:100%;}
+	
+	
+	
+	
+	
+}
