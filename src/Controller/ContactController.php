@@ -27,7 +27,12 @@ class ContactController extends AbstractController
             ->add('name', TextType::class, ['label' => 'Nom'])
             ->add('email', EmailType::class, ['label' => 'E-mail'])
             ->add('content', TextareaType::class, ['label' => 'Votre message'])
-            ->add('input', SubmitType::class, ['label' => 'Envoyer'], ['class' => 'register_button'])
+            ->add('submit', SubmitType::class, [
+                'label' => 'Envoyer',
+                'attr' =>  array(
+                    'class' => 'register_button'
+                )
+            ])
             ->getForm();
             $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) 
