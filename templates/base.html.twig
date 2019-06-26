@@ -22,21 +22,20 @@
         <!--------------- HEADER ---------------->
         <header >
             <div class="nav">
-               <img id="fondHeader" src ="{{asset('asset/img/cinéma.jpg')}}" alt="image de fond cinéma">  
-                 
-                <div class="logo"><a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a></div>
+               <img id="fondHeader" src ="{{asset('asset/img/cinéma.jpg')}}" alt="image de fond cinéma">                 
+                <div class="logo"><a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" class="popcorn" alt="logo">VIE BUSTER </a></div>
                 <div id="link_nav">
                     <ul class="ulnav">                    
                         
-                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "></i>Contact</a></li>
+                        
                 {% if is_granted('ROLE_USER') %}
                         
                     <!------Affichage profil -------->
 
                         <li class="nav-item dropdown no-arrow linav">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ app.user.pseudo }}</span>
-                                <img class="img-profile rounded-circle"  src="{{asset('uploads/avatars/')}}{{ app.user.avatar }}" style="width:35px; height:35px;">
+                            <a href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                              
+                                <img class="img-profile rounded-circle"  src="{{asset('uploads/avatars/')}}{{ app.user.avatar }}">
+                                <span>{{ app.user.pseudo|capitalize }}</span>
                             </a>
                         
                             <!-- Dropdown - User Information -->
@@ -80,12 +79,12 @@
 
                         {% endif %}
                         {% else %}
-
-                        <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> </i>Inscription</a></li>
                         <li class="linav"><a href="{{ path('app_login') }}"><i class="fas fa-user "> </i>Connexion</a></li>
+                        <li class="linav"><a href="{{ path('app_register') }}"><i class="fas fa-user-plus "> </i>Inscription</a></li>
+                        
 
                         {% endif %}
-             
+                        <li class="linav"><a href="{{ path('contact') }}"><i class="far fa-address-book "></i>Contact</a></li>
 
                     </ul>
                 
@@ -96,9 +95,13 @@
                         <span id="relief">Movie Buster</span>
                     </h1>
                     
-                    <p>Movie Buster est un site permettant de .........................<br>
-                    ....................................................................
-                    </p>
+                    <div class="description">
+                        <p>Vous cherchez quoi regarder ce soir ? </p>
+                        <p>Venez checker parmi notre large sélection de films, et trouve celui qui correspond à votre humeur ! </p>
+                        <p>Un film vous plaît mais vous voulez le regarder plus tard ? </p>
+                        <p>Faites votre propre sélection :</p>
+                    </div>
+                
                     <a href="{{path('app_register')}}"><input type="submit" value="Inscrivez-vous" class="register_button"></a>
                 </div>
             </div>            
@@ -120,21 +123,25 @@
         <!--------------- FOOTER ---------------->
         <footer>
             <div class="foot">
-                <div class="logo2" id="logofoot"> 
-                   <a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" id="popcorn" alt="logo">VIE BUSTER </a><br>
-                   <i class="fab fa-twitter " id="twitter" ></i>
-                    <a href ="https://www.facebook.com/Movie-Buster-397536957507337/"><i class="fab fa-facebook-f " id="fb" ></i></a>
-                    
+                <div class="logo" id="logofoot"> 
+                   <a href="{{ path('home')}}"> M<img src="{{asset('asset/img/popcornlogo.png')}}" class="popcorn" alt="logo">VIE BUSTER </a><br>                                      
                 </div>
-                    <div id="lienfoot">
-                    <a href="{{ path('user_profil') }}"><i class="far fa-address-card fa-2x"id="profil"> Profil</i></a>
-                    <a href="{{ path('contact') }}"><i class="far fa-address-book fa-2x"id="contacts"> Contact</i></a>
-                    <a href="{{ path('mentionleg') }}"><i class="fas fa-info-circle fa-2x"id="mentionlegales"> Mentions legales</i></a>
-                    </div>           
 
-               
+                <div id="reseauSoc">
+                    <a href="" ><i class="fab fa-twitter " id="twitter" ></i> </a>
+                    <a href ="https://www.facebook.com/Movie-Buster-397536957507337/"><i class="fab fa-facebook-f " id="fb" ></i></a> 
+                </div>
+
+                <div id="lienfoot">
+                    {% if is_granted('ROLE_USER') %}
+                    <a href="{{ path('user_profil') }}"><i class="far fa-address-card fa-2x"id="profil"></i> Profil</a>
+                    {% endif %}
+                    <a href="{{ path('contact') }}"><i class="far fa-address-book fa-2x"id="contacts"></i> Contact</a>
+                    <a href="{{ path('mentionleg') }}"><i class="fas fa-info-circle fa-2x"id="mentionlegales"></i> Mentions legales</a>
+                </div>               
+
                 <div id="copy">
-                <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS     Création du site :<br> Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Melissa  </p>
+                    <p id="copyright"> ©moviebuster 2019 - TOUS DROITS RÉSERVÉS  Création du site : Webforce3 -> DIMMI Clément - COLOMBIER Maxime - MAUROUARD Benjamin - PAUL Melissa  </p>
                 </div>
             </div>
         </footer>
