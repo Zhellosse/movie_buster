@@ -356,9 +356,6 @@ select
 	margin-bottom:2%;
 }
 
-/* ///// Fin formulaire \\\\\\\\ */
-
-
 .actors{
 
 	color : #FBFBFB;
@@ -427,14 +424,7 @@ select
 
 /* ///// FIN FORMULAIRE FRONT USER \\\\\\\\ */
 
-/* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
-@media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
-	.movie_card{width:40%;}
-}
-@media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
-	.movie_card{width:90%;}
-    #movie_line{margin-left:0;}
-}
+
 /* formulaire edit profil en front*/
 .editprofil{
 	color : #FBFBFB;
@@ -502,3 +492,73 @@ select
 
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1200px){ /* Si l'écran est en dessus de 1200px */
+	
+
+	
+	
+	#lienfoot{font-size:1em;}
+	#copy{width:100%;}
+	
+	
+	
+}
+@media screen and (max-width: 1200px){ /* Si l'écran est en dessous de 1200px */
+	.movie_card{width:30%;margin-left:3%}
+	.linav{font-size:1.5em}
+	.logo{font-size:2em}
+	.logo{width:50%}
+	#info_header{font-size:0.5em;;}
+	.description{font-size:2.5em;margin-top:15px}
+	.register_button{font-size:3em;width:20%;position:absolute;left:320px;top:200px}
+
+	#logofoot{font-size:2em;}
+	#reseauSoc{font-size:2em}
+	#lienfoot{font-size:0.8em;padding-top:5px}
+	#copy{width:100%;}
+	
+	
+	
+}
+@media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
+	.movie_card{width:40%;margin-left:7%}
+	.linav{font-size:1.2em;margin-top:30px;}
+	.logo{width:50%;margin-left:25%}
+	#info_header{font-size:0.2em;margin-top:25px;}
+	.description{font-size:4em;margin-top:5px}
+	.register_button{font-size:3em;width:20%;position:absolute;left:280px;top:110px}
+
+	#logofoot{font-size:2em;width:60%;text-align:center}
+	#reseauSoc{width:100%;text-align:center;padding-left:10%;padding-top:10px}
+	#lienfoot{width:100%;text-align:center;padding-left:10%}
+	#copy{width:100%;text-align:center}
+	
+	
+	
+	
+	
+	
+}
+
+@media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
+	.movie_card{width:90%;}
+	
+	.linav{font-size:1.2em;}
+	.logo{font-size:2em;}
+	
+	#info_header{font-size:0.2em;padding-top:20px;}
+	.description{font-size:3.8em;}
+	.register_button{font-size:3em;width:20%;;left:300px;top:100px}
+
+	#logofoot{font-size:2em;width:60%}
+	#reseauSoc{width:100%;padding-top:10px}
+	#lienfoot{width:100%;padding-left:15%}
+	#copy{width:100%;}
+	
+	
+	
+	
+	
+}
