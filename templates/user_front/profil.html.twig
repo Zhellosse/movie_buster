@@ -10,7 +10,7 @@
     <table class="table">
         <img src="{{asset('uploads/avatars/')}}{{ app.user.avatar }}" id="avatar" >
         <div class="infoUser">    
-            <h1 class="nomUser"> {{ app.user.pseudo }}</h1>
+            <h1 class="nomUser"> {{ app.user.pseudo|capitalize }}</h1>
             <p> Sexe : {{ app.user.sex }} </p>
             <p> E-mail : {{ app.user.email }}<p>
             <p> Date de Naissance : {{ app.user.birthDate ? app.user.birthDate|date('d/m/Y') : '' }}<p>    
