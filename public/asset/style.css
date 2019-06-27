@@ -142,14 +142,12 @@ right:10px;
 	padding : 0px 7px;
 }
 .register_button{
-	width : 150px;
-	height : 35px;
+	
 	background-color: #791a1e;
 	color : white;
 	border : 1px solid white;
 	font: 400 16px/1.3 'Roboto', 'sans-serif';
-	margin-top:2%;
-	margin-bottom:2%;
+	
 }
 .register_button:visited {
 	
@@ -196,6 +194,7 @@ right:10px;
 /* ///// FIN HEADER \\\\\\\ */
 
 /*////// DEBUT BODY:HOME /////// */
+.foot{padding-top:10px}
 #lib{
 	padding-bottom:2%
 
@@ -307,7 +306,7 @@ footer{
 	text-align: center;
 	border: solid #791a1e;
 	background-color:rgba(151, 175, 206, 0.2);
-	width: 40%;
+	width: 50%;
 	position: relative;
 	margin: auto; 
 	top : 50px;	
@@ -379,16 +378,24 @@ select
 	width: 20%;
 }
 
+.movie_title{padding-left:10px;padding-right:10px}
+
 /* ///// MENTION LEGALES \\\\\\\\ */
 #infoleg{
 	font-size: 35px;
 	font-weight: bold;
+	text-align:center
 }
 
 .titreleg{
 	font-size: 25px;
 	font-weight: bold;
 	padding-top: 20px;
+	padding-left:10%
+}
+.txtmentionleg{
+	padding-left:5%;
+	padding-right:5%
 }
 
 /* ///// FIN MENTION LEGALES \\\\\\\\ */
@@ -511,6 +518,7 @@ select
 	
 	
 	
+	
 }
 @media screen and (max-width: 1200px){ /* Si l'écran est en dessous de 1200px */
 	.movie_card{width:30%;margin-left:3%}
@@ -525,6 +533,15 @@ select
 	#reseauSoc{font-size:2em}
 	#lienfoot{font-size:0.8em;padding-top:5px}
 	#copy{width:100%;}
+
+	.affichefilm{width:50%}
+	.infofilm{width:50%;padding-left:5%}
+
+	#register
+	{
+		width: 50%;
+	}
+	.register_button{font-size:1.5em}
 	
 	
 	
@@ -541,6 +558,15 @@ select
 	#reseauSoc{width:100%;text-align:center;padding-left:10%;padding-top:10px}
 	#lienfoot{width:100%;text-align:center;padding-left:10%}
 	#copy{width:100%;text-align:center}
+
+	.affichefilm{width:100%;padding-right:20%}
+	.infofilm{width:100%;text-align:center;padding-left:20%}
+
+	#register
+	{
+		width: 50%;
+	}
+	
 	
 	
 	
@@ -557,14 +583,21 @@ select
 	
 	#info_header{font-size:0.2em;padding-top:20px;}
 	.description{font-size:3.8em;}
-	.register_button{font-size:3em;width:20%;;left:300px;top:100px}
+	.register_button{font-size:3em;width:20%;;left:300px;top:90px}
 
 	#logofoot{font-size:2em;width:60%}
 	#reseauSoc{width:100%;padding-top:10px}
 	#lienfoot{width:100%;padding-left:15%}
 	#copy{width:100%;}
+
+	.affichefilm{width:100%;padding-right:50%}
+	.infofilm{width:100%;padding-left:25%}
 	
-	
+	#register
+{
+	width: 100%;
+}
+
 	
 	
 	
