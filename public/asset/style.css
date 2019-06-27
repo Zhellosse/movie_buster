@@ -141,24 +141,27 @@ right:10px;
 .linav>a>i{
 	padding : 0px 7px;
 }
-.register_button{
-	
+
+
+.register_button2{
+
 	background-color: #791a1e;
 	color : white;
 	border : 1px solid white;
 	font: 400 16px/1.3 'Roboto', 'sans-serif';
-	
+
 }
-.register_button:visited {
-	
+.register_button2:visited {
+
 	background-color: #791a1e;
 }
-.register_button:hover {
+.register_button2:hover {
 	color : #9b1a20;
 	border : 2px solid #9b1a20;
 	background-color: white !important;
 	font-weight: bold;
 }
+
 .linav>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
 	text-decoration: none;
@@ -258,7 +261,8 @@ footer{
 	padding-left:4%
 }
 #copyright{
-	font-size:10px;	
+	font-size:10px;
+	text-align: center;
 }
 #logofoot{
 	float : left;
@@ -299,18 +303,23 @@ footer{
 
 /* ///// FIN FOOTER \\\\\\\ */
 
-/* ///// Formulaire  \\\\\\\ */
+/* ///// Formulaires  \\\\\\\ */
 #register
 {
 	color : #FBFBFB;
 	text-align: center;
 	border: solid #791a1e;
 	background-color:rgba(151, 175, 206, 0.2);
-	width: 50%;
 	position: relative;
 	margin: auto; 
 	top : 50px;	
 	margin-bottom: 100px;
+}
+
+.wrap2{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 800px;
 }
 
 
@@ -340,12 +349,33 @@ input:focus
 input, textarea
 {
 	width: 30%;
+	margin-bottom: 5px;
 }
-select
-{
-	width: 254px;
+input[type="submit"]{
+	padding: 1px;
+	width: auto;
+	font-size: 1em;
 }
 
+.register_button{
+
+	background-color: #791a1e;
+	color : white;
+	border : 1px solid white;
+	font: 400 16px/1.3 'Roboto', 'sans-serif';
+	margin-bottom: 1%;
+
+}
+.register_button:visited {
+
+	background-color: #791a1e;
+}
+.register_button:hover {
+	color : #9b1a20;
+	border : 2px solid #9b1a20;
+	background-color: white !important;
+	font-weight: bold;
+}
 
 #form_submit
 {
@@ -483,11 +513,11 @@ select
 	
 }
 #lienyt{
-	
+
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
   
 }
 #bandeannonce{
@@ -520,7 +550,7 @@ select
 	.logo{width:50%}
 	#info_header{font-size:0.5em;;}
 	.description{font-size:2.5em;margin-top:15px}
-	.register_button{font-size:3em;width:20%;position:absolute;left:320px;top:200px}
+	.register_button2{font-size:2em;position:absolute;left:320px;top:200px}
 
 	#logofoot{font-size:2em;}
 	#reseauSoc{font-size:2em}
@@ -530,11 +560,8 @@ select
 	.affichefilm{width:50%}
 	.infofilm{width:50%;padding-left:5%}
 
-	#register
-	{
-		width: 50%;
-	}
-	.register_button{font-size:1.5em}
+
+	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
 	
 	
 	
@@ -545,7 +572,7 @@ select
 	.logo{width:50%;margin-left:25%}
 	#info_header{font-size:0.2em;margin-top:25px;}
 	.description{font-size:4em;margin-top:5px}
-	.register_button{font-size:3em;width:20%;position:absolute;left:280px;top:110px}
+	.register_button2{font-size:2em;position:absolute;left:280px;top:110px}
 
 	#logofoot{font-size:2em;width:60%;text-align:center}
 	#reseauSoc{width:100%;text-align:center;padding-left:10%;padding-top:10px}
@@ -555,11 +582,9 @@ select
 	.affichefilm{width:100%;padding-right:20%}
 	.infofilm{width:100%;text-align:center;padding-left:20%}
 
-	#register
-	{
-		width: 50%;
-	}
-	
+	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
+
+
 	
 	
 	
@@ -576,7 +601,7 @@ select
 	
 	#info_header{font-size:0.2em;padding-top:20px;}
 	.description{font-size:3.8em;}
-	.register_button{font-size:3em;width:20%;;left:300px;top:90px}
+	.register_button2{font-size:2em;left:300px;top:90px}
 
 	#logofoot{font-size:2em;width:60%}
 	#reseauSoc{width:100%;padding-top:10px}
@@ -585,11 +610,10 @@ select
 
 	.affichefilm{width:100%;padding-right:50%}
 	.infofilm{width:100%;padding-left:25%}
+
+	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
 	
-	#register
-{
-	width: 100%;
-}
+
 
 	
 	

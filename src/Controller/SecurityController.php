@@ -68,7 +68,7 @@ class SecurityController extends AbstractController
                 ->setFrom('moviebuster@hotmail.fr')
                 ->setTo($user->getEmail())
                 ->setBody(
-                    "blablabla voici le lien pour reseter votre mot de passe : <a href='" . $url."'>Cliquez ici</a>",
+                    "voici le lien pour reseter votre mot de passe : <a href='" . $url."'>Cliquez ici</a>",
                     'text/html'
                 );
             $mailer->send($message);
@@ -117,11 +117,11 @@ class SecurityController extends AbstractController
                     return $this->redirectToRoute('app_login');
                 }else
                 {
-                    die('stop1');
+
                 }
             } else
             {
-                die ('stop2');
+
             }
             
            
