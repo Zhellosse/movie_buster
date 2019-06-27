@@ -478,21 +478,23 @@ input[type="submit"]{
 /*/////////////////////DEBUT FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .affichefilm{
-	width:50%;
+	width:40%;
+	margin-left : 6%;
 	float : left;
-
+	margin-right: 6%;
 }
 #posterfilm{
-	padding-left: 40% ;
+	
+	width:100%
 	
 }
 
 .infofilm{
-	width: 50%;
-	padding-right: 20% ;
-	text-align: left;
+	width: 48%;
+	
+	
 	margin-top: 50px;
-	float : right;
+	float : left;
 	
 	
 }
@@ -504,10 +506,11 @@ input[type="submit"]{
 
 .iframe{
 	width: 100%;
-	
 	margin-top:5%;
 }
-
+iframe{
+	width: 100% !important;
+}
 #fichefilm{
 	background-color: #0e0d11;
 	
@@ -534,8 +537,8 @@ input[type="submit"]{
 @media screen and (min-width: 1200px){ /* Si l'écran est en dessus de 1200px */
 	
 
-	
-	
+	.affichefilm{width:35%;}
+	.iframe{width:70%;margin-left:15%}
 	#lienfoot{font-size:1em;}
 	#copy{width:100%;}
 	
@@ -550,15 +553,18 @@ input[type="submit"]{
 	.logo{width:50%}
 	#info_header{font-size:0.5em;;}
 	.description{font-size:2.5em;margin-top:15px}
+
 	.register_button2{font-size:2em;position:absolute;left:320px;top:200px}
+
 
 	#logofoot{font-size:2em;}
 	#reseauSoc{font-size:2em}
 	#lienfoot{font-size:0.8em;padding-top:5px}
 	#copy{width:100%;}
 
-	.affichefilm{width:50%}
-	.infofilm{width:50%;padding-left:5%}
+	.affichefilm{width:40%}
+	.infofilm{width:40%;}
+	.iframe{width:70%;margin-left:15%}
 
 
 	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
@@ -579,17 +585,14 @@ input[type="submit"]{
 	#lienfoot{width:100%;text-align:center;padding-left:10%}
 	#copy{width:100%;text-align:center}
 
-	.affichefilm{width:100%;padding-right:20%}
-	.infofilm{width:100%;text-align:center;padding-left:20%}
+	.affichefilm{width:50%;margin-left:25%}
+	.infofilm{width:100%;text-align:center;}
+	.iframe{width:90%;margin-left:5%}
 
 	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
 
 
-	
-	
-	
-	
-	
+
 	
 }
 
@@ -608,11 +611,22 @@ input[type="submit"]{
 	#lienfoot{width:100%;padding-left:15%}
 	#copy{width:100%;}
 
+
 	.affichefilm{width:100%;padding-right:50%}
 	.infofilm{width:100%;padding-left:25%}
 
 	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
 	
+
+
+	.affichefilm{width:90%;margin-left:5%}
+	.infofilm{width:100%;}
+	.iframe{width:100%}
+	
+	#register
+{
+	width: 100%;
+}
 
 
 	
