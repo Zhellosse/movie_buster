@@ -239,11 +239,12 @@ height : 66px;
 	float: left; 
 	text-align: center;
 	border-radius: 2px;
-	border : 1px solid white ;
+	border : 1px solid rgba(255, 255, 255, 0.644) ;
 }
 .movie_card:hover{
-	border : 2px solid #EEE; 
+	border : 1px solid #FFF; 
 }
+
 .arroundmovie {
 	margin-left: -2%;
 }
@@ -288,8 +289,7 @@ footer{
 	font-size : 22px;
 	width: 33%;
 	float:left;
-	position:relative;
-	 	
+	position:relative; 	
 }
 #lienfoot>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
@@ -496,12 +496,9 @@ input[type="submit"]{
 	width:40%;
 	margin-left : 6%;
 	float : left;
-	margin-right: 6%;
 }
 #posterfilm{
-	
-	width:100%
-	
+	padding-left: 30% ;	
 }
 
 .infofilm{
@@ -509,9 +506,7 @@ input[type="submit"]{
 	
 	
 	margin-top: 50px;
-	float : left;
-	
-	
+	float : right;	
 }
 
 #titrefilm{
@@ -544,7 +539,13 @@ iframe{
 .retourhome{
 	text-align: center;
 	padding-bottom: 5%
-
+}
+.favoris{
+	font-size: 50px;
+	position: relative;
+}
+.favoris:hover{
+	color:  #791a1e;
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
@@ -575,7 +576,6 @@ iframe{
 	.description{font-size:2.5em;margin-top:15px}
 	
 	
-	
 	.linav{font-size:1.2em;}
 	#logofoot{font-size:2em;padding-left:10px}
 	#reseauSoc{font-size:2em}
@@ -601,6 +601,11 @@ iframe{
 	#info_header{font-size:0.3em;margin-top:10px;}
 	.description{font-size:3em;margin-top:5px}
 	.register_button{font-size:3em;width:30%;}
+	.img-profile{
+		width:20px; 
+		height:20px;
+		margin-top:2px;
+	}
 	
 	
 
@@ -620,8 +625,8 @@ iframe{
 	
 }
 @media screen and (max-width: 765px){ /* Si l'écran est en dessous de 1200px */
-	#link_nav{display: none;}
-	
+	.linav{font-size:1.2em; float: none;margin:0;padding:0;}
+	.description{ display: none;}
 	
 }
 @media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
@@ -631,7 +636,7 @@ iframe{
 	.logo{font-size:2em;width:100%}
 	
 	#info_header{font-size:0.2em;padding-top:20px;}
-	.description{font-size:3.8em;}
+	.description{font-size:3.8em; display: none;}
 	
 
 	#logofoot{font-size:2em;}

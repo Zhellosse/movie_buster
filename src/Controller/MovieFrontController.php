@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Actors;
 use App\Entity\Movie;
+use App\Entity\User;
 use App\Form\MovieType;
 use App\Repository\MovieRepository;
 use App\Service\FileUploaderMovie;
@@ -20,10 +21,11 @@ class MovieFrontController extends AbstractController
      */
     public function showFront(Movie $movie): Response
     {
-        
+       
+        $user = $this->getUser();
         return $this->render('movie/show.html.twig', [
             'movie' => $movie,
-           
+            'user' => $user,
         ]);
     }
 }

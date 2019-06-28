@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Entity\User;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -92,12 +91,18 @@ class User implements UserInterface
      */
     private $token;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Movie", inversedBy="users")
+     */
+    private $favoris;
+
     public function __construct()
     {
         $this->movies = new ArrayCollection();
         $this->note = new ArrayCollection();
         $this->comment = new ArrayCollection();
         $this->roles = ['ROLE_USER'];
+        $this->favoris = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -296,6 +301,32 @@ class User implements UserInterface
     public function setToken(?string $token): self
     {
         $this->token = $token;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Movie[]
+     */
+    public function getFavoris(): Collection
+    {
+        return $this->favoris;
+    }
+
+    public function addFavori(Movie $favori): self
+    {
+        if (!$this->favoris->contains($favori)) {
+            $this->favoris[] = $favori;
+        }
+
+        return $this;
+    }
+
+    public function removeFavori(Movie $favori): self
+    {
+        if ($this->favoris->contains($favori)) {
+            $this->favoris->removeElement($favori);
+        }
 
         return $this;
     }

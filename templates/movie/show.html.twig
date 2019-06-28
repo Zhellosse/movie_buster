@@ -4,8 +4,15 @@
 
 {% block body %}
     
-        <div class="wrap" id="fichefilm">  
-                <h1 id="titrefilm">{{ movie.title|title }}</h1>
+        <div class="wrap" id="fichefilm">
+                  
+                <h1 id="titrefilm">{{ movie.title|title }} 
+                {% if is_granted('ROLE_USER') %}
+                        <a href="{{ path('add_favoris_movie', {'id': movie.id}) }}" class="favoris">  ☆ </a>
+                {% endif %}
+                </h1>
+                <br><br>
+                <div class ="haut">
                         <div class="affichefilm">
                         {# src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} #}
                                 <img src="{{ asset('/uploads/affiches/'~ movie.affiche) | imagine_filter('movie') }}" title="affiche" alt="affiche du film" id="posterfilm">
@@ -29,6 +36,7 @@
                                 Pays : {{ movie.country }}<br><br>
                                 Synopsis :<br>
                                 {{ movie.synopsis }}<br>
+                                
                         
                         </div>
                         <div class="clear"></div>  

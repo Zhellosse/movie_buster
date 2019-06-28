@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserFrontType;
 use App\Repository\UserRepository;
+use App\Repository\MovieRepository;
 use App\Service\FileUploader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,11 +32,15 @@ class UserFrontController extends AbstractController
     /**
      * @Route("/profil", name="user_profil")
      */
-    public function profil() : Response
-    {
+    public function profil(MovieRepository $movieRepository, UserRepository $userRepository) : Response
+    {   
+        $user = $this->getUser();
+        $id = $user->getId();
+        $userRepository->findMovieByUser($id);
         
         return $this->render('user_front/profil.html.twig', [
-                        
+            'movies' => $movieRepository->findAll(),
+            'users' => $userRepository->findAll(),       
         ]);
     }
 

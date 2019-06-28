@@ -13,7 +13,7 @@
                     <a href="{{ path('movie_show_front', {'id': movie.id}) }}">
                     <div class="movie_info">
                         <p class="movie_title">{{ movie.title | slice(0,29) | title }}</p>
-                        <p class="movie_date">{{ movie.releaseDate ? movie.releaseDate|date('Y') : '' }}</p>
+                        <p class="movie_date">{{ movie.releaseDate ? movie.releaseDate|date('Y') : '' }}</p>                        
                     </div>
                     </a>
                 </div>
@@ -25,6 +25,6 @@
 
 
 
-<!--<div id="view_more"><a href="">En voir plus <i class="far fa-arrow-alt-circle-down"></a></i></div>-->
+<div id="view_more"><a href=""> Voir plus <i class="far fa-arrow-alt-circle-down"></a></i></div>
 
 {% endblock %}

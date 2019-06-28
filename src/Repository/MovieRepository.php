@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Movie;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -36,16 +37,7 @@ class MovieRepository extends ServiceEntityRepository
         ;
     }
 */
-     public function findMovieByUser($value)
-    {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.user = :val')
-            ->setParameter('val', $value)
-            ->orderBy('m.id', 'ASC')
-            ->getQuery()
-            ->getResult()
-        ;
-    }
+     
 
     public function countNote($value)
     { return $this->getEntityManager()
