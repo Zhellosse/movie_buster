@@ -4,7 +4,6 @@
 
 {% block body %}
     
-<<<<<<< HEAD
         <div class="wrap" id="fichefilm">
                   
                 <h1 id="titrefilm">{{ movie.title|title }} 
@@ -14,10 +13,6 @@
                 </h1>
                 <br><br>
                 <div class ="haut">
-=======
-        <div class="wrap" id="fichefilm">  
-                <h1 id="titrefilm">{{ movie.title|title }}</h1>
->>>>>>> 863ea587817471aeafabda3456aa07ed55be9764
                         <div class="affichefilm">
                         {# src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} #}
                                 <img src="{{ asset('/uploads/affiches/'~ movie.affiche) | imagine_filter('movie') }}" title="affiche" alt="affiche du film" id="posterfilm">

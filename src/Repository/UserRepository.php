@@ -53,9 +53,8 @@ class UserRepository extends ServiceEntityRepository
     public function findMovieByUser($id)
     {
         return $this->getEntityManager()
-        ->createQuery(
-            'SELECT u FROM My\Entity\User u WHERE u.id = :userId'
-            // 'SELECT movie_id FROM user WHERE user_id = '.$id.' '
+        ->createQuery(           
+            "SELECT movie_id FROM user_movie WHERE user_id = '.$id.' "
             )
             ->setParameter('userId' , $id)
           
