@@ -3,23 +3,20 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <div class="wrap2">
 
-        <div id="register" >
+    <div id="register" class="wrap2" >
+        <legend>Inscription</legend>
+    {{ form_start(registrationForm) }}
 
-        {{ form_start(registrationForm) }}
-             <legend>Inscription</legend>
 
-            {{ form_row(registrationForm.pseudo) }}
-            {{ form_row(registrationForm.email) }}
-            {{ form_row(registrationForm.Password) }}
+        {{ form_row(registrationForm.pseudo) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.Password) }}
 
-            <input type="submit" value="S'inscrire" class="register_button"></input>
+        <input type="submit" value="S'inscrire" class="register_button">
 
-            {{ form_end(registrationForm) }}
-        </div>
+        {{ form_end(registrationForm) }}
     </div>
-
     <div class="clear"></div>
     
 
