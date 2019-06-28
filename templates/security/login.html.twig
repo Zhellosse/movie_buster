@@ -19,7 +19,8 @@
                 <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
+                <br><br>
+                <a href="{{ path('app_forgotten_password') }}"> Mot de passe oublié</a>
                 <br><br>
                 {#
                     Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
