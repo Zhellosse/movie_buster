@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Movie;
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -20,7 +21,7 @@ class UserRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, User::class);
     }
-
+  
     // /**
     //  * @return User[] Returns an array of User objects
     //  */
@@ -49,5 +50,17 @@ class UserRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findMovieByUser($id)
+    {
+        return $this->getEntityManager()
+        ->createQuery(
+            'SELECT u FROM My\Entity\User u WHERE u.id = :userId'
+            // 'SELECT movie_id FROM user WHERE user_id = '.$id.' '
+            )
+            ->setParameter('userId' , $id)
+          
+            ->getResult();
+        ;
+    }
     
 }

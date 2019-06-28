@@ -223,17 +223,12 @@ height : 66px;
 	float: left; 
 	text-align: center;
 	border-radius: 2px;
-	border : 1px solid white ;
+	border : 1px solid rgba(255, 255, 255, 0.644) ;
 }
 .movie_card:hover{
-	border : 2px solid #EEE; 
+	border : 1px solid #FFF; 
 }
-.favoris{
-	font-size: 30px;
-	float: right;
-	position: relative;
-	padding-right: 10px;
-}
+
 .arroundmovie {
 	margin-left: -2%;
 }
@@ -276,12 +271,7 @@ footer{
 	font-size : 22px;
 	width: 33%;
 	float:left;
-<<<<<<< HEAD
 	position:relative; 	
-=======
-	position:relative;
-	 	
->>>>>>> 68d8e9c70796134776b2d655785bcb6f77ccea62
 }
 #lienfoot>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
@@ -462,12 +452,7 @@ select
 	float : left;
 }
 #posterfilm{
-<<<<<<< HEAD
 	padding-left: 30% ;	
-=======
-	padding-left: 40% ;
-	
->>>>>>> 68d8e9c70796134776b2d655785bcb6f77ccea62
 }
 
 .infofilm{
@@ -507,7 +492,13 @@ select
 .retourhome{
 	text-align: center;
 	padding-bottom: 5%
-
+}
+.favoris{
+	font-size: 50px;
+	position: relative;
+}
+.favoris:hover{
+	color:  #791a1e;
 }
 /*/////////////////////FIN FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 

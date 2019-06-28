@@ -17,6 +17,27 @@
         </div>
     </table>
 </div>
+
+<div class="wrap" id="movie_line">
+<p id="lib">Vos Favoris :</p>
+    <div class="arroundmovie">
+
+        {% for movie in movies %}
+                <div class="movie_card">
+                    <a href="{{ path('movie_show_front', {'id': movie.id}) }}"><img class="movie_poster" src="{{ asset('/uploads/affiches/'~ movie.affiche )| imagine_filter('test') }} "></a>
+                    <a href="{{ path('movie_show_front', {'id': movie.id}) }}">
+                    <div class="movie_info">
+                        <p class="movie_title">{{ movie.title | slice(0,29) | title }}</p>
+                        <p class="movie_date">{{ movie.releaseDate ? movie.releaseDate|date('Y') : '' }}</p>
+                        
+                    </div>
+                    </a>
+                </div>
+        {% endfor %}
+        <div class="clear"></div>
+    </div>
+</div>
+
 <!--PREVOIR Nombre de commentaires envoyé et  de notes donnés -->
 <a href="{{ path('user_editprofil') }}">Edit Profil</a>
 <div class="filmsRecent">
