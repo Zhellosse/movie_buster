@@ -262,9 +262,10 @@ height : 66px;
 
 /* ///// FOOTER \\\\\\\ */
 
-footer{	
-	width: 99%;
-	position:relative;		
+.foot{
+	width: 100%;
+	height : 20px;
+	background-color: #282733;
 }
 #contacts{
 	padding-left:4%
@@ -638,7 +639,11 @@ iframe{
 	#info_header{font-size:0.2em;padding-top:20px;}
 	.description{font-size:3.8em; display: none;}
 	
+	#posterfilm{
 
+		padding-left : 12%;
+
+	}
 	#logofoot{font-size:2em;}
 	#reseauSoc{text-align: center}
 	#lienfoot{text-align: center}
