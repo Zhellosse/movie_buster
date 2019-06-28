@@ -3,6 +3,7 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
+<<<<<<< HEAD
     <div id="register">
         <form method="post">
             {% if error %}
@@ -39,5 +40,42 @@
             {# <input type="submit" value="Connexion"> #}
 
         </form>
+=======
+
+    <div class="wrap2">
+        <div id="register">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <legend>Connexion</legend>
+                <label for="inputEmail" >E-mail</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail"  placeholder="Email" required autofocus><br>
+                <label for="inputPassword" >Mot de passe</label>
+                <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                <br><br>
+                <a href="{{ path('app_forgotten_password') }}"> Mot de passe oublié</a>
+                <br><br>
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                #}
+
+                <button class="register_button" type="submit">
+                    Connexion
+                </button>
+
+            </form>
+        </div>
+>>>>>>> 863ea587817471aeafabda3456aa07ed55be9764
     </div>
 {% endblock %}

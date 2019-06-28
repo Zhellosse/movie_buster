@@ -110,7 +110,9 @@ right:10px;
 .logo{
 	position: absolute;
 	top:10px;
-	left:20px;
+	padding-left:10px
+	
+	
 }
 .fondHeader{
 	width : 100%;	
@@ -141,26 +143,28 @@ right:10px;
 .linav>a>i{
 	padding : 0px 7px;
 }
-.register_button{
-	width : 150px;
-	height : 35px;
+
+
+.register_button2{
+
 	background-color: #791a1e;
 	color : white;
 	border : 1px solid white;
 	font: 400 16px/1.3 'Roboto', 'sans-serif';
-	margin-top:2%;
-	margin-bottom:2%;
-}
-.register_button:visited {
 	
+
+}
+.register_button2:visited {
+
 	background-color: #791a1e;
 }
-.register_button:hover {
+.register_button2:hover {
 	color : #9b1a20;
 	border : 2px solid #9b1a20;
 	background-color: white !important;
 	font-weight: bold;
 }
+
 .linav>a:hover{
 	color: rgba(238, 238, 238, 0.8) !important;
 	text-decoration: none;
@@ -172,6 +176,16 @@ right:10px;
 	font-size: 40px;
 }
 .logo>a:hover,.logo2>a:hover{ /* aussi dans le footer */
+	color: rgba(238, 238, 238, 0.8) !important;
+	text-decoration: none;
+}
+.logo2{ /* aussi dans le footer */
+	font-size:30px;
+	width: 25%;
+	font-family: 'buble',arial,sans-serif;
+	font-size: 40px;
+}
+.logo2>a:hover,.logo2>a:hover{ /* aussi dans le footer */
 	color: rgba(238, 238, 238, 0.8) !important;
 	text-decoration: none;
 }
@@ -196,6 +210,7 @@ right:10px;
 /* ///// FIN HEADER \\\\\\\ */
 
 /*////// DEBUT BODY:HOME /////// */
+.foot{padding-top:10px}
 #lib{
 	padding-bottom:2%
 
@@ -247,7 +262,7 @@ height : 66px;
 /* ///// FOOTER \\\\\\\ */
 
 footer{	
-	width: 100%;
+	width: 99%;
 	position:relative;		
 }
 #contacts{
@@ -260,11 +275,12 @@ footer{
 	padding-left:4%
 }
 #copyright{
-	font-size:10px;	
+	font-size:10px;
+	text-align: center;
 }
 #logofoot{
 	float : left;
-	width: 33%;
+	width: 32%;
 	position:relative;
 }
 #lienfoot{
@@ -300,18 +316,23 @@ footer{
 
 /* ///// FIN FOOTER \\\\\\\ */
 
-/* ///// Formulaire  \\\\\\\ */
+/* ///// Formulaires  \\\\\\\ */
 #register
 {
 	color : #FBFBFB;
 	text-align: center;
 	border: solid #791a1e;
 	background-color:rgba(151, 175, 206, 0.2);
-	width: 40%;
 	position: relative;
 	margin: auto; 
 	top : 50px;	
 	margin-bottom: 100px;
+}
+
+.wrap2{
+	margin: 0 auto;
+	
+	max-width: 800px;
 }
 
 
@@ -341,12 +362,33 @@ input:focus
 input, textarea
 {
 	width: 30%;
+	margin-bottom: 5px;
 }
-select
-{
-	width: 254px;
+input[type="submit"]{
+	padding: 1px;
+	width: auto;
+	font-size: 1em;
 }
 
+.register_button{
+
+	background-color: #791a1e;
+	color : white;
+	border : 1px solid white;
+	font: 400 16px/1.3 'Roboto', 'sans-serif';
+	margin-bottom: 1%;
+
+}
+.register_button:visited {
+
+	background-color: #791a1e;
+}
+.register_button:hover {
+	color : #9b1a20;
+	border : 2px solid #9b1a20;
+	background-color: white !important;
+	font-weight: bold;
+}
 
 #form_submit
 {
@@ -355,13 +397,6 @@ select
 	margin-top:2%;
 	margin-bottom:2%;
 }
-#espace{
-
-	margin-top:2%;
-	margin-bottom:2%;
-}
-/* ///// Fin formulaire \\\\\\\\ */
-
 
 .actors{
 
@@ -379,16 +414,24 @@ select
 	width: 20%;
 }
 
+.movie_title{padding-left:10px;padding-right:10px}
+
 /* ///// MENTION LEGALES \\\\\\\\ */
 #infoleg{
 	font-size: 35px;
 	font-weight: bold;
+	text-align:center
 }
 
 .titreleg{
 	font-size: 25px;
 	font-weight: bold;
 	padding-top: 20px;
+	padding-left:10%
+}
+.txtmentionleg{
+	padding-left:5%;
+	padding-right:5%
 }
 
 /* ///// FIN MENTION LEGALES \\\\\\\\ */
@@ -448,19 +491,35 @@ select
 /*/////////////////////DEBUT FRONT FILM\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .affichefilm{
-	width:50%;
+	width:40%;
+	margin-left : 6%;
 	float : left;
+<<<<<<< HEAD
 }
 #posterfilm{
 	padding-left: 30% ;	
+=======
+	margin-right: 6%;
+}
+#posterfilm{
+	
+	width:100%
+	
+>>>>>>> 863ea587817471aeafabda3456aa07ed55be9764
 }
 
 .infofilm{
-	width: 50%;
-	padding-right: 20% ;
-	text-align: left;
+	width: 48%;
+	
+	
 	margin-top: 50px;
+<<<<<<< HEAD
 	float : right;	
+=======
+	float : left;
+	
+	
+>>>>>>> 863ea587817471aeafabda3456aa07ed55be9764
 }
 
 #titrefilm{
@@ -470,20 +529,21 @@ select
 
 .iframe{
 	width: 100%;
-	
 	margin-top:5%;
 }
-
+iframe{
+	width: 100% !important;
+}
 #fichefilm{
 	background-color: #0e0d11;
 	
 }
 #lienyt{
-	
+
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
   
 }
 #bandeannonce{
@@ -505,11 +565,17 @@ select
 /* //////////////// RESPONSIVE \\\\\\\\\\\\\\\\\\\\ */
 @media screen and (min-width: 1200px){ /* Si l'écran est en dessus de 1200px */
 	
-
-	
-	
+	.register_button2{font-size:1.5em;width: auto;padding-left:2%;padding-right:2%}
+	.affichefilm{width:35%;}
+	.iframe{width:70%;margin-left:15%}
 	#lienfoot{font-size:1em;}
-	#copy{width:100%;}
+	#copy{width:90%;}
+	#logofoot{padding-left:10px}
+	#info_header{font-size:0.6em;}
+	.description{font-size:2.6em;}
+
+	.register_button2{font-size:3em;width: auto}
+	
 	
 	
 	
@@ -517,56 +583,85 @@ select
 @media screen and (max-width: 1200px){ /* Si l'écran est en dessous de 1200px */
 	.movie_card{width:30%;margin-left:3%}
 	.linav{font-size:1.5em}
-	.logo{font-size:2em}
-	.logo{width:50%}
-	#info_header{font-size:0.5em;;}
+	.logo2{font-size:2em;}
+	.logo{width:100%;}
+	#info_header{font-size:0.5em;margin-top:20px;}
 	.description{font-size:2.5em;margin-top:15px}
-	.register_button{font-size:3em;width:20%;position:absolute;left:320px;top:200px}
-
-	#logofoot{font-size:2em;}
+	
+	
+	
+	.linav{font-size:1.2em;}
+	#logofoot{font-size:2em;padding-left:10px}
 	#reseauSoc{font-size:2em}
 	#lienfoot{font-size:0.8em;padding-top:5px}
-	#copy{width:100%;}
+	#copy{width:90%;}
+
+	.affichefilm{width:40%;}
+	.infofilm{width:40%;}
+	.iframe{width:70%;margin-left:15%}
+
+
+	.register_button{font-size:1em;width: auto;padding-bottom: 1%}
+	.register_button2{font-size:3em;width: auto}
+	
 	
 	
 	
 }
 @media screen and (max-width: 900px){ /* Si l'écran est en dessous de 900px */
 	.movie_card{width:40%;margin-left:7%}
-	.linav{font-size:1.2em;margin-top:30px;}
-	.logo{width:50%;margin-left:25%}
-	#info_header{font-size:0.2em;margin-top:25px;}
-	.description{font-size:4em;margin-top:5px}
-	.register_button{font-size:3em;width:20%;position:absolute;left:280px;top:110px}
+	.linav{font-size:1.2em;}
+	.logo{width:90%;}
+	#info_header{font-size:0.3em;margin-top:10px;}
+	.description{font-size:3em;margin-top:5px}
+	.register_button{font-size:3em;width:30%;}
+	
+	
 
-	#logofoot{font-size:2em;width:60%;text-align:center}
-	#reseauSoc{width:100%;text-align:center;padding-left:10%;padding-top:10px}
-	#lienfoot{width:100%;text-align:center;padding-left:10%}
-	#copy{width:100%;text-align:center}
+	#logofoot{font-size:2em;;text-align:center;width:100%;}
+	#reseauSoc{width:100%;text-align:center;padding-top:10px}
+	#lienfoot{width:100%;text-align:center;}
+	#copy{width:90%;text-align:center}
+
+	.affichefilm{width:88%;}
+	.infofilm{width:100%;text-align:center;}
+	.iframe{width:90%;margin-left:5%}
+
+	.register_button{font-size:1em;width: auto;margin-bottom: 1%}
+	.register_button2{font-size:4em;width: auto;padding-bottom: 1%;padding-left:1%;padding-right:1%}
+
+
 	
-	
-	
-	
+}
+@media screen and (max-width: 765px){ /* Si l'écran est en dessous de 1200px */
+	#link_nav{display: none;}
 	
 	
 }
-
 @media screen and (max-width: 500px){ /* Si l'écran est en dessous de 500px */
 	.movie_card{width:90%;}
 	
 	.linav{font-size:1.2em;}
-	.logo{font-size:2em;}
+	.logo{font-size:2em;width:100%}
 	
 	#info_header{font-size:0.2em;padding-top:20px;}
 	.description{font-size:3.8em;}
-	.register_button{font-size:3em;width:20%;;left:300px;top:100px}
+	
 
-	#logofoot{font-size:2em;width:60%}
-	#reseauSoc{width:100%;padding-top:10px}
-	#lienfoot{width:100%;padding-left:15%}
-	#copy{width:100%;}
+	#logofoot{font-size:2em;}
+	#reseauSoc{text-align: center}
+	#lienfoot{text-align: center}
+	#copy{text-align: center;width:90%}
+
+	.affichefilm{width:88%;}
+	.infofilm{width:100%;}
 	
+	iframe{width:100%;margin:0}
+	.register_button2{font-size:5em;width: auto;padding-bottom: 1%;padding-left:2%;padding-right:2%}
 	
+
+
+
 	
 	
 	
