@@ -184,6 +184,7 @@ right:10px;
 	width: 25%;
 	font-family: 'buble',arial,sans-serif;
 	font-size: 40px;
+	left : 20px;
 }
 .logo2>a:hover,.logo2>a:hover{ /* aussi dans le footer */
 	color: rgba(238, 238, 238, 0.8) !important;
@@ -281,6 +282,7 @@ footer{
 	float : left;
 	width: 32%;
 	position:relative;
+
 }
 #lienfoot{
 	font-size : 22px;
